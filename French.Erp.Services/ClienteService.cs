@@ -66,7 +66,7 @@ namespace French.Erp.Services
                 {
                     return cliente.ValidationResult;
                 }
-                
+
                 await clienteRepository.Atualizar(cliente);
             }
 

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using French.Erp.Application.ViewModel;
+using System;
 using System.Collections.Generic;
-using French.Erp.Application.ViewModel;
 
 #nullable disable
 

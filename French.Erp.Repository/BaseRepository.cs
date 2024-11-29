@@ -1,15 +1,14 @@
 ﻿using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Repository.Context;
 using French.Erp.Repository.Interfaces;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using Microsoft.Data;
-using Microsoft.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using System.Data;
 
 namespace French.Erp.Repository
 {

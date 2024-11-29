@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using French.Erp.Domain.Entities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using French.Erp.Domain.Entities;
 
 namespace French.Erp.Application.Interfaces.Services
 {

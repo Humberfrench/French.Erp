@@ -14,7 +14,7 @@ namespace French.Erp.Services
         private readonly ITributoRepository tributoRepository;
         private readonly ValidationResult validationResult;
 
-        public TributoService( ITributoRepository tributoRepository) 
+        public TributoService(ITributoRepository tributoRepository)
         {
             this.tributoRepository = tributoRepository;
             validationResult = new ValidationResult();

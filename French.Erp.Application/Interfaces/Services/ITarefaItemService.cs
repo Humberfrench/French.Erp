@@ -1,11 +1,11 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using French.Erp.Domain.Entities;
 
 namespace French.Erp.Application.Interfaces.Services
 {
-    public interface ITarefaItemService 
+    public interface ITarefaItemService
     {
         Task<ValidationResult> Gravar(TarefaItem tarefa);
         Task<ValidationResult> Excluir(int id);

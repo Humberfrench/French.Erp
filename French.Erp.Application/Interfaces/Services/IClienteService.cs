@@ -1,8 +1,7 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.DataObject;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using French.Erp.Domain.Entities;
-using French.Erp.Application.DataObject;
 
 namespace French.Erp.Application.Interfaces.Services
 {

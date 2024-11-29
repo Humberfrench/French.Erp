@@ -16,7 +16,7 @@ namespace French.Erp.Services
         private readonly INotaFiscalRepository notaFiscalRepository;
         private readonly ValidationResult validationResult;
 
-        public TarefaService(INotaFiscalRepository notaFiscalRepository, 
+        public TarefaService(INotaFiscalRepository notaFiscalRepository,
                              ITarefaItemRepository repositoryTarefaItem,
                              ITarefaRepository repositoryTarefa)
         {

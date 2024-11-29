@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class StatusNotaFiscalService :  IStatusNotaFiscalService
+    public class StatusNotaFiscalService : IStatusNotaFiscalService
     {
         private readonly IStatusNotaFiscalRepository statusNotaFiscalRepository;
 
-        public StatusNotaFiscalService(IStatusNotaFiscalRepository statusNotaFiscalRepository) 
+        public StatusNotaFiscalService(IStatusNotaFiscalRepository statusNotaFiscalRepository)
         {
             this.statusNotaFiscalRepository = statusNotaFiscalRepository;
         }

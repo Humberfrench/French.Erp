@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class ServicoService :  IServicoService
+    public class ServicoService : IServicoService
     {
         private readonly IServicoRepository servicoRepository;
         private readonly ValidationResult validationResult;
 
-        public ServicoService(IServicoRepository servicoRepository) 
+        public ServicoService(IServicoRepository servicoRepository)
         {
             this.servicoRepository = servicoRepository;
             validationResult = new ValidationResult();

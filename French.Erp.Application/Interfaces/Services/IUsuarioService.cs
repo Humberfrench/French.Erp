@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Application.Interfaces.Services
 {
-    public interface IUsuarioService 
+    public interface IUsuarioService
     {
         Task<ValidationResult<UsuarioDto>> Gravar(Usuario usuario);
         Task<ValidationResult<UsuarioDto>> Login(string login, string senha);

@@ -6,19 +6,18 @@ using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class UsuarioService: IUsuarioService
+    public class UsuarioService : IUsuarioService
     {
         private readonly IUsuarioRepository usuarioRepository;
         private readonly ValidationResult<Usuario> validationResult1;
         private readonly IConvertKey convertKey;
 
         public UsuarioService(IUsuarioRepository usuarioRepository,
-                              IConvertKey convertKey) 
+                              IConvertKey convertKey)
         {
             this.usuarioRepository = usuarioRepository;
             this.convertKey = convertKey;
@@ -44,7 +43,7 @@ namespace French.Erp.Services
         public async Task<ValidationResult<UsuarioDto>> Gravar(Usuario usuario)
         {
             var validationResult = new ValidationResult<UsuarioDto>();
-            
+
             //validate
             if (!usuario.IsValid())
             {

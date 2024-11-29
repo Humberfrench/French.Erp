@@ -62,7 +62,7 @@ namespace French.Erp.Services
                 {
                     return tipoDePessoa.ValidationResult;
                 }
-                
+
                 await tipoDePessoaRepository.Atualizar(tipoDePessoa);
             }
 
