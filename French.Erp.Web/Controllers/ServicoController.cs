@@ -20,7 +20,7 @@ namespace French.Erp.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var model = new ModelBasic<ServicoViewModel>
+            var model = new ModelBasic<ServicoDto>
             {
                 Lista = (await servicoAppService.ObterTodos()).ToList(),
                 Nome = Nome,
@@ -31,7 +31,7 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Gravar(ServicoViewModel servico)
+        public async Task<IActionResult> Gravar(ServicoDto servico)
         {
             var result = await servicoAppService.Gravar(servico);
 

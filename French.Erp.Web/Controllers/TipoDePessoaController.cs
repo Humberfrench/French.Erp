@@ -20,7 +20,7 @@ namespace French.Erp.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var model = new ModelBasic<TipoDePessoaViewModel>
+            var model = new ModelBasic<TipoDePessoaDto>
             {
                 Lista = (await tipoPessoaAppService.ObterTodos()).ToList(),
                 Nome = Nome,
@@ -30,7 +30,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> Gravar(TipoDePessoaViewModel tipoDePessoa)
+        public async Task<IActionResult> Gravar(TipoDePessoaDto tipoDePessoa)
         {
             var result = await tipoPessoaAppService.Gravar(tipoDePessoa);
 

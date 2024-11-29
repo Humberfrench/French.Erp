@@ -42,17 +42,17 @@ namespace French.Erp.Web.Controllers
             return true;
         }
 
-        public UsuarioViewModel UsuarioViewModel
+        public UsuarioDto UsuarioViewModel
         {
             get
             {
                 var user = context.HttpContext.User.FindFirst(ClaimTypes.UserData);
                 if (user == null)
                 {
-                    return new UsuarioViewModel();
+                    return new UsuarioDto();
                 }
 
-                return JsonSerializer.Deserialize<UsuarioViewModel>(user.Value);
+                return JsonSerializer.Deserialize<UsuarioDto>(user.Value);
             }
         }
 

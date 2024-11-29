@@ -32,7 +32,7 @@ namespace French.Erp.Web.Controllers
         [Route("")]
         public async Task<IActionResult> Index()
         {
-            var model = new ModelBasic<ClienteViewModel>
+            var model = new ModelBasic<ClienteDto>
             {
                 Lista = (await clienteAppService.ObterTodos()).ToList(),
                 Seletores = new SeletoresBasic
@@ -50,7 +50,7 @@ namespace French.Erp.Web.Controllers
 
         [HttpPost, Route("Gravar")]
 
-        public async Task<IActionResult> Gravar(ClienteViewModel servico)
+        public async Task<IActionResult> Gravar(ClienteDto servico)
         {
             var result = await clienteAppService.Gravar(servico);
 

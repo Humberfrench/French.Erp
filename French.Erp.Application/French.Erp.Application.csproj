@@ -5,19 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Dietcode.Core.DomainValidator" Version="2.0.0" />
     <PackageReference Include="Dietcode.Core.Lib" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\French.Erp.Domain\French.Erp.Domain.csproj" />
-    <ProjectReference Include="..\French.Erp.ViewModel\French.Erp.ViewModel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DataObject\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="Enum\" />
   </ItemGroup>
 
 </Project>

@@ -71,7 +71,7 @@ namespace French.Erp.Web.Controllers
             return View();
         }
 
-        public async Task AutenticarUsuario(UsuarioViewModel usuario)
+        public async Task AutenticarUsuario(UsuarioDto usuario)
         {
 
             var claims = new List<Claim>();

@@ -21,7 +21,7 @@ namespace French.Erp.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var model = new ModelBasic<TributoViewModel>
+            var model = new ModelBasic<TributoDto>
             {
                 Lista = (await tributoAppService.ObterTodos()).ToList(),
                 Nome = Nome,
@@ -32,7 +32,7 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpPost, Route("Excluir/{id}")]
-        public async Task<IActionResult> Gravar(TributoViewModel tributo)
+        public async Task<IActionResult> Gravar(TributoDto tributo)
         {
             var result = await tributoAppService.Gravar(tributo);
 

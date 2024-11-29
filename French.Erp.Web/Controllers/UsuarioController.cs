@@ -18,7 +18,7 @@ namespace French.Erp.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var model = new ModelBasic<UsuarioViewModel>
+            var model = new ModelBasic<UsuarioDto>
             {
                 Lista = (await usuarioAppService.ObterTodos()).ToList(),
                 Nome = Nome,

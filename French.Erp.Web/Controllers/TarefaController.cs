@@ -32,7 +32,7 @@ namespace French.Erp.Web.Controllers
         [Route("")]
         public async Task<IActionResult> Index()
         {
-            var model = new ModelBasic<TarefaViewModel>
+            var model = new ModelBasic<TarefaDto>
             {
                 Lista = (await tarefaAppService.ObterTodos()).ToList(),
                 Valor1 = 0,
@@ -51,7 +51,7 @@ namespace French.Erp.Web.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Index(int id)
         {
-            var model = new ModelBasic<TarefaViewModel>
+            var model = new ModelBasic<TarefaDto>
             {
                 Lista = (await tarefaAppService.ObterTodosDoCliente(id)).ToList(),
                 Valor1 = id,
@@ -71,14 +71,14 @@ namespace French.Erp.Web.Controllers
         public async Task<IActionResult> New(int clienteId)
         {
 
-            var model = new ModelBasic<TarefaViewModel, TarefaItemViewModel>
+            var model = new ModelBasic<TarefaDto, TarefaItemDto>
             {
                 Erro = "",
-                ViewModel = new TarefaViewModel()
+                ViewModel = new TarefaDto()
                 {
                     ClienteId = clienteId
                 },
-                Lista = new List<TarefaItemViewModel>(),
+                Lista = new List<TarefaItemDto>(),
                 Valor1 = "0",
                 Seletores = new SeletoresBasic
                 {
@@ -99,11 +99,11 @@ namespace French.Erp.Web.Controllers
             if (dadosModel == null) // erro
             {
                 // tratar
-                var modelErro = new ModelBasic<TarefaViewModel, TarefaItemViewModel>
+                var modelErro = new ModelBasic<TarefaDto, TarefaItemDto>
                 {
                     Erro = "Não encontrado a tarefa. Por  favor verifique as informações.",
-                    ViewModel = new TarefaViewModel(),
-                    Lista = new List<TarefaItemViewModel>(), //futuramente itens de tarefa
+                    ViewModel = new TarefaDto(),
+                    Lista = new List<TarefaItemDto>(), //futuramente itens de tarefa
                     Valor1 = "0",
                     Seletores = new SeletoresBasic
                     {
@@ -117,7 +117,7 @@ namespace French.Erp.Web.Controllers
 
             }
 
-            var model = new ModelBasic<TarefaViewModel, TarefaItemViewModel>
+            var model = new ModelBasic<TarefaDto, TarefaItemDto>
             {
                 Erro = "",
                 ViewModel = dadosModel,
@@ -136,10 +136,10 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpPost, Route("Edit")]
-        public async Task<IActionResult> Edit(TarefaViewModel tarefa)
+        public async Task<IActionResult> Edit(TarefaDto tarefa)
         {
 
-            var model = new ModelBasic<TarefaViewModel, TarefaItemViewModel>
+            var model = new ModelBasic<TarefaDto, TarefaItemDto>
             {
                 Erro = "",
                 ViewModel = tarefa,

@@ -20,7 +20,7 @@ namespace French.Erp.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var model = new ModelBasic<StatusNotaFiscalViewModel>
+            var model = new ModelBasic<StatusNotaFiscalDto>
             {
                 Lista = (await statusNotaFiscalAppService.ObterTodos()).ToList(),
                 Nome = Nome,
@@ -31,7 +31,7 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Gravar(StatusNotaFiscalViewModel statusNotaFiscal)
+        public async Task<IActionResult> Gravar(StatusNotaFiscalDto statusNotaFiscal)
         {
             var result = await statusNotaFiscalAppService.Gravar(statusNotaFiscal);
 

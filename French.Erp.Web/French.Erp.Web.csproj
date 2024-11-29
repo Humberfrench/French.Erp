@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\French.Erp.Ioc\French.Erp.Ioc.csproj" />
-    <ProjectReference Include="..\French.Erp.ViewModel\French.Erp.ViewModel.csproj" />
   </ItemGroup>
 
   <ItemGroup>

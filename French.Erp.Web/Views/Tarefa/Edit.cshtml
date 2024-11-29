@@ -1,6 +1,6 @@
 ﻿@using French.Erp.Application.ViewModel;
 @using Dietcode.Core.Lib;
-@model ModelBasic<TarefaViewModel, TarefaItemViewModel>
+@model ModelBasic<TarefaDto, TarefaItemDto>
 @{
     IEnumerable<SelectListItem> cliente = Model.Seletores.Seletor1 as IEnumerable<SelectListItem>;
     ViewData["User"] = Model.Nome;

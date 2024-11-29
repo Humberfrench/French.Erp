@@ -16,7 +16,6 @@
 		<ProjectReference Include="..\French.Erp.Domain\French.Erp.Domain.csproj" />
 		<ProjectReference Include="..\French.Erp.Repository\French.Erp.Repository.csproj" />
 		<ProjectReference Include="..\French.Erp.Services\French.Erp.Services.csproj" />
-		<ProjectReference Include="..\French.Erp.ViewModel\French.Erp.ViewModel.csproj" />
 	</ItemGroup>
 
 </Project>
