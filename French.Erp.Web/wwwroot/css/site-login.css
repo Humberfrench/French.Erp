@@ -1,0 +1,146 @@
+﻿/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modalLoading {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.80) url('../images/load_big.gif') 50% 50% no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+    /* Anytime the body has the loading class, our
+modal element will be visible */
+    body.loading .modalLoading {
+        display: block;
+    }
+
+
+body {
+    margin: 0;
+    color: #0f0f0f;
+    background: #f0f0f0;
+/*  background: url('../images/material-design-4k-2048x1152.jpg') fixed;*/
+    background-size: cover;
+    font: 600 16px/18px 'Open Sans',sans-serif;
+}
+
+
+@import url('../lib/font-awesome/css/fontawesome.css');
+/*@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+*/
+.login-block {
+    background: #0f0f0f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #a2a2a2, #666666); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #a2a2a2, #666666); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float: left;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.banner-sec {
+    background: url('../images/pexels-photo.jpg') no-repeat left bottom;
+    background-size: cover;
+    min-height: 500px;
+    border-radius: 0 10px 10px 0;
+    padding: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 15px 20px 0px rgba(0,0,0,0.1);
+}
+
+.carousel-inner {
+    border-radius: 0 10px 10px 0;
+}
+
+.carousel-caption {
+    text-align: left;
+    left: 5%;
+}
+
+.login-sec {
+    padding: 50px 30px;
+    position: relative;
+}
+
+    .login-sec .copy-text {
+        position: absolute;
+        width: 80%;
+        bottom: 20px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+        .login-sec .copy-text i {
+            color: #666666;
+        }
+
+        .login-sec .copy-text a {
+            color: #E36262;
+        }
+
+    .login-sec h2 {
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 30px;
+        color: #0f0f0f;
+    }
+
+        .login-sec h2:after {
+            content: " ";
+            width: 100px;
+            height: 5px;
+            background: #666666;
+            display: block;
+            margin-top: 20px;
+            border-radius: 3px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+.btn-login {
+    background: #0f0f0f;
+    color: #fff;
+    font-weight: 600;
+}
+
+.banner-text {
+    width: 70%;
+    position: absolute;
+    bottom: 40px;
+    padding-left: 20px;
+}
+
+    .banner-text h2 {
+        color: #fff;
+        font-weight: 600;
+    }
+
+        .banner-text h2:after {
+            content: " ";
+            width: 100px;
+            height: 5px;
+            background: #FFF;
+            display: block;
+            margin-top: 20px;
+            border-radius: 3px;
+        }
+
+    .banner-text p {
+        color: #fff;
+    }

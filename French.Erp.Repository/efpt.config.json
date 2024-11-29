@@ -1,0 +1,92 @@
+﻿{
+   "ContextClassName": "FrenchContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": null,
+   "ProjectRootNamespace": "French.Erp.Domain",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[ArquivoNotaFiscal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Cidade]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Cliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ComposicaoNotaFiscal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Cor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Estado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Faturamento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Mes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NotaFiscal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Servico]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[StatusNotaFiscal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tarefa]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TarefaItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TipoDeCliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TipoDePessoa]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tributo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TributoNotaFiscal]",
+         "ObjectType": 0
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseNodaTime": false,
+   "UseSpatial": false
+}

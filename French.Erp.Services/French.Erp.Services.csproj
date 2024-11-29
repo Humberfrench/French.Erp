@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dietcode.Core.DomainValidator" Version="2.0.0" />
+    <PackageReference Include="Dietcode.Core.Lib" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\French.Erp.Domain\French.Erp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

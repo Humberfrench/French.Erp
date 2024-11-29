@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "French.Erp.Web", "French.Erp.Web\French.Erp.Web.csproj", "{94B99AEB-24E2-4274-B8D3-83482C32518A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{2D3DDEB7-D7AF-48CE-84C0-F51BA8F08E41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Aplication", "1 - Aplication", "{56DBAE8D-FE3B-4693-93B7-8E8A66AE4FA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{EF733257-9BF0-418A-8348-6776423F0AD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Services", "3 - Services", "{3A17F809-391B-4490-8036-87B6942CDBA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Repository", "4 - Repository", "{0A47E98E-E8C2-449C-AFE2-325AC96B8074}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{4C2C68D9-43BF-4EE2-B0E9-60BFA3EA5EA7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "French.Erp.Application", "French.Erp.Application\French.Erp.Application.csproj", "{9630564B-E84F-4088-A8DF-21CCF44C5DB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "French.Erp.Domain", "French.Erp.Domain\French.Erp.Domain.csproj", "{2A13DC7B-890A-45D1-A4A4-AE0B8EEA4E9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "French.Erp.Services", "French.Erp.Services\French.Erp.Services.csproj", "{D4E101A9-1DD2-4952-8424-40F4D7D6AF18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "French.Erp.Repository", "French.Erp.Repository\French.Erp.Repository.csproj", "{D071624D-2B8F-443F-8145-FE6752651988}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "French.Erp.Ioc", "French.Erp.Ioc\French.Erp.Ioc.csproj", "{E619F9DB-52F3-43EF-9487-0ADF04917D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "French.Erp.ViewModel", "French.Erp.ViewModel\French.Erp.ViewModel.csproj", "{7483C237-0C1B-4E81-9E2F-248002B9D78A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94B99AEB-24E2-4274-B8D3-83482C32518A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B99AEB-24E2-4274-B8D3-83482C32518A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B99AEB-24E2-4274-B8D3-83482C32518A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B99AEB-24E2-4274-B8D3-83482C32518A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9630564B-E84F-4088-A8DF-21CCF44C5DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9630564B-E84F-4088-A8DF-21CCF44C5DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9630564B-E84F-4088-A8DF-21CCF44C5DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9630564B-E84F-4088-A8DF-21CCF44C5DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A13DC7B-890A-45D1-A4A4-AE0B8EEA4E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A13DC7B-890A-45D1-A4A4-AE0B8EEA4E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A13DC7B-890A-45D1-A4A4-AE0B8EEA4E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A13DC7B-890A-45D1-A4A4-AE0B8EEA4E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E101A9-1DD2-4952-8424-40F4D7D6AF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E101A9-1DD2-4952-8424-40F4D7D6AF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E101A9-1DD2-4952-8424-40F4D7D6AF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E101A9-1DD2-4952-8424-40F4D7D6AF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D071624D-2B8F-443F-8145-FE6752651988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D071624D-2B8F-443F-8145-FE6752651988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D071624D-2B8F-443F-8145-FE6752651988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D071624D-2B8F-443F-8145-FE6752651988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E619F9DB-52F3-43EF-9487-0ADF04917D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E619F9DB-52F3-43EF-9487-0ADF04917D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E619F9DB-52F3-43EF-9487-0ADF04917D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E619F9DB-52F3-43EF-9487-0ADF04917D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7483C237-0C1B-4E81-9E2F-248002B9D78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7483C237-0C1B-4E81-9E2F-248002B9D78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7483C237-0C1B-4E81-9E2F-248002B9D78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7483C237-0C1B-4E81-9E2F-248002B9D78A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94B99AEB-24E2-4274-B8D3-83482C32518A} = {2D3DDEB7-D7AF-48CE-84C0-F51BA8F08E41}
+		{9630564B-E84F-4088-A8DF-21CCF44C5DB8} = {56DBAE8D-FE3B-4693-93B7-8E8A66AE4FA0}
+		{2A13DC7B-890A-45D1-A4A4-AE0B8EEA4E9A} = {EF733257-9BF0-418A-8348-6776423F0AD5}
+		{D4E101A9-1DD2-4952-8424-40F4D7D6AF18} = {3A17F809-391B-4490-8036-87B6942CDBA8}
+		{D071624D-2B8F-443F-8145-FE6752651988} = {0A47E98E-E8C2-449C-AFE2-325AC96B8074}
+		{E619F9DB-52F3-43EF-9487-0ADF04917D5E} = {4C2C68D9-43BF-4EE2-B0E9-60BFA3EA5EA7}
+		{7483C237-0C1B-4E81-9E2F-248002B9D78A} = {56DBAE8D-FE3B-4693-93B7-8E8A66AE4FA0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EC34BFE-5549-45A1-987F-76C1B91CD7BC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,88 @@
+﻿@using French.Erp.Application.ViewModel;
+@using French.Erp.ViewModel.ViewModel;
+@model ModelBasic<UsuarioViewModel>
+                                         
+@{
+    ViewData["Title"] = "Usuário";
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+    ViewData["User"] = Model.Nome;
+    ViewData["Role"] = Model.Role;
+    ViewData["Admin"] = Model.Admin;
+    var linha = 0;
+}
+<div class="text-center">
+    <h3 class="display-4">Tipo de Pessoa</h3>
+</div>
+<br />
+<div class="table-responsive" style="overflow: visible;">
+    <div class="accordion" id="accordionExample">
+        @foreach (var item in Model.Lista)
+        {
+            linha++;
+            <div class="card">
+                <div class="card-header" id="headingOne_@linha">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse_@linha" aria-expanded="true" aria-controls="collapse_@linha">
+                            Usuário:<i class="fa fa-user"></i> @item.Login - 
+                            Nome: @item.Nome
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapse_@linha" class="collapse" aria-labelledby="headingOne_@linha" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <table class="table table-striped table-hover table-sm dataTable" data-item-reload="true" id="tableDados">
+                            <thead class="thead-dark">
+
+                                <tr>
+                                    <th scope="col" style="width:50%">E-mail</th>
+                                    <th scope="col" style="width:15%">Celular</th>
+                                    <th scope="col" style="width:20%">Validade Senha</th>
+                                    <th scope="col" style="width:10%">Admin</th>
+                                    <th scope="col" style="width:5%" class="text-right">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@item.Email</td>
+                                    <td>@item.Celular</td>
+                                    <td>@item.ValidadeSenha</td>
+                                    <td>
+                                        @if (item.Admin)
+                                        {
+                                            <i class="fa fa-toggle-on"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fa fa-toggle-off"></i>
+                                        }
+                                    </td>
+                                    <td class="text-right">
+                                        <div class="btn-group dropleft">
+                                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-star"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" asp-controller="Usuario" asp-action="Edit" asp-route-id="0"><i class="fa fa-file"></i>&nbsp;Novo</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" asp-controller="Usuario" asp-action="Edit" asp-route-id="@item.UsuarioId"><i class="fa fa-pencil"></i>&nbsp;Editar </a>
+                                                <a class="dropdown-item" href="#" onclick="Usuario.Excluir('@item.UsuarioId')"><i class="fa fa-trash-o"></i>&nbsp;Excluir</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+<partial name="Edit" />
+
+@section scripts
+{
+    <script src="~/Views/Usuario/main.js"></script>
+}
