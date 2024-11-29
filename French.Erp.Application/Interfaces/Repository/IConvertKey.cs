@@ -1,6 +1,6 @@
 using French.Erp.Domain.Entities.Support;
 
-namespace French.Erp.Domain.Interfaces.Repository
+namespace French.Erp.Application.Interfaces.Repository
 {
     public interface IConvertKey
     {

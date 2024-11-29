@@ -1,5 +1,4 @@
-﻿using French.Erp.ViewModel.Interface;
-using French.Erp.ViewModel.ViewModel;
+﻿using French.Erp.Application.DataObject;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

@@ -1,13 +1,13 @@
-using French.Erp.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using French.Erp.Domain.Entities;
 
-namespace French.Erp.Domain.Interfaces.Repository
+namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface ITarefaItemRepository
+    public interface ITarefaItemRepository : IBaseRepository<TarefaItem>
     {
-        Task<IEnumerable<TarefaItem>> ObterTodos();
-        Task<TarefaItem> ObterPorId(int id);
+        new Task<IEnumerable<TarefaItem>> ObterTodos();
+        new Task<TarefaItem> ObterPorId(int id);
         Task<IEnumerable<TarefaItem>> ObterTodosItensDaTarefa(int clienteId);
     }
 }

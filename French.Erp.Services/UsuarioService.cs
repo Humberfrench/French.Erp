@@ -1,45 +1,47 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class UsuarioService : BaseService<Usuario>, IUsuarioService
+    public class UsuarioService: IUsuarioService
     {
-        private readonly IUsuarioRepository repository;
-        //private readonly ValidationResult<Usuario> typedResult;
-        private readonly ValidationResult<Usuario> validationResult;
+        private readonly IUsuarioRepository usuarioRepository;
+        private readonly ValidationResult<Usuario> validationResult1;
         private readonly IConvertKey convertKey;
 
-        public UsuarioService(IBaseRepository<Usuario> baseRepository,
-                              IUsuarioRepository repository,
-                              IConvertKey convertKey) : base(baseRepository)
+        public UsuarioService(IUsuarioRepository usuarioRepository,
+                              IConvertKey convertKey) 
         {
-            this.repository = repository;
+            this.usuarioRepository = usuarioRepository;
             this.convertKey = convertKey;
-            validationResult = new ValidationResult<Usuario>();
+            validationResult1 = new ValidationResult<Usuario>();
 
         }
 
-        public async Task<ValidationResult<Usuario>> Excluir(int id)
+        public async Task<ValidationResult<bool>> Excluir(int id)
         {
-            var usuario = await ObterPorId(id);
+            var validationResult = new ValidationResult<bool>();
+            var usuario = await usuarioRepository.ObterPorId(id);
             if (usuario == null)
             {
-                validationResult.Add("Usuario inexistente.");
+                validationResult1.Add("Usuario inexistente.");
                 return validationResult;
             }
 
-            await base.Remover(usuario);
+            await usuarioRepository.Remover(usuario);
 
             return validationResult;
         }
 
-        public async Task<ValidationResult<Usuario>> Gravar(Usuario usuario)
+        public async Task<ValidationResult<UsuarioDto>> Gravar(Usuario usuario)
         {
+            var validationResult = new ValidationResult<UsuarioDto>();
+            
             //validate
             if (!usuario.IsValid())
             {
@@ -52,12 +54,12 @@ namespace French.Erp.Services
             {
                 //just add
                 usuario.Senha = convertKey.Encript(usuario.SenhaText).ChaveEncript;
-                await base.Adicionar(usuario);
+                await usuarioRepository.Adicionar(usuario);
             }
             else
             {
                 //recuperar user:
-                var user = await base.ObterPorId(usuario.UsuarioId);
+                var user = await usuarioRepository.ObterPorId(usuario.UsuarioId);
                 if (user == null)
                 {
                     validationResult.Add("Usuario inexistente.");
@@ -71,19 +73,26 @@ namespace French.Erp.Services
                 user.DataAtualizacao = DateTime.Now;
                 user.Admin = user.Admin;
 
-                await base.Atualizar(user);
+                await usuarioRepository.Atualizar(user);
             }
+
+            validationResult.Retorno = AtualizaDadosUsuario(usuario);
 
             return validationResult;
         }
 
-        public async Task<ValidationResult<Usuario>> AlterarSenha(int usuarioId, string senhaAnterior, string senhaNova)
+        public async Task<ValidationResult<UsuarioDto>> AlterarSenha(int usuarioId, string senhaAnterior, string senhaNova)
         {
-            var usuario = await ObterPorId(usuarioId);
+            var validationResult = new ValidationResult<UsuarioDto>();
+            var usuario = await usuarioRepository.ObterPorId(usuarioId);
 
             if (usuario == null)
             {
                 validationResult.Add("Usuario inexistente.");
+                validationResult.Retorno = new UsuarioDto
+                {
+                    UsuarioId = usuarioId,
+                };
                 return validationResult;
             }
 
@@ -91,28 +100,52 @@ namespace French.Erp.Services
             usuario.DataAtualizacao = DateTime.Now;
             usuario.ValidadeSenha = DateTime.Now.AddDays(90);
 
-            await base.Atualizar(usuario);
+            await usuarioRepository.Atualizar(usuario);
+
+            validationResult.Retorno = AtualizaDadosUsuario(usuario);
 
             return validationResult;
 
         }
-        public async Task<ValidationResult<Usuario>> Login(string login, string senha)
+        public async Task<ValidationResult<UsuarioDto>> Login(string login, string senha)
         {
-            var usuario = await repository.ObterUsuarioPorLogin(login);
+            var validationResult = new ValidationResult<UsuarioDto>();
+
+            var usuario = await usuarioRepository.ObterUsuarioPorLogin(login);
 
             var senhaBanco = convertKey.Decript(usuario.Senha).ChaveDecript;
 
             if (senha != senhaBanco)
             {
                 validationResult.Add("Usuário ou senha inválidos");
-                validationResult.Retorno = new Usuario
+                validationResult.Retorno = new UsuarioDto
                 {
                     Login = login,
                 };
                 return validationResult;
             }
-            validationResult.Retorno = usuario;
+
+            validationResult.Retorno = AtualizaDadosUsuario(usuario);
+
             return validationResult;
         }
+
+        UsuarioDto AtualizaDadosUsuario(Usuario usuario)
+        {
+            return new UsuarioDto
+            {
+                Admin = usuario.Admin,
+                Celular = usuario.Celular,
+                ValidadeSenha = usuario.ValidadeSenha,
+                Senha = usuario.SenhaText,
+                DataAtualizacao = usuario.DataAtualizacao,
+                UsuarioId = usuario.UsuarioId,
+                Nome = usuario.Nome,
+                Login = usuario.Login,
+                Email = usuario.Email,
+                DataCriacao = usuario.DataCriacao,
+            };
+        }
+
     }
 }

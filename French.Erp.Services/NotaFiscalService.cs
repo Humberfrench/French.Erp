@@ -1,33 +1,32 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class NotaFiscalService : BaseService<NotaFiscal>, INotaFiscalService
+    public class NotaFiscalService :  INotaFiscalService
     {
-        private readonly INotaFiscalRepository repository;
+        private readonly INotaFiscalRepository repositoryNotaFiscal;
         private readonly ValidationResult validationResult;
 
-        public NotaFiscalService(IBaseRepository<NotaFiscal> baseRepository,
-                                 INotaFiscalRepository repository) : base(baseRepository)
+        public NotaFiscalService(INotaFiscalRepository repositoryNotaFiscal) 
         {
-            this.repository = repository;
+            this.repositoryNotaFiscal = repositoryNotaFiscal;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var tipoDePessoa = await ObterPorId(id);
+            var tipoDePessoa = await repositoryNotaFiscal.ObterPorId(id);
             if (tipoDePessoa == null)
             {
                 validationResult.Add(" da Nota Fiscal inexistente");
                 return validationResult;
             }
 
-            await base.Remover(tipoDePessoa);
+            await repositoryNotaFiscal.Remover(tipoDePessoa);
 
             return validationResult;
         }
@@ -43,11 +42,11 @@ namespace French.Erp.Services
             //add or update
             if (notaFiscal.NotaFiscalId == 0)
             {
-                await base.Adicionar(notaFiscal);
+                await repositoryNotaFiscal.Adicionar(notaFiscal);
             }
             else
             {
-                await base.Atualizar(notaFiscal);
+                await repositoryNotaFiscal.Atualizar(notaFiscal);
             }
 
             return validationResult;

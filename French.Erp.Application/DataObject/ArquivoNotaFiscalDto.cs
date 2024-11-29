@@ -1,9 +1,8 @@
 ﻿using French.Erp.Application.ViewModel;
-using French.Erp.ViewModel.Interface;
 
-namespace French.Erp.ViewModel.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public class ArquivoNotaFiscalDto 
+    public class ArquivoNotaFiscalDto
     {
         public int ArquivoNotaFiscalId { get; set; }
         public int NotaFiscalId { get; set; }

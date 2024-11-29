@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\French.Erp.Application\French.Erp.Application.csproj" />
     <ProjectReference Include="..\French.Erp.Domain\French.Erp.Domain.csproj" />
   </ItemGroup>
 

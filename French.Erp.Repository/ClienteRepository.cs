@@ -1,5 +1,5 @@
-﻿using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
+﻿using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Domain.Entities;
 using French.Erp.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class ClienteRepository : BaseRepository<Cliente>, IClienteRepository
+    public class ClienteRepository : BaseRepository<Cliente>, IClienteRepository, IBaseRepository<Cliente>
     {
         public ClienteRepository(IContextManager contextManager) : base(contextManager)
         {

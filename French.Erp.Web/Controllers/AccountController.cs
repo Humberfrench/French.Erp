@@ -1,7 +1,7 @@
-﻿using French.Erp.ViewModel.Interface;
-using French.Erp.ViewModel.ViewModel;
+﻿using Dietcode.Core.Lib;
+using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
-using Dietcode.Core.Lib;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -17,11 +17,11 @@ namespace French.Erp.Web.Controllers
 {
     public class AccountController : BaseController
     {
-        private readonly IUsuarioAppService usuarioAppService;
-        public AccountController(IUsuarioAppService usuarioAppService,
+        private readonly IUsuarioService usuarioService;
+        public AccountController(IUsuarioService usuarioService,
                                  IHttpContextAccessor context) : base(context)
         {
-            this.usuarioAppService = usuarioAppService;
+            this.usuarioService = usuarioService;
         }
 
         [AllowAnonymous]
@@ -44,7 +44,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost, AllowAnonymous]
         public async Task<IActionResult> Login(Login login)
         {
-            var loginValidator = await usuarioAppService.Login(login.Usuario, login.Senha);
+            var loginValidator = await usuarioService.Login(login.Usuario, login.Senha);
             if (!loginValidator.Valid)
             {
                 var model = new ModelBasic<Login>

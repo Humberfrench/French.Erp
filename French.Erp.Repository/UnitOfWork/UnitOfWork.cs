@@ -1,5 +1,5 @@
 ﻿using Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Repository.Context;
 using French.Erp.Repository.Interfaces;
 using System;

@@ -1,9 +1,9 @@
 ﻿using French.Erp.Application.ViewModel;
-using French.Erp.ViewModel.Interface;
+using System.Collections.Generic;
 
-namespace French.Erp.ViewModel.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public partial class TipoDeClienteDto 
+    public partial class TipoDeClienteDto
     {
         public TipoDeClienteDto()
         {

@@ -1,4 +1,4 @@
-namespace French.Erp.ViewModel.ViewModel
+namespace French.Erp.Application.DataObject
 {
     public class ClienteDadosDto
     {

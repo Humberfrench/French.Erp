@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace French.Erp.Domain.Interfaces.Repository
+namespace French.Erp.Application.Interfaces.Repository
 {
     public interface IBaseRepository<TEntity> : IDisposable
     {

@@ -1,10 +1,10 @@
-using French.Erp.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using French.Erp.Domain.Entities;
 
-namespace French.Erp.Domain.Interfaces.Repository
+namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface ICidadeRepository
+    public interface ICidadeRepository : IBaseRepository<Cidade>
     {
         Task<IEnumerable<Cidade>> ObterCidades(int uf);
     }

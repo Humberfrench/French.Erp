@@ -1,10 +1,10 @@
 ﻿using Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Entities;
 using System.Threading.Tasks;
+using French.Erp.Domain.Entities;
 
-namespace French.Erp.Domain.Interfaces.Services
+namespace French.Erp.Application.Interfaces.Services
 {
-    public interface ITributoService : IBaseService<Tributo>
+    public interface ITributoService 
     {
         Task<ValidationResult> Gravar(Tributo tributo);
         Task<ValidationResult> Excluir(int id);

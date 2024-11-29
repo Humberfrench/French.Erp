@@ -1,33 +1,32 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class TributoService : BaseService<Tributo>, ITributoService
+    public class TributoService : ITributoService
     {
-        private readonly ITributoRepository repository;
+        private readonly ITributoRepository repositoryTributo;
         private readonly ValidationResult validationResult;
 
-        public TributoService(IBaseRepository<Tributo> baseRepository,
-                                    ITributoRepository repository) : base(baseRepository)
+        public TributoService( ITributoRepository repositoryTributo) 
         {
-            this.repository = repository;
+            this.repositoryTributo = repositoryTributo;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var tributo = await ObterPorId(id);
+            var tributo = await repositoryTributo.ObterPorId(id);
             if (tributo == null)
             {
                 validationResult.Add("Tributo inexistente");
                 return validationResult;
             }
 
-            await base.Remover(tributo);
+            await repositoryTributo.Remover(tributo);
 
             return validationResult;
         }
@@ -43,11 +42,11 @@ namespace French.Erp.Services
             //add or update
             if (tributo.TributoId == 0)
             {
-                await base.Adicionar(tributo);
+                await repositoryTributo.Adicionar(tributo);
             }
             else
             {
-                await base.Atualizar(tributo);
+                await repositoryTributo.Atualizar(tributo);
             }
 
             return validationResult;

@@ -1,13 +1,13 @@
 ﻿using Dapper;
+using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
 using French.Erp.Repository.Interfaces;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class NotaFiscalRepository : BaseRepository<NotaFiscal>, INotaFiscalRepository
+    public class NotaFiscalRepository : BaseRepository<NotaFiscal>, INotaFiscalRepository, IBaseRepository<NotaFiscal>
     {
         public NotaFiscalRepository(IContextManager contextManager) : base(contextManager)
         {

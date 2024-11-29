@@ -1,7 +1,7 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

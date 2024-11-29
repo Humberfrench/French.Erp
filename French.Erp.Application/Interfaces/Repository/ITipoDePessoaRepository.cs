@@ -1,6 +1,8 @@
-﻿namespace French.Erp.Domain.Interfaces.Repository
+﻿using French.Erp.Domain.Entities;
+
+namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface ITipoDePessoaRepository
+    public interface ITipoDePessoaRepository: IBaseRepository<TipoDePessoa>
     {
     }
 }

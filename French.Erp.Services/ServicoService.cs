@@ -1,26 +1,25 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class ServicoService : BaseService<Servico>, IServicoService
+    public class ServicoService :  IServicoService
     {
-        private readonly IServicoRepository repository;
+        private readonly IServicoRepository repositoryServico;
         private readonly ValidationResult validationResult;
 
-        public ServicoService(IBaseRepository<Servico> baseRepository,
-                                    IServicoRepository repository) : base(baseRepository)
+        public ServicoService(IServicoRepository repositoryServico) 
         {
-            this.repository = repository;
+            this.repositoryServico = repositoryServico;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var servico = await ObterPorId(id);
+            var servico = await repositoryServico.ObterPorId(id);
 
             if (servico == null)
             {
@@ -28,7 +27,7 @@ namespace French.Erp.Services
                 return validationResult;
             }
 
-            await base.Remover(servico);
+            await repositoryServico.Remover(servico);
 
             return validationResult;
         }
@@ -44,11 +43,11 @@ namespace French.Erp.Services
             //add or update
             if (servico.ServicoId == 0)
             {
-                await base.Adicionar(servico);
+                await repositoryServico.Adicionar(servico);
             }
             else
             {
-                await base.Atualizar(servico);
+                await repositoryServico.Atualizar(servico);
             }
 
             return validationResult;

@@ -2,10 +2,11 @@ using French.Erp.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace French.Erp.Domain.Interfaces.Repository
+namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface IClienteRepository
+    public interface IClienteRepository : IBaseRepository<Cliente>
     {
-        Task<IEnumerable<Cliente>> ObterTodos();
+        new Task<IEnumerable<Cliente>> ObterTodos();
+        new Task<Cliente> ObterPorId(int id);
     }
 }

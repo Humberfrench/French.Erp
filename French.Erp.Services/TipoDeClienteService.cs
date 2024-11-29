@@ -1,33 +1,32 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class TipoDeClienteService : BaseService<TipoDeCliente>, ITipoDeClienteService
+    public class TipoDeClienteService :  ITipoDeClienteService
     {
-        private readonly ITipoDeClienteRepository repository;
         private readonly ValidationResult validationResult;
+        private readonly ITipoDeClienteRepository repositoryTipoDeCliente;
 
-        public TipoDeClienteService(IBaseRepository<TipoDeCliente> baseRepository,
-                                    ITipoDeClienteRepository repository) : base(baseRepository)
+        public TipoDeClienteService(ITipoDeClienteRepository repositoryTipoDeCliente) 
         {
-            this.repository = repository;
+            this.repositoryTipoDeCliente = repositoryTipoDeCliente;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var tipoDeCliente = await ObterPorId(id);
+            var tipoDeCliente = await repositoryTipoDeCliente.ObterPorId(id);
             if (tipoDeCliente == null)
             {
                 validationResult.Add("Tipo de Cliente inexistente");
                 return validationResult;
             }
 
-            await base.Remover(tipoDeCliente);
+            await repositoryTipoDeCliente.Remover(tipoDeCliente);
 
             return validationResult;
         }
@@ -43,11 +42,11 @@ namespace French.Erp.Services
             //add or update
             if (tipoDeCliente.TipoDeClienteId == 0)
             {
-                await base.Adicionar(tipoDeCliente);
+                await repositoryTipoDeCliente.Adicionar(tipoDeCliente);
             }
             else
             {
-                await base.Atualizar(tipoDeCliente);
+                await repositoryTipoDeCliente.Atualizar(tipoDeCliente);
             }
 
             return validationResult;

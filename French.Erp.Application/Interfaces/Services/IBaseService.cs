@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace French.Erp.Domain.Interfaces.Services
+namespace French.Erp.Application.Interfaces.Services
 {
     public interface IBaseService<TEntity>
     {

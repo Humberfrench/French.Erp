@@ -1,5 +1,5 @@
 ﻿using Dietcode.Core.DomainValidator.Interfaces;
-using French.Erp.ViewModel.ViewModel;
+using French.Erp.Application.DataObject;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;

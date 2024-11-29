@@ -1,8 +1,8 @@
-using French.Erp.ViewModel.Interface;
+using System;
 
-namespace French.Erp.ViewModel.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public class UsuarioDto 
+    public class UsuarioDto
     {
         public int UsuarioId { get; set; }
         public string Login { get; set; }
@@ -10,7 +10,6 @@ namespace French.Erp.ViewModel.ViewModel
         public string Email { get; set; }
         public string Celular { get; set; }
         public string Senha { get; set; }
-        public string SenhaText { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime? DataAtualizacao { get; set; }
         public DateTime ValidadeSenha { get; set; }

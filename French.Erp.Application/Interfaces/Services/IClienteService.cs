@@ -1,16 +1,16 @@
 ﻿using Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Entities;
-using French.Erp.Domain.ObjectValue;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using French.Erp.Domain.Entities;
+using French.Erp.Application.DataObject;
 
-namespace French.Erp.Domain.Interfaces.Services
+namespace French.Erp.Application.Interfaces.Services
 {
-    public interface IClienteService : IBaseService<Cliente>
+    public interface IClienteService
     {
         Task<ValidationResult> Gravar(Cliente tributo);
         Task<ValidationResult> Excluir(int id);
-        new Task<IEnumerable<Cliente>> ObterTodos();
-        Task<IEnumerable<ClienteDados>> ObterTodosParaCombo();
+        Task<IEnumerable<Cliente>> ObterTodos();
+        Task<IEnumerable<ClienteDadosDto>> ObterTodosParaCombo();
     }
 }

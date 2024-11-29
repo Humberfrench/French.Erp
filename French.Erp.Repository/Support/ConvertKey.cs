@@ -1,10 +1,9 @@
 using Dapper;
+using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities.Support;
-using French.Erp.Domain.Interfaces.Repository;
 using French.Erp.Repository.Interfaces;
-using System.Data;
 using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Linq;
 
 namespace French.Erp.Repository.Support

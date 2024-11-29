@@ -1,10 +1,10 @@
 ﻿using Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Entities;
 using System.Threading.Tasks;
+using French.Erp.Domain.Entities;
 
-namespace French.Erp.Domain.Interfaces.Services
+namespace French.Erp.Application.Interfaces.Services
 {
-    public interface IStatusNotaFiscalService : IBaseService<StatusNotaFiscal>
+    public interface IStatusNotaFiscalService 
     {
         Task<ValidationResult> Gravar(StatusNotaFiscal tipoDeCliente);
         Task<ValidationResult> Excluir(int id);

@@ -1,6 +1,6 @@
 ﻿using Dietcode.Core.DomainValidator;
 
-namespace French.Erp.Domain.Interfaces.Repository
+namespace French.Erp.Application.Interfaces.Repository
 {
     public interface IUnitOfWork
     {

@@ -1,33 +1,32 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class StatusNotaFiscalService : BaseService<StatusNotaFiscal>, IStatusNotaFiscalService
+    public class StatusNotaFiscalService :  IStatusNotaFiscalService
     {
-        private readonly IStatusNotaFiscalRepository repository;
+        private readonly IStatusNotaFiscalRepository repositoryStatusNotaFiscal;
         private readonly ValidationResult validationResult;
 
-        public StatusNotaFiscalService(IBaseRepository<StatusNotaFiscal> baseRepository,
-                                       IStatusNotaFiscalRepository repository) : base(baseRepository)
+        public StatusNotaFiscalService(IStatusNotaFiscalRepository repositoryStatusNotaFiscal) 
         {
-            this.repository = repository;
+            this.repositoryStatusNotaFiscal = repositoryStatusNotaFiscal;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var tipoDePessoa = await ObterPorId(id);
+            var tipoDePessoa = await repositoryStatusNotaFiscal.ObterPorId(id);
             if (tipoDePessoa == null)
             {
                 validationResult.Add("Status da Nota Fiscal inexistente");
                 return validationResult;
             }
 
-            await base.Remover(tipoDePessoa);
+            await repositoryStatusNotaFiscal.Remover(tipoDePessoa);
 
             return validationResult;
         }
@@ -43,11 +42,11 @@ namespace French.Erp.Services
             //add or update
             if (statusNotaFiscal.StatusNotaFiscalId == 0)
             {
-                await base.Adicionar(statusNotaFiscal);
+                await repositoryStatusNotaFiscal.Adicionar(statusNotaFiscal);
             }
             else
             {
-                await base.Atualizar(statusNotaFiscal);
+                await repositoryStatusNotaFiscal.Atualizar(statusNotaFiscal);
             }
 
             return validationResult;

@@ -1,36 +1,36 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
-using French.Erp.Domain.ObjectValue;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class ClienteService : BaseService<Cliente>, IClienteService
+    public class ClienteService : IClienteService
     {
-        private readonly IClienteRepository repository;
+
+        private readonly IClienteRepository clienteRepository;
         private readonly ValidationResult validationResult;
 
-        public ClienteService(IBaseRepository<Cliente> baseRepository,
-                              IClienteRepository repository) : base(baseRepository)
+        public ClienteService(IClienteRepository clienteRepository)
         {
-            this.repository = repository;
+            this.clienteRepository = clienteRepository;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var cliente = await ObterPorId(id);
+            var cliente = await clienteRepository.ObterPorId(id);
             if (cliente == null)
             {
                 validationResult.Add("Cliente inexistente");
                 return validationResult;
             }
 
-            await base.Remover(cliente);
+            await clienteRepository.Remover(cliente);
 
             return validationResult;
         }
@@ -46,25 +46,25 @@ namespace French.Erp.Services
             //add or update
             if (cliente.ClienteId == 0)
             {
-                await base.Adicionar(cliente);
+                await clienteRepository.Adicionar(cliente);
             }
             else
             {
-                await base.Atualizar(cliente);
+                await clienteRepository.Atualizar(cliente);
             }
 
             return validationResult;
         }
 
-        public async new Task<IEnumerable<Cliente>> ObterTodos()
+        public async Task<IEnumerable<Cliente>> ObterTodos()
         {
-            return await repository.ObterTodos();
+            return await clienteRepository.ObterTodos();
         }
-        public async Task<IEnumerable<ClienteDados>> ObterTodosParaCombo()
+        public async Task<IEnumerable<ClienteDadosDto>> ObterTodosParaCombo()
         {
-            var clientes = (await base.ObterTodos()).ToList();
+            var clientes = (await clienteRepository.ObterTodos()).ToList();
 
-            var retorno = clientes.Select(c => new ClienteDados()
+            var retorno = clientes.Select(c => new ClienteDadosDto()
             {
                 ClienteId = c.ClienteId,
                 Nome = c.Nome,

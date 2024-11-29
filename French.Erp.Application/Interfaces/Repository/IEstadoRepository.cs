@@ -2,10 +2,10 @@ using French.Erp.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace French.Erp.Domain.Interfaces.Repository
+namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface IEstadoRepository
+    public interface IEstadoRepository : IBaseRepository<Estado>
     {
-        Task<IEnumerable<Estado>> ObterTodos();
+        new Task<IEnumerable<Estado>> ObterTodos();
     }
 }

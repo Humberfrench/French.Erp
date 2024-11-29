@@ -1,33 +1,32 @@
 ﻿using Dietcode.Core.DomainValidator;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
-using French.Erp.Domain.Interfaces.Repository;
-using French.Erp.Domain.Interfaces.Services;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
-    public class TipoDePessoaService : BaseService<TipoDePessoa>, ITipoDePessoaService
+    public class TipoDePessoaService : ITipoDePessoaService
     {
-        private readonly ITipoDePessoaRepository repository;
+        private readonly ITipoDePessoaRepository tipoDePessoaRepository;
         private readonly ValidationResult validationResult;
 
-        public TipoDePessoaService(IBaseRepository<TipoDePessoa> baseRepository,
-                                    ITipoDePessoaRepository repository) : base(baseRepository)
+        public TipoDePessoaService(ITipoDePessoaRepository tipoDePessoaRepository) 
         {
-            this.repository = repository;
+            this.tipoDePessoaRepository = tipoDePessoaRepository;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var tipoDePessoa = await ObterPorId(id);
+            var tipoDePessoa = await tipoDePessoaRepository.ObterPorId(id);
             if (tipoDePessoa == null)
             {
                 validationResult.Add("Tipo de Pessoa inexistente");
                 return validationResult;
             }
 
-            await base.Remover(tipoDePessoa);
+            await tipoDePessoaRepository.Remover(tipoDePessoa);
 
             return validationResult;
         }
@@ -43,11 +42,11 @@ namespace French.Erp.Services
             //add or update
             if (tipoDePessoa.TipoDePessoaId == 0)
             {
-                await base.Adicionar(tipoDePessoa);
+                await tipoDePessoaRepository.Adicionar(tipoDePessoa);
             }
             else
             {
-                await base.Atualizar(tipoDePessoa);
+                await tipoDePessoaRepository.Atualizar(tipoDePessoa);
             }
 
             return validationResult;
