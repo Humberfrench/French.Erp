@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using French.Erp.Application.DataObject;
+using French.Erp.Application.ViewModel;
 
 #nullable disable
 
-namespace French.Erp.Application.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public partial class ClienteDto 
+    public partial class ClienteDto
     {
         public ClienteDto()
         {
@@ -33,6 +33,7 @@ namespace French.Erp.Application.ViewModel
         public string Cep { get; set; }
         public int? EstadoId { get; set; }
         public int? CidadeId { get; set; }
+        public int UsuarioId { get; set; }
         public DateTime? DataCriacao { get; set; }
         public DateTime? DataAlteracao { get; set; }
 

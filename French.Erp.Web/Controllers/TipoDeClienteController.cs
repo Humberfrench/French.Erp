@@ -1,4 +1,5 @@
 ﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,19 +10,19 @@ namespace French.Erp.Web.Controllers
 {
     public class TipoDeClienteController : BaseController
     {
-        private readonly ITipoDeClienteAppService tipoTarefaAppService;
+        private readonly ITipoDeClienteService tipoDeClienteService;
 
-        public TipoDeClienteController(ITipoDeClienteAppService tipoTarefaAppService,
+        public TipoDeClienteController(ITipoDeClienteService tipoDeClienteService,
                                        IHttpContextAccessor context) : base(context)
         {
-            this.tipoTarefaAppService = tipoTarefaAppService;
+            this.tipoDeClienteService = tipoDeClienteService;
         }
 
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<TipoDeClienteDto>
             {
-                Lista = (await tipoTarefaAppService.ObterTodos()).ToList(),
+                Lista = (await tipoDeClienteService.ObterTodos()).ToList(),
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
                 Admin = Admin,
@@ -32,7 +33,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Gravar(TipoDeClienteDto tipoDeTarefa)
         {
-            var result = await tipoTarefaAppService.Gravar(tipoDeTarefa);
+            var result = await tipoDeClienteService.Gravar(tipoDeTarefa);
 
             var returnData = new
             {
@@ -55,7 +56,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost, Route("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
-            var result = await tipoTarefaAppService.Excluir(id);
+            var result = await tipoDeClienteService.Excluir(id);
 
             var returnData = new
             {

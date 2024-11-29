@@ -1,7 +1,10 @@
 ﻿using Dietcode.Core.DomainValidator;
+using Dietcode.Core.Lib;
+using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
@@ -9,47 +12,70 @@ namespace French.Erp.Services
     public class TipoDeClienteService :  ITipoDeClienteService
     {
         private readonly ValidationResult validationResult;
-        private readonly ITipoDeClienteRepository repositoryTipoDeCliente;
+        private readonly ITipoDeClienteRepository tipoDeClienteRepository;
 
-        public TipoDeClienteService(ITipoDeClienteRepository repositoryTipoDeCliente) 
+        public TipoDeClienteService(ITipoDeClienteRepository tipoDeClienteRepository) 
         {
-            this.repositoryTipoDeCliente = repositoryTipoDeCliente;
+            this.tipoDeClienteRepository = tipoDeClienteRepository;
             validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var tipoDeCliente = await repositoryTipoDeCliente.ObterPorId(id);
+            var tipoDeCliente = await tipoDeClienteRepository.ObterPorId(id);
             if (tipoDeCliente == null)
             {
                 validationResult.Add("Tipo de Cliente inexistente");
                 return validationResult;
             }
 
-            await repositoryTipoDeCliente.Remover(tipoDeCliente);
+            await tipoDeClienteRepository.Remover(tipoDeCliente);
 
             return validationResult;
         }
 
-        public async Task<ValidationResult> Gravar(TipoDeCliente tipoDeCliente)
+        public async Task<ValidationResult> Gravar(TipoDeClienteDto tipoDeClienteDados)
         {
-            //validate
-            if (!tipoDeCliente.IsValid())
-            {
-                return tipoDeCliente.ValidationResult;
-            }
 
             //add or update
-            if (tipoDeCliente.TipoDeClienteId == 0)
+            if (tipoDeClienteDados.TipoDeClienteId == 0)
             {
-                await repositoryTipoDeCliente.Adicionar(tipoDeCliente);
+                var tipoDeCliente = new TipoDeCliente()
+                {
+                    Descricao = tipoDeClienteDados.Descricao
+                };
+
+                //validate
+                if (!tipoDeCliente.IsValid())
+                {
+                    return tipoDeCliente.ValidationResult;
+                }
+
+                await tipoDeClienteRepository.Adicionar(tipoDeCliente);
             }
             else
             {
-                await repositoryTipoDeCliente.Atualizar(tipoDeCliente);
+                var tipoDeCliente = await tipoDeClienteRepository.ObterPorId(tipoDeClienteDados.TipoDeClienteId);
+                tipoDeCliente.Descricao = tipoDeClienteDados.Descricao;
+
+                //validate
+                if (!tipoDeCliente.IsValid())
+                {
+                    return tipoDeCliente.ValidationResult;
+                }
+
+                await tipoDeClienteRepository.Atualizar(tipoDeCliente);
             }
 
+
             return validationResult;
+        }
+
+        public async Task<IEnumerable<TipoDeClienteDto>> ObterTodos()
+        {
+            var tipoDeClientes = await tipoDeClienteRepository.ObterTodos();
+
+            return tipoDeClientes.ConvertObjects<List<TipoDeClienteDto>>();
         }
     }
 }

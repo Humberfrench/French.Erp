@@ -1,4 +1,6 @@
 ﻿using Dietcode.Core.DomainValidator;
+using Dietcode.Core.Lib;
+using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
@@ -38,38 +40,82 @@ namespace French.Erp.Services
             return validationResult;
         }
 
-        public async Task<ValidationResult> Gravar(Tarefa tarefa)
+        public async Task<ValidationResult> Gravar(TarefaDto tarefaDados)
         {
             //validate
-            if (!tarefa.IsValid())
-            {
-                return tarefa.ValidationResult;
-            }
 
             //add or update
-            if (tarefa.TarefaId == 0)
+            if (tarefaDados.TarefaId == 0)
             {
+                var tarefa = new Tarefa();
+
+                //TODO: Atualizar as tarefas
+                AtualizarTarefa(tarefaDados, ref tarefa);
+
+                if (!tarefa.IsValid())
+                {
+                    return tarefa.ValidationResult;
+                }
                 await repositoryTarefa.Adicionar(tarefa);
             }
             else
             {
+                var tarefa = await repositoryTarefa.ObterPorId(tarefaDados.TarefaId);
+
+                //TODO: Atualizar as tarefas
+                AtualizarTarefa(tarefaDados, ref tarefa);
+
+                if (!tarefa.IsValid())
+                {
+                    return tarefa.ValidationResult;
+                }
                 await repositoryTarefa.Atualizar(tarefa);
             }
 
             return validationResult;
         }
-        public async Task<IEnumerable<Tarefa>> ObterTodos()
+
+        void AtualizarTarefa(TarefaDto tarefaDados, ref Tarefa tarefa)
         {
-            return await repositoryTarefa.ObterTodos();
+            tarefa.TarefaId = tarefaDados.TarefaId;
+            tarefa.ClienteId = tarefaDados.ClienteId;
+            tarefa.NotaFiscalId = tarefaDados.NotaFiscalId;
+            tarefa.Nome = tarefaDados.Nome;
+            tarefa.Observacao = tarefaDados.Observacao;
+            tarefa.ValorOrcado = tarefaDados.ValorOrcado;
+            tarefa.TotalHoras = tarefaDados.TotalHoras;
+            tarefa.ValorDesconto = tarefaDados.ValorDesconto;
+            tarefa.ValorBruto = tarefaDados.ValorBruto;
+            tarefa.ValorHora = tarefaDados.ValorHora;
+            tarefa.ValorCobrado = tarefaDados.ValorCobrado;
+            tarefa.Comissao = tarefaDados.Comissao;
+            tarefa.DataInicio = tarefaDados.DataInicio;
+            tarefa.DataFim = tarefaDados.DataFim;
+
+
         }
-        public async Task<IEnumerable<Tarefa>> ObterTodosDoCliente(int clienteId)
+        void AtualizarTarefa(List<TarefaItemDto> tarefaDados, ref List<Tarefa> tarefa)
         {
-            return await repositoryTarefa.ObterTodosDoCliente(clienteId);
+            // ver que tarefa tem igual e atualizar
+            // ver que tarefa nao tem e inserir
+            // ver tarefa nao tem e deletar
         }
 
-        public async Task<Tarefa> ObterPorId(int id)
+        public async Task<IEnumerable<TarefaDto>> ObterTodos()
         {
-            return await repositoryTarefa.ObterPorId(id);
+            var tarefas = await repositoryTarefa.ObterTodos();
+            return tarefas.ConvertObjects<List<TarefaDto>>();
+        }
+        public async Task<IEnumerable<TarefaDto>> ObterTodosDoCliente(int clienteId)
+        {
+            var tarefas = await repositoryTarefa.ObterTodosDoCliente(clienteId);
+            return tarefas.ConvertObjects<List<TarefaDto>>();
+        }
+
+        public async Task<TarefaDto> ObterPorId(int id)
+        {
+            var tarefa = await repositoryTarefa.ObterPorId(id);
+            return tarefa.ConvertObjects<TarefaDto>();
         }
 
         public async Task<string> ObterNumeroDaNota(int tarefaId)

@@ -1,4 +1,5 @@
-﻿using French.Erp.Application.ViewModel;
+﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,19 +10,19 @@ namespace French.Erp.Web.Controllers
 {
     public class StatusNotaFiscalController : BaseController
     {
-        private readonly IStatusNotaFiscalAppService statusNotaFiscalAppService;
+        private readonly IStatusNotaFiscalService statusNotaFiscalService;
 
-        public StatusNotaFiscalController(IStatusNotaFiscalAppService statusNotaFiscalAppService,
+        public StatusNotaFiscalController(IStatusNotaFiscalService statusNotaFiscalService,
                                           IHttpContextAccessor context) : base(context)
         {
-            this.statusNotaFiscalAppService = statusNotaFiscalAppService;
+            this.statusNotaFiscalService = statusNotaFiscalService;
         }
 
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<StatusNotaFiscalDto>
             {
-                Lista = (await statusNotaFiscalAppService.ObterTodos()).ToList(),
+                Lista = (await statusNotaFiscalService.ObterTodos()).ToList(),
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
                 Admin = Admin,
@@ -32,7 +33,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Gravar(StatusNotaFiscalDto statusNotaFiscal)
         {
-            var result = await statusNotaFiscalAppService.Gravar(statusNotaFiscal);
+            var result = await statusNotaFiscalService.Gravar(statusNotaFiscal);
 
             var returnData = new
             {
@@ -55,7 +56,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost, Route("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
-            var result = await statusNotaFiscalAppService.Excluir(id);
+            var result = await statusNotaFiscalService.Excluir(id);
 
             var returnData = new
             {

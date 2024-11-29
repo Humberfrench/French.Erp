@@ -1,4 +1,5 @@
-﻿using French.Erp.Application.ViewModel;
+﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,19 +10,19 @@ namespace French.Erp.Web.Controllers
 {
     public class ServicoController : BaseController
     {
-        private readonly IServicoAppService servicoAppService;
+        private readonly IServicoService servicoService;
 
-        public ServicoController(IServicoAppService servicoAppService,
+        public ServicoController(IServicoService servicoService,
                                  IHttpContextAccessor context) : base(context)
         {
-            this.servicoAppService = servicoAppService;
+            this.servicoService = servicoService;
         }
 
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<ServicoDto>
             {
-                Lista = (await servicoAppService.ObterTodos()).ToList(),
+                Lista = (await servicoService.ObterTodos()).ToList(),
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
                 Admin = Admin,
@@ -32,7 +33,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Gravar(ServicoDto servico)
         {
-            var result = await servicoAppService.Gravar(servico);
+            var result = await servicoService.Gravar(servico);
 
             var returnData = new
             {
@@ -55,12 +56,12 @@ namespace French.Erp.Web.Controllers
         [HttpPost, Route("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
-            var result = await servicoAppService.Excluir(id);
+            var result = await servicoService.Excluir(id);
 
             var returnData = new
             {
                 Erro = false,
-                Mensagem = "Tipo de Cliente excluído com sucesso.",
+                Mensagem = "Serviço excluído com sucesso.",
             };
             if (!result.Valid)
             {

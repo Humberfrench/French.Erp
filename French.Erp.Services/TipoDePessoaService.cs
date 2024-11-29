@@ -1,7 +1,10 @@
 ﻿using Dietcode.Core.DomainValidator;
+using Dietcode.Core.Lib;
+using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
@@ -9,16 +12,15 @@ namespace French.Erp.Services
     public class TipoDePessoaService : ITipoDePessoaService
     {
         private readonly ITipoDePessoaRepository tipoDePessoaRepository;
-        private readonly ValidationResult validationResult;
 
-        public TipoDePessoaService(ITipoDePessoaRepository tipoDePessoaRepository) 
+        public TipoDePessoaService(ITipoDePessoaRepository tipoDePessoaRepository)
         {
             this.tipoDePessoaRepository = tipoDePessoaRepository;
-            validationResult = new ValidationResult();
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
+            var validationResult = new ValidationResult();
             var tipoDePessoa = await tipoDePessoaRepository.ObterPorId(id);
             if (tipoDePessoa == null)
             {
@@ -31,25 +33,54 @@ namespace French.Erp.Services
             return validationResult;
         }
 
-        public async Task<ValidationResult> Gravar(TipoDePessoa tipoDePessoa)
+        public async Task<ValidationResult> Gravar(TipoDePessoaDto tipoDePessoaDados)
         {
-            //validate
-            if (!tipoDePessoa.IsValid())
-            {
-                return tipoDePessoa.ValidationResult;
-            }
-
+            var validationResult = new ValidationResult();
             //add or update
-            if (tipoDePessoa.TipoDePessoaId == 0)
+            if (tipoDePessoaDados.TipoDePessoaId == 0)
             {
+                var tipoDePessoa = new TipoDePessoa()
+                {
+                    Descricao = tipoDePessoaDados.Descricao
+                };
+
+                //validate
+                if (!tipoDePessoa.IsValid())
+                {
+                    return tipoDePessoa.ValidationResult;
+                }
+
                 await tipoDePessoaRepository.Adicionar(tipoDePessoa);
             }
             else
             {
+                var tipoDePessoa = await tipoDePessoaRepository.ObterPorId(tipoDePessoaDados.TipoDePessoaId);
+                tipoDePessoa.Descricao = tipoDePessoaDados.Descricao;
+
+                //validate
+                if (!tipoDePessoa.IsValid())
+                {
+                    return tipoDePessoa.ValidationResult;
+                }
+                
                 await tipoDePessoaRepository.Atualizar(tipoDePessoa);
             }
 
             return validationResult;
         }
+
+        public async Task<IEnumerable<TipoDePessoaDto>> ObterTodos()
+        {
+            var tipoDeClientes = await tipoDePessoaRepository.ObterTodos();
+
+            return tipoDeClientes.ConvertObjects<List<TipoDePessoaDto>>();
+        }
+        public async Task<TipoDePessoaDto> ObterPorId(int id)
+        {
+            var tipoDeClientes = await tipoDePessoaRepository.ObterPorId(id);
+
+            return tipoDeClientes.ConvertObjects<TipoDePessoaDto>();
+        }
+
     }
 }

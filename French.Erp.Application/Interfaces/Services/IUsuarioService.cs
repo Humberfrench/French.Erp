@@ -1,6 +1,7 @@
 ﻿using Dietcode.Core.DomainValidator;
 using French.Erp.Application.DataObject;
 using French.Erp.Domain.Entities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace French.Erp.Application.Interfaces.Services
@@ -11,5 +12,6 @@ namespace French.Erp.Application.Interfaces.Services
         Task<ValidationResult<UsuarioDto>> Login(string login, string senha);
         Task<ValidationResult<bool>> Excluir(int id);
         Task<ValidationResult<UsuarioDto>> AlterarSenha(int usuarioId, string senhaAnterior, string senhaNova);
+        Task<IEnumerable<UsuarioDto>> ObterTodos();
     }
 }

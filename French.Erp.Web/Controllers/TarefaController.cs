@@ -1,4 +1,5 @@
-﻿using French.Erp.Application.ViewModel;
+﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,17 +14,14 @@ namespace French.Erp.Web.Controllers
     public class TarefaController : BaseController
     {
 
-        private readonly IClienteAppService clienteAppService;
-        private readonly ITarefaAppService tarefaAppService;
-        private readonly ITarefaItemAppService tarefaItemAppService;
+        private readonly IClienteService clienteAppService;
+        private readonly ITarefaService tarefaAppService;
 
-        public TarefaController(IClienteAppService clienteAppService,
-                                ITarefaAppService tarefaAppService,
-                                ITarefaItemAppService tarefaItemAppService,
+        public TarefaController(IClienteService clienteAppService,
+                                ITarefaService tarefaAppService,
                                 IHttpContextAccessor context) : base(context)
         {
             this.tarefaAppService = tarefaAppService;
-            this.tarefaItemAppService = tarefaItemAppService;
             this.clienteAppService = clienteAppService;
 
         }
@@ -120,7 +118,7 @@ namespace French.Erp.Web.Controllers
             {
                 Erro = "",
                 ViewModel = dadosModel,
-                Lista = (await tarefaItemAppService.ObterTodosItensDaTarefa(dadosModel.TarefaId)).ToList(),
+                Lista = new List<TarefaItemDto>(), //futuramente itens de tarefa,
                 Valor1 = await tarefaAppService.ObterNumeroDaNota(dadosModel.TarefaId),
                 Seletores = new SeletoresBasic
                 {
@@ -143,7 +141,7 @@ namespace French.Erp.Web.Controllers
                 Erro = "",
                 ViewModel = tarefa,
                 Valor1 = await tarefaAppService.ObterNumeroDaNota(tarefa.TarefaId),
-                Lista = (await tarefaItemAppService.ObterTodosItensDaTarefa(tarefa.TarefaId)).ToList(), //futuramente itens de tarefa
+                Lista = new List<TarefaItemDto>(), //futuramente itens de tarefa,
                 Seletores = new SeletoresBasic
                 {
                     Seletor1 = await ObterClienteParaCombo(),

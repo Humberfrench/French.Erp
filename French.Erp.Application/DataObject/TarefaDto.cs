@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace French.Erp.Application.ViewModel
+namespace French.Erp.Application.DataObject
 {
     public partial class TarefaDto
     {

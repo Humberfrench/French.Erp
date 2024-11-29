@@ -5,7 +5,7 @@ namespace French.Erp.Web.Models
 {
     public class ModelBasic<T>
     {
-        public IList<T> Lista { get; set; } = new List<T>();
+        public List<T> Lista { get; set; } = new List<T>();
         public T ViewModel { get; set; }
         public SeletoresBasic Seletores { get; set; }
         public dynamic Valor1 { get; set; }

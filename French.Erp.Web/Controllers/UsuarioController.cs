@@ -1,4 +1,5 @@
 ﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,8 +10,8 @@ namespace French.Erp.Web.Controllers
 {
     public class UsuarioController : BaseController
     {
-        private readonly IUsuarioAppService usuarioAppService;
-        public UsuarioController(IHttpContextAccessor context, IUsuarioAppService usuarioAppService) : base(context)
+        private readonly IUsuarioService usuarioAppService;
+        public UsuarioController(IHttpContextAccessor context, IUsuarioService usuarioAppService) : base(context)
         {
             this.usuarioAppService = usuarioAppService;
         }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace French.Erp.Application.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public partial class TarefaItemDto 
+    public partial class TarefaItemDto
     {
         public int TarefaItemId { get; set; }
         public int TarefaId { get; set; }

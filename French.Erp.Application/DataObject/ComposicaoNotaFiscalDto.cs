@@ -1,11 +1,12 @@
-﻿using System;
+﻿using French.Erp.Application.ViewModel;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
 
-namespace French.Erp.Application.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public partial class ComposicaoNotaFiscalDto 
+    public partial class ComposicaoNotaFiscalDto
     {
         public int ComposicaoNotaFiscalId { get; set; }
         public int NotaFiscalId { get; set; }

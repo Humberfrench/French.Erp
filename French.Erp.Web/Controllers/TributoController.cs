@@ -1,4 +1,5 @@
-﻿using French.Erp.Application.ViewModel;
+﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,19 +11,19 @@ namespace French.Erp.Web.Controllers
 {
     public class TributoController : BaseController
     {
-        private readonly ITributoAppService tributoAppService;
+        private readonly ITributoService tributoService;
 
-        public TributoController(ITributoAppService tributoAppService,
+        public TributoController(ITributoService tributoService,
                                  IHttpContextAccessor context) : base(context)
         {
-            this.tributoAppService = tributoAppService;
+            this.tributoService = tributoService;
         }
 
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<TributoDto>
             {
-                Lista = (await tributoAppService.ObterTodos()).ToList(),
+                Lista = (await tributoService.ObterTodos()).ToList(),
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
                 Admin = Admin,
@@ -33,7 +34,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost, Route("Excluir/{id}")]
         public async Task<IActionResult> Gravar(TributoDto tributo)
         {
-            var result = await tributoAppService.Gravar(tributo);
+            var result = await tributoService.Gravar(tributo);
 
             var returnData = new
             {
@@ -56,7 +57,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost, Route("{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
-            var result = await tributoAppService.Excluir(id);
+            var result = await tributoService.Excluir(id);
 
             var returnData = new
             {

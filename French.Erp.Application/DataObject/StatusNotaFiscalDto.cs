@@ -1,11 +1,12 @@
-﻿using System;
+﻿using French.Erp.Application.ViewModel;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
 
-namespace French.Erp.Application.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public partial class StatusNotaFiscalDto 
+    public partial class StatusNotaFiscalDto
     {
         public StatusNotaFiscalDto()
         {

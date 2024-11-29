@@ -1,55 +1,86 @@
 ﻿using Dietcode.Core.DomainValidator;
+using Dietcode.Core.Lib;
+using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
 {
     public class StatusNotaFiscalService :  IStatusNotaFiscalService
     {
-        private readonly IStatusNotaFiscalRepository repositoryStatusNotaFiscal;
-        private readonly ValidationResult validationResult;
+        private readonly IStatusNotaFiscalRepository statusNotaFiscalRepository;
 
-        public StatusNotaFiscalService(IStatusNotaFiscalRepository repositoryStatusNotaFiscal) 
+        public StatusNotaFiscalService(IStatusNotaFiscalRepository statusNotaFiscalRepository) 
         {
-            this.repositoryStatusNotaFiscal = repositoryStatusNotaFiscal;
-            validationResult = new ValidationResult();
+            this.statusNotaFiscalRepository = statusNotaFiscalRepository;
         }
 
         public async Task<ValidationResult> Excluir(int id)
         {
-            var tipoDePessoa = await repositoryStatusNotaFiscal.ObterPorId(id);
+            var validationResult = new ValidationResult();
+            var tipoDePessoa = await statusNotaFiscalRepository.ObterPorId(id);
             if (tipoDePessoa == null)
             {
                 validationResult.Add("Status da Nota Fiscal inexistente");
                 return validationResult;
             }
 
-            await repositoryStatusNotaFiscal.Remover(tipoDePessoa);
+            await statusNotaFiscalRepository.Remover(tipoDePessoa);
 
             return validationResult;
         }
 
-        public async Task<ValidationResult> Gravar(StatusNotaFiscal statusNotaFiscal)
+        public async Task<ValidationResult> Gravar(StatusNotaFiscalDto statusNotaFiscalDados)
         {
-            //validate
-            if (!statusNotaFiscal.IsValid())
-            {
-                return statusNotaFiscal.ValidationResult;
-            }
-
+            var validationResult = new ValidationResult();
             //add or update
-            if (statusNotaFiscal.StatusNotaFiscalId == 0)
+            if (statusNotaFiscalDados.StatusNotaFiscalId == 0)
             {
-                await repositoryStatusNotaFiscal.Adicionar(statusNotaFiscal);
+                var statusNotaFiscal = new StatusNotaFiscal()
+                {
+                    Descricao = statusNotaFiscalDados.Descricao
+                };
+
+                //validate
+                if (!statusNotaFiscal.IsValid())
+                {
+                    return statusNotaFiscal.ValidationResult;
+                }
+
+                await statusNotaFiscalRepository.Adicionar(statusNotaFiscal);
             }
             else
             {
-                await repositoryStatusNotaFiscal.Atualizar(statusNotaFiscal);
-            }
+                var statusNotaFiscal = await statusNotaFiscalRepository.ObterPorId(statusNotaFiscalDados.StatusNotaFiscalId);
+                statusNotaFiscal.Descricao = statusNotaFiscalDados.Descricao;
 
+                //validate
+                if (!statusNotaFiscal.IsValid())
+                {
+                    return statusNotaFiscal.ValidationResult;
+                }
+
+                await statusNotaFiscalRepository.Atualizar(statusNotaFiscal);
+            }
             return validationResult;
+        }
+
+
+        public async Task<StatusNotaFiscalDto> ObterPorId(int id)
+        {
+            var statusNotaFiscal = await statusNotaFiscalRepository.ObterPorId(id);
+
+            return statusNotaFiscal.ConvertObjects<StatusNotaFiscalDto>();
+        }
+
+        public async Task<List<StatusNotaFiscalDto>> ObterTodos()
+        {
+            var statusNotaFiscal = await statusNotaFiscalRepository.ObterTodos();
+
+            return statusNotaFiscal.ConvertObjects<List<StatusNotaFiscalDto>>();
         }
     }
 }

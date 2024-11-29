@@ -5,9 +5,9 @@ using System.Text.Json.Serialization;
 
 #nullable disable
 
-namespace French.Erp.Application.ViewModel
+namespace French.Erp.Application.DataObject
 {
-    public partial class CidadeDto 
+    public partial class CidadeDto
     {
         public CidadeDto()
         {

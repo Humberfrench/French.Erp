@@ -1,4 +1,5 @@
 ﻿using Dietcode.Core.DomainValidator;
+using Dietcode.Core.Lib;
 using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
@@ -21,8 +22,9 @@ namespace French.Erp.Services
             validationResult = new ValidationResult();
         }
 
-        public async Task<ValidationResult> Excluir(int id)
+        public async Task<ValidationResult<bool>> Excluir(int id)
         {
+            var validationResult = new ValidationResult<bool>();
             var cliente = await clienteRepository.ObterPorId(id);
             if (cliente == null)
             {
@@ -35,31 +37,78 @@ namespace French.Erp.Services
             return validationResult;
         }
 
-        public async Task<ValidationResult> Gravar(Cliente cliente)
+        public async Task<ValidationResult> Gravar(ClienteDto clienteDados)
         {
-            //validate
-            if (!cliente.IsValid())
-            {
-                return cliente.ValidationResult;
-            }
 
             //add or update
-            if (cliente.ClienteId == 0)
+            if (clienteDados.ClienteId == 0)
             {
+                var cliente = new Cliente();
+
+                AtualizaCliente(clienteDados, ref cliente);
+
+                //validate
+                if (!cliente.IsValid())
+                {
+                    return cliente.ValidationResult;
+                }
+
                 await clienteRepository.Adicionar(cliente);
             }
             else
             {
+                var cliente = await clienteRepository.ObterPorId(clienteDados.ClienteId);
+
+                AtualizaCliente(clienteDados, ref cliente);
+
+                //validate
+                if (!cliente.IsValid())
+                {
+                    return cliente.ValidationResult;
+                }
+                
                 await clienteRepository.Atualizar(cliente);
             }
 
             return validationResult;
         }
 
-        public async Task<IEnumerable<Cliente>> ObterTodos()
+        void AtualizaCliente(ClienteDto clienteDados, ref Cliente cliente)
         {
-            return await clienteRepository.ObterTodos();
+            cliente.Nome = clienteDados.Nome;
+            cliente.RazaoSocial = clienteDados.RazaoSocial;
+            cliente.Documento = clienteDados.Documento;
+            cliente.TipoDeClienteId = clienteDados.TipoDeClienteId;
+            cliente.TipoDePessoaId = clienteDados.TipoDePessoaId;
+            cliente.Telefone = clienteDados.Telefone;
+            cliente.Contato = clienteDados.Contato;
+            cliente.Email = clienteDados.Email;
+            cliente.InscricaoEstadual = clienteDados.InscricaoEstadual;
+            cliente.CadastroMunicipal = clienteDados.CadastroMunicipal;
+            cliente.Endereco = clienteDados.Endereco;
+            cliente.Numero = clienteDados.Numero;
+            cliente.Complemento = clienteDados.Complemento;
+            cliente.Bairro = clienteDados.Bairro;
+            cliente.Cep = clienteDados.Cep;
+            cliente.UsuarioId = clienteDados.UsuarioId;
+            cliente.EstadoId = clienteDados.EstadoId;
+            cliente.CidadeId = clienteDados.CidadeId;
         }
+
+        public async Task<IEnumerable<ClienteDto>> ObterTodos()
+        {
+            var clientes = await clienteRepository.ObterTodos();
+
+            return clientes.ConvertObjects<List<ClienteDto>>();
+        }
+
+        public async Task<ClienteDto> ObterPorId(int id)
+        {
+            var tipoDeClientes = await clienteRepository.ObterPorId(id);
+
+            return tipoDeClientes.ConvertObjects<ClienteDto>();
+        }
+
         public async Task<IEnumerable<ClienteDadosDto>> ObterTodosParaCombo()
         {
             var clientes = (await clienteRepository.ObterTodos()).ToList();
@@ -73,5 +122,6 @@ namespace French.Erp.Services
 
             return retorno;
         }
+
     }
 }

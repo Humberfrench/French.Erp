@@ -18,6 +18,7 @@ namespace French.Erp.Application.ViewModel
 
         public int NotaFiscalId { get; set; }
         public string Numero { get; set; }
+        public int UsuarioId { get; set; }
         public int ClienteId { get; set; }
         public string CodigoVerificacao { get; set; }
         public DateTime Data { get; set; }

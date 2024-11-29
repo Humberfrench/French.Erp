@@ -1,4 +1,5 @@
-﻿using French.Erp.Application.ViewModel;
+﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,28 +13,28 @@ namespace French.Erp.Web.Controllers
     [Route("Cliente")]
     public class ClienteController : BaseController
     {
-        private readonly IGenericsAppService genericAppService;
-        private readonly IClienteAppService clienteAppService;
-        private readonly ITipoDePessoaAppService tipoDePessoaAppService;
-        private readonly ITipoDeClienteAppService tipoDeClienteAppService;
+        private readonly IGenericsService genericService;
+        private readonly IClienteService clienteService;
+        private readonly ITipoDePessoaService tipoDePessoaService;
+        private readonly ITipoDeClienteService tipoDeClienteService;
 
-        public ClienteController(IClienteAppService clienteAppService,
-                                 IGenericsAppService genericAppService,
-                                 ITipoDePessoaAppService tipoDePessoaAppService,
-                                 ITipoDeClienteAppService tipoDeClienteAppService,
+        public ClienteController(IClienteService clienteService,
+                                 IGenericsService genericService,
+                                 ITipoDePessoaService tipoDePessoaService,
+                                 ITipoDeClienteService tipoDeClienteService,
                                  IHttpContextAccessor context) : base(context)
         {
-            this.genericAppService = genericAppService;
-            this.clienteAppService = clienteAppService;
-            this.tipoDePessoaAppService = tipoDePessoaAppService;
-            this.tipoDeClienteAppService = tipoDeClienteAppService;
+            this.genericService = genericService;
+            this.clienteService = clienteService;
+            this.tipoDePessoaService = tipoDePessoaService;
+            this.tipoDeClienteService = tipoDeClienteService;
         }
         [Route("")]
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<ClienteDto>
             {
-                Lista = (await clienteAppService.ObterTodos()).ToList(),
+                Lista = (await clienteService.ObterTodos()).ToList(),
                 Seletores = new SeletoresBasic
                 {
                     Seletor1 = await ObterTipoDeClienteParaCombo(),
@@ -51,7 +52,7 @@ namespace French.Erp.Web.Controllers
 
         public async Task<IActionResult> Gravar(ClienteDto servico)
         {
-            var result = await clienteAppService.Gravar(servico);
+            var result = await clienteService.Gravar(servico);
 
             var returnData = new
             {
@@ -74,7 +75,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost, Route("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
-            var result = await clienteAppService.Excluir(id);
+            var result = await clienteService.Excluir(id);
 
             var returnData = new
             {
@@ -97,28 +98,28 @@ namespace French.Erp.Web.Controllers
         [Route("ObterCidades/{id}")]
         public async Task<IActionResult> ObterCidades(int id)
         {
-            var dados = await genericAppService.ObterCidades(id);
+            var dados = await genericService.ObterCidades(id);
             return Json(dados);
 
         }
 
         private async Task<SelectList> ObterTipoDeClienteParaCombo()
         {
-            var dados = await tipoDeClienteAppService.ObterTodos();
+            var dados = await tipoDeClienteService.ObterTodos();
             var dadosSelect = new SelectList(dados, "TipoDeClienteId", "Descricao");
 
             return dadosSelect;
         }
         private async Task<SelectList> ObterTipoDePessoaParaCombo()
         {
-            var dados = await tipoDePessoaAppService.ObterTodos();
+            var dados = await tipoDePessoaService.ObterTodos();
             var dadosSelect = new SelectList(dados, "TipoDePessoaId", "Descricao");
 
             return dadosSelect;
         }
         private async Task<SelectList> ObterEstadosParaCombo()
         {
-            var dados = await genericAppService.ObterEstados();
+            var dados = await genericService.ObterEstados();
             var dadosSelect = new SelectList(dados, "EstadoId", "NomeUf");
 
             return dadosSelect;
