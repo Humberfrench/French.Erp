@@ -24,6 +24,7 @@ namespace French.Erp.Repository
                                                   .Include(c => c.Faturamento)
                                                   .Include(c => c.Cidade)
                                                   .ToList());
+
         }
 
         public new async Task<Cliente> ObterPorId(int id)

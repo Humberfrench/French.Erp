@@ -11,7 +11,7 @@ namespace French.Erp.Application.DataObject
             Cidade = new HashSet<CidadeDto>();
         }
 
-        public short EstadoId { get; set; }
+        public int EstadoId { get; set; }
         /// <summary>
         /// UF
         /// </summary>

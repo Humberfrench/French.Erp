@@ -10,6 +10,7 @@
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.0.0",
           "Dietcode.Core.Lib": "2.0.0",
+          "French.Erp.Application": "1.0.0",
           "French.Erp.Ioc": "1.0.0"
         },
         "runtime": {
@@ -692,7 +693,8 @@
       "French.Erp.Application/1.0.0": {
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.0.0",
-          "Dietcode.Core.Lib": "2.0.0"
+          "Dietcode.Core.Lib": "2.0.0",
+          "French.Erp.Domain": "1.0.0"
         },
         "runtime": {
           "French.Erp.Application.dll": {
@@ -733,6 +735,7 @@
           "Dapper": "2.1.35",
           "Dietcode.Core.DomainValidator": "2.0.0",
           "Dietcode.Core.Lib": "2.0.0",
+          "French.Erp.Application": "1.0.0",
           "French.Erp.Domain": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",

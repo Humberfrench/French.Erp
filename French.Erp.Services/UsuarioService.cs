@@ -115,6 +115,17 @@ namespace French.Erp.Services
 
             var usuario = await usuarioRepository.ObterUsuarioPorLogin(login);
 
+            if(usuario == null)
+            {
+                validationResult.Add("Usuário ou senha inválidos");
+                validationResult.Retorno = new UsuarioDto
+                {
+                    Login = login,
+                };
+                return validationResult;
+
+            }
+
             var senhaBanco = convertKey.Decript(usuario.Senha).ChaveDecript;
 
             if (senha != senhaBanco)

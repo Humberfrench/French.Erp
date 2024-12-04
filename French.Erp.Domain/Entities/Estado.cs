@@ -13,7 +13,7 @@ namespace French.Erp.Domain.Entities
             Cidade = new HashSet<Cidade>();
         }
 
-        public short EstadoId { get; set; }
+        public int EstadoId { get; set; }
         /// <summary>
         /// UF
         /// </summary>

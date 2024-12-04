@@ -15,6 +15,7 @@ namespace French.Erp.Domain.Entities
             validationResult = new ValidationResult();
             isValid = null;
         }
+
         public int UsuarioId { get; set; }
         public string Login { get; set; }
         public string Nome { get; set; }
@@ -26,6 +27,10 @@ namespace French.Erp.Domain.Entities
         public DateTime? DataAtualizacao { get; set; }
         public DateTime ValidadeSenha { get; set; }
         public bool Admin { get; set; }
+        public int TentativasInvalidas { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public DateTime? DataLogin { get; set; }
+        public bool Ativo { get; set; }
 
         #region Dados de Validação
 

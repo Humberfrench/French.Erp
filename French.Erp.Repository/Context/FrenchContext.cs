@@ -18,6 +18,7 @@ namespace French.Erp.Repository.Context
         }
 
         public virtual DbSet<ArquivoNotaFiscal> ArquivoNotaFiscal { get; set; }
+        public virtual DbSet<Banco> Bancos { get; set; }
         public virtual DbSet<Cidade> Cidade { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<ComposicaoNotaFiscal> ComposicaoNotaFiscal { get; set; }
@@ -424,6 +425,18 @@ namespace French.Erp.Repository.Context
                 entity.Property(e => e.ValidadeSenha).IsRequired();
                 entity.Property(e => e.Admin).IsRequired();
                 entity.Ignore(e => e.SenhaText);
+            });
+
+            modelBuilder.Entity<Banco>(entity =>
+            {
+                entity.Property(e => e.Codigo)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+                entity.Property(e => e.Nome)
+                    .IsRequired()
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);

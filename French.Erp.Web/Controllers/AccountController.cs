@@ -95,7 +95,7 @@ namespace French.Erp.Web.Controllers
             }
 
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var tempoSessao = DateTimeOffset.Now.AddMinutes(1);
+            var tempoSessao = DateTimeOffset.Now.AddMinutes(SessionTimeInMinutes);
             var principal = new ClaimsPrincipal(identity);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal,
                                           new AuthenticationProperties()

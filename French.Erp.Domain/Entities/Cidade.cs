@@ -21,7 +21,7 @@ namespace French.Erp.Domain.Entities
         /// Nome
         /// </summary>
         public string Nome { get; set; }
-        public short EstadoId { get; set; }
+        public int EstadoId { get; set; }
 
         public virtual Estado Estado { get; set; }
         public virtual ICollection<Cliente> Cliente { get; set; }

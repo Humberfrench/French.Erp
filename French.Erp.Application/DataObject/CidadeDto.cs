@@ -20,7 +20,7 @@ namespace French.Erp.Application.DataObject
         /// Nome
         /// </summary>
         public string Nome { get; set; }
-        public short EstadoId { get; set; }
+        public int EstadoId { get; set; }
 
         [JsonIgnore]
         public virtual EstadoDto Estado { get; set; }

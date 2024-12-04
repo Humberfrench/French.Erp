@@ -11,6 +11,7 @@
           "Dapper": "2.1.35",
           "Dietcode.Core.DomainValidator": "2.0.0",
           "Dietcode.Core.Lib": "2.0.0",
+          "French.Erp.Application": "1.0.0",
           "French.Erp.Domain": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
@@ -20,8 +21,7 @@
           "Microsoft.Extensions.Configuration": "9.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.0",
           "Microsoft.Extensions.Configuration.Json": "9.0.0",
-          "System.Data.SqlClient": "4.9.0",
-          "French.Erp.Application": "1.0.0.0"
+          "System.Data.SqlClient": "4.9.0"
         },
         "runtime": {
           "French.Erp.Repository.dll": {}
@@ -1245,6 +1245,19 @@
           }
         }
       },
+      "French.Erp.Application/1.0.0": {
+        "dependencies": {
+          "Dietcode.Core.DomainValidator": "2.0.0",
+          "Dietcode.Core.Lib": "2.0.0",
+          "French.Erp.Domain": "1.0.0"
+        },
+        "runtime": {
+          "French.Erp.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "French.Erp.Domain/1.0.0": {
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.0.0",
@@ -1253,14 +1266,6 @@
         "runtime": {
           "French.Erp.Domain.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "French.Erp.Application/1.0.0.0": {
-        "runtime": {
-          "French.Erp.Application.dll": {
-            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -1966,13 +1971,13 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
-    "French.Erp.Domain/1.0.0": {
+    "French.Erp.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "French.Erp.Application/1.0.0.0": {
-      "type": "reference",
+    "French.Erp.Domain/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

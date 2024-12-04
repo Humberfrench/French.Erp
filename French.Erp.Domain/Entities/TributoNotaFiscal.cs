@@ -9,8 +9,11 @@ namespace French.Erp.Domain.Entities
     public partial class TributoNotaFiscal
     {
         public int TributoNotaFiscalId { get; set; }
+
         public int NotaFiscalId { get; set; }
+
         public int TributoId { get; set; }
+
         public decimal Total { get; set; }
 
         public virtual NotaFiscal NotaFiscal { get; set; }

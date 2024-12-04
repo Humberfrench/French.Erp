@@ -10,7 +10,7 @@
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.0.0",
           "Dietcode.Core.Lib": "2.0.0",
-          "French.Erp.Domain": "1.0.0.0"
+          "French.Erp.Domain": "1.0.0"
         },
         "runtime": {
           "French.Erp.Application.dll": {}
@@ -46,10 +46,14 @@
           }
         }
       },
-      "French.Erp.Domain/1.0.0.0": {
+      "French.Erp.Domain/1.0.0": {
+        "dependencies": {
+          "Dietcode.Core.DomainValidator": "2.0.0",
+          "Dietcode.Core.Lib": "2.0.0"
+        },
         "runtime": {
           "French.Erp.Domain.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -83,8 +87,8 @@
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
-    "French.Erp.Domain/1.0.0.0": {
-      "type": "reference",
+    "French.Erp.Domain/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

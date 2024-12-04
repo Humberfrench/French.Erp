@@ -15,3 +15,4 @@ namespace French.Erp.Domain.Entities
         public virtual NotaFiscal NotaFiscal { get; set; }
     }
 }
+
