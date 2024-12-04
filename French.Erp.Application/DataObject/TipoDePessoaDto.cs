@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 #nullable disable
 
@@ -8,12 +9,10 @@ namespace French.Erp.Application.DataObject
     {
         public TipoDePessoaDto()
         {
-            Cliente = new HashSet<ClienteDto>();
         }
 
         public byte TipoDePessoaId { get; set; }
         public string Descricao { get; set; }
 
-        public virtual ICollection<ClienteDto> Cliente { get; set; }
     }
 }

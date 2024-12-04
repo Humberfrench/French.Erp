@@ -2,6 +2,7 @@
 using French.Erp.Domain.Validations.TipoDePessoas;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 #nullable disable
 
@@ -23,6 +24,7 @@ namespace French.Erp.Domain.Entities
         public byte TipoDePessoaId { get; set; }
         public string Descricao { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Cliente> Cliente { get; set; }
 
         #region Dados de Validação

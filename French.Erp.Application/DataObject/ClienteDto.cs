@@ -31,9 +31,10 @@ namespace French.Erp.Application.DataObject
         public string Complemento { get; set; }
         public string Bairro { get; set; }
         public string Cep { get; set; }
+        public int UsuarioId { get; set; }
         public int? EstadoId { get; set; }
         public int? CidadeId { get; set; }
-        public int UsuarioId { get; set; }
+
         public DateTime? DataCriacao { get; set; }
         public DateTime? DataAlteracao { get; set; }
 

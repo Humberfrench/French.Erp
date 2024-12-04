@@ -6,6 +6,7 @@ using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static Dietcode.Core.Lib.Extensions;
 
 namespace French.Erp.Services
 {
@@ -75,7 +76,24 @@ namespace French.Erp.Services
         {
             var tipoDeClientes = await tipoDeClienteRepository.ObterTodos();
 
-            return tipoDeClientes.ConvertObjects<List<TipoDeClienteDto>>();
+            //return tipoDeClientes.ConvertObjects<List<TipoDeClienteDto>>();
+            return ConverterObjects<List<TipoDeClienteDto>>(tipoDeClientes);
         }
+
+        Destiny ConverterObjects<Destiny>(object data) where Destiny : new()
+        {
+            string value = SerializeObject(data);
+            Destiny result = new Destiny();
+            try
+            {
+                result = DeserializeObject<Destiny>(value);
+                return result;
+            }
+            catch
+            {
+                return result;
+            }
+        }
+
     }
 }

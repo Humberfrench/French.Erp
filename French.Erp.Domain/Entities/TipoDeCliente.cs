@@ -1,5 +1,6 @@
 ﻿using Dietcode.Core.DomainValidator;
 using French.Erp.Domain.Validations.TipoDeClientes;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,6 +23,7 @@ namespace French.Erp.Domain.Entities
         public byte TipoDeClienteId { get; set; }
         public string Descricao { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Cliente> Cliente { get; set; }
 
         #region Dados de Validação

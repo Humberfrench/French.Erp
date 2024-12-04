@@ -47,13 +47,9 @@ namespace French.Erp.Repository.Context
                    .Build();
                 var connectionString = configuration.GetConnectionString("FrenchContext");
 
-                //optionsBuilder.UseLazyLoadingProxies();
                 optionsBuilder.UseSqlServer(connectionString);
+
             }
-            //if (!optionsBuilder.IsConfigured)
-            //{
-            //    //optionsBuilder.UseSqlServer("Data Source=.\\WEB;Initial Catalog=french;Integrated Security=True");
-            //}
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

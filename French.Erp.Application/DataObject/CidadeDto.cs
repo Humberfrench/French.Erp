@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 #nullable disable
 
@@ -9,7 +9,6 @@ namespace French.Erp.Application.DataObject
     {
         public CidadeDto()
         {
-            Cliente = new HashSet<ClienteDto>();
         }
 
         /// <summary>
@@ -21,10 +20,5 @@ namespace French.Erp.Application.DataObject
         /// </summary>
         public string Nome { get; set; }
         public int EstadoId { get; set; }
-
-        [JsonIgnore]
-        public virtual EstadoDto Estado { get; set; }
-        [JsonIgnore]
-        public virtual ICollection<ClienteDto> Cliente { get; set; }
     }
 }
