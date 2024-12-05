@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
-
-namespace French.Erp.Application.DataObject
+﻿namespace French.Erp.Application.DataObject
 {
     public partial class TipoDeClienteDto
     {

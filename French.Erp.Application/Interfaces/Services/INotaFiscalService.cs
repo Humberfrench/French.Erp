@@ -1,5 +1,5 @@
 ﻿using Dietcode.Core.DomainValidator;
-using French.Erp.Application.ViewModel;
+using French.Erp.Application.DataObject;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

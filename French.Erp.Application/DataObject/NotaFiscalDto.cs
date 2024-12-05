@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace French.Erp.Application.ViewModel
+namespace French.Erp.Application.DataObject
 {
     public partial class NotaFiscalDto 
     {

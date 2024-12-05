@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace French.Erp.Application.DataObject
 {

@@ -1,23 +1,27 @@
-﻿/// <reference path="./generics/main.js" />
-/// <reference path="././js/ajax.js" />
-/// <reference path="././js/mensagens.js" />
+﻿/// <reference path="../../js/site.js" />
+/// <reference path="../../js/ajax.js" />
+/// <reference path="../../js/mensagens.js" />
+
+var Cliente = new Object;
 
 
-var Cliente = new function () { }
-
-
-$(document).ready(function ()
+$(document).on('ready', function ()
 {
 
 });
 
-$("#Gravar").click(function ()
+$("#Gravar").on('click', function ()
 {
     if (!Cliente.Consistir())
     {
         return;
     }
     Cliente.Gravar();
+});
+
+$("#EstadoId").on('change', function ()
+{
+    Cliente.RenderizarComboCidades($("#EstadoId").val());
 });
 
 Cliente.Limpar = function ()
@@ -40,11 +44,8 @@ Cliente.Limpar = function ()
     $("#Cep").val('');
     $("#CidadeId").val('');
     $("#CidadeId").html('');
-    //$("#CidadeId").selectpicker('refresh')
     $("#EstadoId").val('0');
 }
-
-
 
 Cliente.Edit = function (id, nome, razaoSocial, documento,
     tipoDeCliente, tipoDePessoa, telefone,
@@ -61,9 +62,7 @@ Cliente.Edit = function (id, nome, razaoSocial, documento,
     $("#Documento").val(documento);
     $("#Contato").val(contato);
     $("#TipoDeClienteId").val(tipoDeCliente);
-    //$("#TipoDeClienteId").selectpicker('val', tipoDeCliente);
     $("#TipoDePessoaId").val(tipoDePessoa);
-    //$("#TipoDePessoaId").selectpicker('val', tipoDePessoa);
     $("#Telefone").val(telefone);
     $("#Email").val(email);
     $("#InscricaoEstadual").val(inscricaoEstadual);
@@ -74,11 +73,9 @@ Cliente.Edit = function (id, nome, razaoSocial, documento,
     $("#Bairro").val(bairro);
     $("#Cep").val(cep);
     $("#EstadoId").val(estado);
-    //$("#EstadoId").selectpicker('val',estado);
     Cliente.RenderizarComboCidades(estado);
     $("#CidadeId").val(cidade);
-    //$("#CidadeId").selectpicker('val', cidade);
-   $("#modalEdicao").modal('show');
+    $("#modalEdicao").modal('show');
 }
 
 Cliente.Novo = function ()
@@ -220,10 +217,6 @@ Cliente.Excluir = function (id)
 
 }
 
-$("#EstadoId").change(function ()
-{
-    Cliente.RenderizarComboCidades($("#EstadoId").val());
-});
 
 Cliente.RenderizarComboCidades = function (id)
 {
@@ -239,3 +232,11 @@ Cliente.RenderizarComboCidades = function (id)
     //$("#CidadeId").selectpicker('refresh')
 }
 
+Cliente.VerNotasFiscais = function ()
+{
+    $("#modalNotas").modal('show');
+}
+Cliente.VerDemandas = function ()
+{
+    $("#modalTarefas").modal('show');
+}

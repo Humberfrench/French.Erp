@@ -1,5 +1,4 @@
-﻿using French.Erp.Application.ViewModel;
-
+﻿
 namespace French.Erp.Application.DataObject
 {
     public class ArquivoNotaFiscalDto

@@ -1,5 +1,4 @@
-﻿using French.Erp.Application.ViewModel;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 #nullable disable
 

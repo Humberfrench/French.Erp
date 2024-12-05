@@ -85,8 +85,12 @@ body {
     }
 }
 
-body {
-    font-size: 0.9rem;
+body
+{
+/*    font-size: 0.9rem;*/
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .page-wrapper .sidebar-wrapper,

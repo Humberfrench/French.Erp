@@ -1,0 +1,51 @@
+﻿@using French.Erp.Application.DataObject 
+@using Dietcode.Core.Lib
+@model List<NotaFiscalDto>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="modal fade" tabindex="-1" id="modalNotas">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-black opacity-75 text-white">
+                <h5 class="modal-title">Nota Fiscal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <table class="table table-striped table-hover table-responsive-xxl dataTable" data-item-reload="true" id="tableDados">
+                        <thead>
+                            <tr class="table-dark">
+                                <th scope="col" style="width:5%">Nome</th>
+                                <th scope="col" style="width:40%">Cliente</th>
+                                <th scope="col" style="width:15%">Valor</th>
+                                <th scope="col" style="width:15%">Valor Líquido</th>
+                                <th scope="col" style="width:15%">Data</th>
+                                <th scope="col" class="text-right" style="width:10%">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="col" style="width:5%">@item.Numero</th>
+                                    <th scope="col" style="width:40%">@item.Descricao</th>
+                                    <th scope="col" style="width:15%">R$ @item.Valor</th>
+                                    <th scope="col" style="width:15%">R$ @item.Valor</th>
+                                    <th scope="col" style="width:15%">@item.Data.ToDateFormated()</th>
+                                    <th scope="col" class="text-right" style="width:10%">Ações</th>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
