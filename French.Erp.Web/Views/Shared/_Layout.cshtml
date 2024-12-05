@@ -4,52 +4,52 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - French System</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap-select/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/regular.min.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/v4-shims.css" />
     <link rel="stylesheet" href="~/lib/toastr.js/toastr.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom box-shadow">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/logo.jpg" />
+                    <img src="~/images/logo.jpg" alt="Logo" />
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="Index">Cliente</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarFaturamento" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faturamento</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarFaturamento">
-                                <a class="dropdown-item" asp-controller="Tarefa" asp-action="Index">Tarefas/Trabalhos</a>
-                                <a class="dropdown-item" href="#">Item de Tarefa</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Faturamento</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Nota Fiscal</a>
-                            </div>
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarFaturamento" role="button" data-bs-toggle="dropdown" aria-expanded="false">Faturamento</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarFaturamento">
+                                <li><a class="dropdown-item" asp-controller="Tarefa" asp-action="Index">Tarefas/Trabalhos</a></li>
+                                <li><a class="dropdown-item" href="#">Item de Tarefa</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Faturamento</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Nota Fiscal</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggl" href="#" id="navbarCadastros" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarCadastros">
-                                <a class="dropdown-item" asp-area="" asp-controller="Servico" asp-action="Index">Serviços</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-area="" asp-controller="Tributo" asp-action="Index">Tributos</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-area="" asp-controller="TipoDeCliente" asp-action="Index">Tipo de Cliente</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="TipoDePessoa" asp-action="Index">Tipo de Pessoa</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-area="" asp-controller="StatusNotaFiscal" asp-action="Index">Status Nota Fiscal</a>
-                            </div>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarCadastros" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarCadastros">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Servico" asp-action="Index">Serviços</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Tributo" asp-action="Index">Tributos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="TipoDeCliente" asp-action="Index">Tipo de Cliente</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="TipoDePessoa" asp-action="Index">Tipo de Pessoa</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="StatusNotaFiscal" asp-action="Index">Status Nota Fiscal</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuário</a>
@@ -71,13 +71,14 @@
             &copy; 2021 - French Web
         </div>
     </footer>
-    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="~/lib/popper.js/umd/popper.js"></script>
-    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="~/lib/bootstrap-select/js/bootstrap-select.js"></script>
+    
+    <script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js"></script>
     <script type="text/javascript" src="~/lib/font-awesome/js/v4-shims.js"></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/fontawesome.min.js"></script>
     <script type="text/javascript" src="~/lib/toastr.js/toastr.min.js"></script>
+    <script type="text/javascript" src="~/js/toastr-configuracao.js"></script>
     <script type="text/javascript" src="~/js/site.js" asp-append-version="true"></script>
     <script type="text/javascript" src="~/js/ajax.js" asp-append-version="true"></script>
     <script type="text/javascript" src="~/js/mensagens.js" asp-append-version="true"></script>

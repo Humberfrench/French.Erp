@@ -10,16 +10,17 @@
 <div class="text-center">
     <h3 class="display-4">Cliente</h3>
 </div>
-<div class="text-right">
-    <button type="button" class="btn btn-success" onclick="Cliente.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
+<div class="text-end">
+    <button type="button" class="btn btn-outline-success" onclick="Cliente.Novo();"><i class="fa fa-file"></i>&nbsp;Novo Cliente</button>
 </div>
 <br />
 <div class="table-responsive" style="overflow: visible;">
     <table class="table table-striped table-hover table-sm dataTable" data-item-reload="true" id="tableDados">
         <thead class="thead-dark">
             <tr>
-                <th scope="col" style="width:48%">Cliente</th>
+                <th scope="col" style="width:40%">Cliente</th>
                 <th scope="col" style="width:15%">Contato</th>
+                <th scope="col" style="width:8%">&nbsp;</th>
                 <th scope="col" style="width:12%">Documento</th>
                 <th scope="col" style="width:12%">Pessoa</th>
                 <th scope="col" style="width:8%">Tipo</th>
@@ -34,35 +35,76 @@
                         <b>Nome: </b>@item.Nome <i class="fa fa-user"></i>
                         @if (item.NotaFiscal.Count > 0)
                         {
-                        <span class="badge badge-success">@item.NotaFiscal.Count Notas Emitidas</span>
+                            <span class="badge text-bg-success">@item.NotaFiscal.Count Notas Emitidas</span>
                         }
                         @if (item.Tarefa.Count > 0)
                         {
-                    <span class="badge badge-info">@item.Tarefa.Count Demandas </span>
+                            <span class="badge text-bg-info">@item.Tarefa.Count Demandas </span>
                         }
                         <br /><b>Razão Social: </b>@item.RazaoSocial
                     </td>
                     <td>@item.Contato</td>
+                    <td>
+                        <div class="btn-group dropleft">
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-address-card"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="mailto: @item.Email">
+                                        <i class="fa fa-mail-bulk"></i>&nbsp;@item.Email
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa fa-phone"></i>&nbsp;@item.Telefone
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
                     <td>@item.Documento</td>
                     <td>@item.TipoDePessoa.Descricao</td>
                     <td>@item.TipoDeCliente.Descricao</td>
                     <td class="text-right">
-                        @*<button type="button" class="btn btn-success" onclick="Cliente.Edit('@item.ClienteId', '@item.Nome')"><i class="fa fa-pencil"></i></button>
-                        <button type="button" class="btn btn-danger" onclick="Cliente.Excluir('@item.ClienteId')"><i class="fa fa-trash-o"></i></button>*@
                         <div class="btn-group dropleft">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-star"></i>
                             </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" onclick="Cliente.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" onclick="Cliente.Edit('@item.ClienteId', '@item.Nome', '@item.RazaoSocial', '@item.Documento', '@item.TipoDeClienteId', '@item.TipoDePessoaId', '@item.Telefone', '@item.Contato', '@item.Email', '@item.InscricaoEstadual', '@item.CadastroMunicipal', '@item.Endereco', '@item.Numero', '@item.Complemento', '@item.Bairro', '@item.Cep', '@item.CidadeId', '@item.EstadoId')"><i class="fa fa-pencil"></i>&nbsp;Editar </a>
-                                <a class="dropdown-item" href="#" onclick="Cliente.Excluir('@item.ClienteId')"><i class="fa fa-trash-o"></i>&nbsp;Excluir</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" onclick="Cliente.Excluir('@item.ClienteId')"><i class="fa fa-money"></i>&nbsp;Ver Notas Fiscais</a>
-                                <a class="dropdown-item" href="#" onclick="Cliente.Excluir('@item.ClienteId')"><i class="fa fa-inbox"></i>&nbsp;Ver Demandas</a>
-                            </div>
-                        </div>                    
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="Cliente.Novo();">
+                                        <i class="fa fa-file"></i>&nbsp;Novo
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="Cliente.Edit('@item.ClienteId', '@item.Nome', '@item.RazaoSocial', '@item.Documento', '@item.TipoDeClienteId', '@item.TipoDePessoaId', '@item.Telefone', '@item.Contato', '@item.Email', '@item.InscricaoEstadual', '@item.CadastroMunicipal', '@item.Endereco', '@item.Numero', '@item.Complemento', '@item.Bairro', '@item.Cep', '@item.CidadeId', '@item.EstadoId')">
+                                        <i class="fa fa-pencil"></i>&nbsp;Editar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="Cliente.Excluir('@item.ClienteId')">
+                                        <i class="fa fa-trash-o"></i>&nbsp;Excluir
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="Cliente.VerNotasFiscais('@item.ClienteId')">
+                                        <i class="fa fa-money"></i>&nbsp;Ver Notas Fiscais
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="Cliente.VerDemandas('@item.ClienteId')">
+                                        <i class="fa fa-inbox"></i>&nbsp;Ver Demandas
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </td>
                 </tr>
             }

@@ -1,10 +1,18 @@
-﻿$body = $("body");
+﻿
+if (typeof jQuery === 'undefined')
+{
+    console.error('jQuery não está carregado!');
+} else
+{
+    console.log('jQuery está carregado!');
+}
+const $body = jQuery("body");
 
 $(function ()
 {
     $('[data-toggle="tooltip"]').tooltip();
 
-    $("form").submit(function ()
+    $("form").on('submit', function ()
     {
         $body.addClass("loading");
     });

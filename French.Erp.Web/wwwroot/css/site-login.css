@@ -30,17 +30,15 @@ modal element will be visible */
 body {
     margin: 0;
     color: #0f0f0f;
-    background: #f0f0f0;
-/*  background: url('../images/material-design-4k-2048x1152.jpg') fixed;*/
+/*    background: #f0f0f0;*/
+    background: url('../images/material-design-4k-2048x1152.jpg') fixed;
     background-size: cover;
     font: 600 16px/18px 'Open Sans',sans-serif;
 }
 
 
 @import url('../lib/font-awesome/css/fontawesome.css');
-/*@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
-*/
 .login-block {
     background: #0f0f0f; /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #a2a2a2, #666666); /* Chrome 10-25, Safari 5.1-6 */

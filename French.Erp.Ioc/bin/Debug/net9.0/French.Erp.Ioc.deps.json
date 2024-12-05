@@ -12,6 +12,7 @@
           "French.Erp.Domain": "1.0.0",
           "French.Erp.Repository": "1.0.0",
           "French.Erp.Services": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
         },
         "runtime": {

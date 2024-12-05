@@ -25,14 +25,6 @@
     {
       "library": "toastr.js@2.1.4",
       "destination": "wwwroot/lib/toastr.js/"
-    },
-    {
-      "library": "bootstrap-datepicker@1.10.0",
-      "destination": "wwwroot/lib/bootstrap-datepicker/"
-    },
-    {
-      "library": "bootstrap-select@1.13.18",
-      "destination": "wwwroot/lib/bootstrap-select/"
     }
   ]
 }

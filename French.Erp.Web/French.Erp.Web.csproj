@@ -7,17 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\lib\bootstrap-select\**" />
+    <Content Remove="wwwroot\lib\bootstrap-select\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap-select\**" />
+    <None Remove="wwwroot\lib\bootstrap-select\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dietcode.Core.DomainValidator" Version="2.0.0" />
     <PackageReference Include="Dietcode.Core.Lib" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\French.Erp.Application\French.Erp.Application.csproj" />
     <ProjectReference Include="..\French.Erp.Ioc\French.Erp.Ioc.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">

@@ -4,33 +4,43 @@
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
     var modelData = Model.ViewModel;
 }
-<div class=row>&nbsp;</div><br/>
+<div class=row>&nbsp;</div>
+<br />
 
-<section class="login-block">
+<section class="p-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 login-sec">
+            <div class="col-md-4">
                 <h3 class="text-center text-uppercase">Acesso ao Sistema</h3>
-                <form asp-controller="Account" asp-action="Login" method="post" id="formLogin" class="login-form">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1" class="text-uppercase">Login</label>
-                        <input type="text" class="form-control" placeholder="" id="Usuario" name="Usuario" required="required">
-
+                <form asp-controller="Account" asp-action="Login" method="post" id="formLogin" class="login-form" autocomplete="off">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="Usuario" name="Usuario" placeholder=" " required="required">
+                                <label for="Usuario">Login</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1" class="text-uppercase">Senha</label>
-                        <input type="password" class="form-control" placeholder="" id="Senha" name="Senha" required="required">
+                    <br />
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="Senha" name="Senha" placeholder=" " required="required">
+                                <label for="Senha">Senha</label>
+                            </div>
+                        </div>
                     </div>
-
-
-                    <div class="form-check">
-                        <label class="form-check-label d-none d-sm-none d-md-none d-xl-none d-lg-none">
-                            <input type="checkbox" class="form-check-input">
-                            <small>Lembre-Me</small>
-                        </label>
-                        <button type="submit" class="btn btn-login float-right">Acesso</button>
+                    <div class="row">
+                        <div class="form-check">
+                            <label class="form-check-label d-none d-sm-none d-md-none d-xl-none d-lg-none">
+                                <input type="checkbox" class="form-check-input">
+                                <small>Lembre-Me</small>
+                            </label>
+                        </div>
+                        <div class="form-group text-end">
+                            <button type="submit" class="btn btn-outline-primary">Acesso</button>
+                        </div>
                     </div>
-
                 </form>
                 <div class="copy-text">Created with <i class="fa fa-heart"></i> by <a href="http://www.dietcode.com.br.com">Dietcode.com.br</a></div>
             </div>

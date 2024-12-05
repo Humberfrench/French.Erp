@@ -11,7 +11,8 @@
           "Dietcode.Core.DomainValidator": "2.0.0",
           "Dietcode.Core.Lib": "2.0.0",
           "French.Erp.Application": "1.0.0",
-          "French.Erp.Ioc": "1.0.0"
+          "French.Erp.Ioc": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
         },
         "runtime": {
           "French.Erp.Web.dll": {}
@@ -721,6 +722,7 @@
           "French.Erp.Domain": "1.0.0",
           "French.Erp.Repository": "1.0.0",
           "French.Erp.Services": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
         },
         "runtime": {

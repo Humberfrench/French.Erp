@@ -1,6 +1,6 @@
-﻿/// <reference path="../generics/main.js" />
-/// <reference path="../../js/ajax.js" />
-/// <reference path="../../js/mensagens.js" />
+﻿/// <reference path="./generics/main.js" />
+/// <reference path="././js/ajax.js" />
+/// <reference path="././js/mensagens.js" />
 
 
 var Cliente = new function () { }
@@ -40,7 +40,7 @@ Cliente.Limpar = function ()
     $("#Cep").val('');
     $("#CidadeId").val('');
     $("#CidadeId").html('');
-    $("#CidadeId").selectpicker('refresh')
+    //$("#CidadeId").selectpicker('refresh')
     $("#EstadoId").val('0');
 }
 
@@ -54,16 +54,16 @@ Cliente.Edit = function (id, nome, razaoSocial, documento,
 {
 
     Cliente.Limpar();
-    $("#Nome").focus();
+    $("#Nome").trigger('focus');
     $("#Id").val(id);
     $("#Nome").val(nome);
     $("#RazaoSocial").val(razaoSocial);
     $("#Documento").val(documento);
     $("#Contato").val(contato);
     $("#TipoDeClienteId").val(tipoDeCliente);
-    $("#TipoDeClienteId").selectpicker('val', tipoDeCliente);
+    //$("#TipoDeClienteId").selectpicker('val', tipoDeCliente);
     $("#TipoDePessoaId").val(tipoDePessoa);
-    $("#TipoDePessoaId").selectpicker('val', tipoDePessoa);
+    //$("#TipoDePessoaId").selectpicker('val', tipoDePessoa);
     $("#Telefone").val(telefone);
     $("#Email").val(email);
     $("#InscricaoEstadual").val(inscricaoEstadual);
@@ -74,17 +74,17 @@ Cliente.Edit = function (id, nome, razaoSocial, documento,
     $("#Bairro").val(bairro);
     $("#Cep").val(cep);
     $("#EstadoId").val(estado);
-    $("#EstadoId").selectpicker('val',estado);
+    //$("#EstadoId").selectpicker('val',estado);
     Cliente.RenderizarComboCidades(estado);
     $("#CidadeId").val(cidade);
-    $("#CidadeId").selectpicker('val', cidade);
+    //$("#CidadeId").selectpicker('val', cidade);
    $("#modalEdicao").modal('show');
 }
 
 Cliente.Novo = function ()
 {
     Cliente.Limpar()
-    $("#Nome").focus();
+    $("#Nome").trigger('focus');
     $("#modalEdicao").modal('show');
 }
 
@@ -146,43 +146,43 @@ Cliente.Consistir = function ()
     if ($("#Nome").val() === '')
     {
         Mensagens.Erro("Preencher o campo de Nome!", "Erro.");
-        $("#Nome").focus();
+        $("#Nome").trigger('focus');
         return false;
     }
     if ($("#RazaoSocial").val() === '')
     {
         Mensagens.Erro("Preencher o campo de Razão Social!", "Erro.");
-        $("#RazaoSocial").focus();
+        $("#RazaoSocial").trigger('focus');
         return false;
     }
     if ($("#Documento").val() === '')
     {
         Mensagens.Erro("Preencher o campo de Documento!", "Erro.");
-        $("#Documento").focus();
+        $("#Documento").trigger('focus');
         return false;
     }
     if ($("#TipoDeClienteId").val() === '')
     {
         Mensagens.Erro("Preencher o campo de Tipo De Cliente!", "Erro.");
-        $("#TipoDeClienteId").focus();
+        $("#TipoDeClienteId").trigger('focus');
         return false;
     }
     if ($("#TipoDePessoaId").val() === '')
     {
         Mensagens.Erro("Preencher o campo de Tipo De Pessoa!", "Erro.");
-        $("#TipoDePessoaId").focus();
+        $("#TipoDePessoaId").trigger('focus');
         return false;
     }
     if ($("#Telefone").val() === '')
     {
         Mensagens.Erro("Preencher o campo de Telefone!", "Erro.");
-        $("#Telefone").focus();
+        $("#Telefone").trigger('focus');
         return false;
     }
     if ($("#Email").val() === '')
     {
         Mensagens.Erro("Preencher o campo de Email!", "Erro.");
-        $("#Email").focus();
+        $("#Email").trigger('focus');
         return false;
     }
 
@@ -236,6 +236,6 @@ Cliente.RenderizarComboCidades = function (id)
     }
 
     $("#CidadeId").html(opcoes);
-    $("#CidadeId").selectpicker('refresh')
+    //$("#CidadeId").selectpicker('refresh')
 }
 

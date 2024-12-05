@@ -4,12 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - French System</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site-login.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/regular.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/v4-shims.css" />
+    <link rel="stylesheet" href="~/lib/toastr.js/toastr.css" />
 </head>
 <body>
     <div class="modalLoading"></div>
-
+    <div class=row>&nbsp;</div>
     <div class="page-wrapper">
         <main class="page-content" role="main">
             <div class="container">
@@ -19,9 +23,16 @@
         <!-- page-content" -->
     </div>
     <!-- page-wrapper -->
-    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="~/lib/popper.js/umd/popper.js"></script>
-    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js"></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/v4-shims.js"></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="~/lib/toastr.js/toastr.min.js"></script>
+    <script type="text/javascript" src="~/js/toastr-configuracao.js"></script>
+    <script type="text/javascript" src="~/js/ajax.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/js/mensagens.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/js/util.js" asp-append-version="true"></script>
     <script type="text/javascript" src="~/js/site-login.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
