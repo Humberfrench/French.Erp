@@ -232,11 +232,11 @@ Cliente.RenderizarComboCidades = function (id)
     //$("#CidadeId").selectpicker('refresh')
 }
 
-Cliente.VerNotasFiscais = function ()
+Cliente.VerNotasFiscais = function (id)
 {
-    $("#modalNotas").modal('show');
+    $(id).modal('show');
 }
-Cliente.VerDemandas = function ()
+Cliente.VerDemandas = function (id)
 {
-    $("#modalTarefas").modal('show');
+    $(id).modal('show');
 }

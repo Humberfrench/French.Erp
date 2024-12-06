@@ -32,26 +32,26 @@
         <tbody>
             @foreach (var item in Model.Lista)
             {
-                var verNotas = item.NotaFiscal.Count == 0;
-                var verDemanda = item.Tarefa.Count == 0;
+                var verNotas = item.NotaFiscal.Count > 0;
+                var verDemanda = item.Tarefa.Count > 0;
                 <tr>
                     <td>
                         <b>Nome: </b>@item.Nome <i class="fa fa-user"></i>
-                        @if (item.NotaFiscal.Count > 0)
+                        @if (verNotas)
                         {
-                            <partial name="Notas" model="@item.NotaFiscal" />
+                            <partial name="Notas" model="@item.NotaFiscal" itemid="@item.ClienteId" />
                             <span class="badge text-bg-success">@item.NotaFiscal.Count Notas Emitidas</span>
                         }
-                        @if (item.Tarefa.Count > 0)
+                        @if (verDemanda)
                         {
-                            <partial name="Tarefas" model="@item.Tarefa" />
+                            <partial name="Tarefas" model="@item.Tarefa" itemid="@item.ClienteId" />
                             <span class="badge text-bg-info">@item.Tarefa.Count Demandas </span>
                         }
                         <br /><b>Razão Social: </b>@item.RazaoSocial
                     </td>
                     <td>@item.Contato</td>
                     <td>
-                        <div class="btn-group dropleft">
+                        <div class="btn-group dropend">
                             <button type="button" class="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-address-card"></i>
                             </button>
@@ -73,11 +73,11 @@
                     <td>@item.TipoDePessoa.Descricao</td>
                     <td>@item.TipoDeCliente.Descricao</td>
                     <td class="text-right">
-                        <div class="btn-group dropleft">
+                        <div class="btn-group dropstart">
                             <button type="button" class="btn btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-star"></i>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu dropdown-menu-dark">
                                 <li>
                                     <a class="dropdown-item" href="#" onclick="Cliente.Novo();">
                                         <i class="fa fa-file"></i>&nbsp;Novo
@@ -100,14 +100,32 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#" onclick="Cliente.VerNotasFiscais()">
-                                        <i class="fa fa-money"></i>&nbsp;Ver Notas Fiscais
-                                    </a>
+                                    @if (verNotas)
+                                    {
+                                        <a class="dropdown-item" href="#" onclick="Cliente.VerNotasFiscais('#modalNotas_@item.ClienteId')">
+                                            <i class="fa fa-money"></i>&nbsp;Ver Notas Fiscais (@item.NotaFiscal.Count)
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a class="dropdown-item disabled" href="#">
+                                            <i class="fa fa-money"></i>&nbsp;Sem Notas Fiscais
+                                        </a>
+                                    }
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#" onclick="Cliente.VerDemandas()">
-                                        <i class="fa fa-inbox"></i>&nbsp;Ver Demandas
-                                    </a>
+                                    @if (verDemanda)
+                                    {
+                                        <a class="dropdown-item" href="#" onclick="Cliente.VerDemandas('#modalTarefas_@item.ClienteId')">
+                                            <i class="fa fa-inbox"></i>&nbsp;Ver Demandas (@item.Tarefa.Count)
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a class="dropdown-item disabled" href="#">
+                                            <i class="fa fa-inbox"></i>&nbsp;Sem Demandas
+                                        </a>
+                                    }
                                 </li>
                             </ul>
                         </div>
