@@ -34,17 +34,18 @@
             {
                 var verNotas = item.NotaFiscal.Count > 0;
                 var verDemanda = item.Tarefa.Count > 0;
+                ViewData["ClienteId"] = item.ClienteId;
                 <tr>
                     <td>
                         <b>Nome: </b>@item.Nome <i class="fa fa-user"></i>
                         @if (verNotas)
-                        {
-                            <partial name="Notas" model="@item.NotaFiscal" itemid="@item.ClienteId" />
+                        {                           
+                            <partial name="Notas" model="@item.NotaFiscal" />
                             <span class="badge text-bg-success">@item.NotaFiscal.Count Notas Emitidas</span>
                         }
                         @if (verDemanda)
                         {
-                            <partial name="Tarefas" model="@item.Tarefa" itemid="@item.ClienteId" />
+                            <partial name="Tarefas" model="@item.Tarefa"/>
                             <span class="badge text-bg-info">@item.Tarefa.Count Demandas </span>
                         }
                         <br /><b>Razão Social: </b>@item.RazaoSocial

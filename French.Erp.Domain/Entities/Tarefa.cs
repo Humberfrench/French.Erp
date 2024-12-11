@@ -11,12 +11,12 @@ namespace French.Erp.Domain.Entities
     public partial class Tarefa
     {
         private readonly ValidationResult validationResult;
-        private bool? isValid;
+        private bool isValid;
 
         public Tarefa()
         {
             validationResult = new ValidationResult();
-            isValid = null;
+            isValid = false;
             ComposicaoNotaFiscal = new HashSet<ComposicaoNotaFiscal>();
             TarefaItem = new HashSet<TarefaItem>();
         }
@@ -46,7 +46,7 @@ namespace French.Erp.Domain.Entities
 
         public virtual bool IsValid()
         {
-            if (!isValid.HasValue)
+            if (!isValid)
             {
                 var validationDados = Validar(this);
                 if (!validationDados.Valid)
@@ -55,7 +55,7 @@ namespace French.Erp.Domain.Entities
                 }
                 return validationResult.Valid;
             }
-            return isValid.Value;
+            return isValid;
 
         }
 

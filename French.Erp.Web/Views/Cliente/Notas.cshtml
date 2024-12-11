@@ -5,7 +5,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    var nota = ViewData["itemId"];
+    var nota = ViewData["ClienteId"];
 }
 <div class="modal fade" tabindex="-1" id="modalNotas_@nota">
     <div class="modal-dialog modal-xl">
@@ -20,11 +20,10 @@
                         <thead>
                             <tr class="table-dark">
                                 <th scope="col" style="width:5%">Nome</th>
-                                <th scope="col" style="width:40%">Cliente</th>
+                                <th scope="col" style="width:50%">Cliente</th>
                                 <th scope="col" style="width:15%">Valor</th>
                                 <th scope="col" style="width:15%">Valor Líquido</th>
                                 <th scope="col" style="width:15%">Data</th>
-                                <th scope="col" class="text-right" style="width:10%">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,11 +31,10 @@
                             {
                                 <tr>
                                     <th scope="col" style="width:5%">@item.Numero</th>
-                                    <th scope="col" style="width:40%">@item.Descricao</th>
-                                    <th scope="col" style="width:15%">R$ @item.Valor</th>
-                                    <th scope="col" style="width:15%">R$ @item.Valor</th>
+                                    <th scope="col" style="width:50%">@item.Descricao</th>
+                                    <th scope="col" style="width:15%">R$ @item.Valor.ToString("N2")</th>
+                                    <th scope="col" style="width:15%">R$ @item.ValorLiquido.ToString("N2")</th>
                                     <th scope="col" style="width:15%">@item.Data.ToDateFormated()</th>
-                                    <th scope="col" class="text-right" style="width:10%">Ações</th>
                                 </tr>
 
                             }

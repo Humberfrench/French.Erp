@@ -59,7 +59,7 @@ namespace French.Erp.Domain.Entities
         {
             if (!isValid.HasValue)
             {
-                var validationDados = Validar(this);
+                var validationDados = Validar();
                 if (!validationDados.Valid)
                 {
                     validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
@@ -70,10 +70,10 @@ namespace French.Erp.Domain.Entities
 
         }
 
-        public virtual ValidationResult Validar(Cliente entity)
+        public virtual ValidationResult Validar()
         {
             var entidadeNomeValidate = new ClienteEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
+            var validationResultEntidade = entidadeNomeValidate.Validar(this);
             isValid = validationResultEntidade.Valid;
             if (!validationResultEntidade.Valid)
             {

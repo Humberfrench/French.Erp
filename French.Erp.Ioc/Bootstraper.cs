@@ -65,6 +65,9 @@ namespace French.Erp.Ioc
             services.AddScoped<IUsuarioService, UsuarioService>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
+            services.AddScoped<ILeadService, LeadService>();
+            services.AddScoped<ILeadRepository, LeadRepository>();
+
             services.AddScoped<ICidadeRepository, CidadeRepository>();
             services.AddScoped<IEstadoRepository, EstadoRepository>();
             services.AddScoped<IGenericsService, GenericsService>();

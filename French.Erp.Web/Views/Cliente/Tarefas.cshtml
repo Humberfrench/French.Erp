@@ -5,7 +5,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    var tarefa = ViewData["itemId"];
+    var tarefa = ViewData["ClienteId"];
 
 }
 <div class="modal fade" tabindex="-1" id="modalTarefas_@tarefa">
@@ -22,8 +22,7 @@
                                 <tr class="table-dark">
                                     <th scope="col" style="width:45%">Nome</th>
                                     <th scope="col" style="width:15%">Valor</th>
-                                    <th scope="col" style="width:30%">Periodo</th>
-                                    <th scope="col" class="text-right" style="width:10%">Ações</th>
+                                    <th scope="col" style="width:40%">Periodo</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,9 +30,8 @@
                             {
                                 <tr>
                                     <th scope="col" style="width:45%">@item.Nome</th>
-                                    <th scope="col" style="width:15%">R$ @item.ValorCobrado</th>
-                                    <th scope="col" style="width:30%">@item.DataInicio.ToDateFormated() - @item.DataFim.ToDateFormated()</th>
-                                    <th scope="col" class="text-right" style="width:10%">Ações</th>
+                                    <th scope="col" style="width:15%">R$ @item.ValorCobrado.Value.ToString("N2")</th>
+                                    <th scope="col" style="width:40%">@item.DataInicio.ToDateFormated() - @item.DataFim.ToDateFormated()</th>
                                 </tr>
 
                             }
