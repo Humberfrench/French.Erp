@@ -10,26 +10,25 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
 {
-    [Route("Cliente")]
-    public class ClienteController : BaseController
+    [Route("[controller]")]
+    public class ClienteController : CommonController
     {
-        private readonly IGenericsService genericService;
         private readonly IClienteService clienteService;
-        private readonly ITipoDePessoaService tipoDePessoaService;
-        private readonly ITipoDeClienteService tipoDeClienteService;
 
         public ClienteController(IClienteService clienteService,
                                  IGenericsService genericService,
                                  ITipoDePessoaService tipoDePessoaService,
                                  ITipoDeClienteService tipoDeClienteService,
-                                 IHttpContextAccessor context) : base(context)
+                                 IHttpContextAccessor context) : base(genericService,
+                                                                      tipoDePessoaService,
+                                                                      tipoDeClienteService,
+                                                                      clienteService,
+                                                                      context)
         {
-            this.genericService = genericService;
             this.clienteService = clienteService;
-            this.tipoDePessoaService = tipoDePessoaService;
-            this.tipoDeClienteService = tipoDeClienteService;
         }
-        [Route("")]
+
+        [HttpGet("")]
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<ClienteDto>
@@ -48,7 +47,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpPost, Route("Gravar")]
+        [HttpPost("Gravar")]
 
         public async Task<IActionResult> Gravar(ClienteDto servico)
         {
@@ -72,7 +71,7 @@ namespace French.Erp.Web.Controllers
 
         }
 
-        [HttpPost, Route("Excluir/{id}")]
+        [HttpPost("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
             var result = await clienteService.Excluir(id);
@@ -95,34 +94,5 @@ namespace French.Erp.Web.Controllers
 
         }
 
-        [Route("ObterCidades/{id}")]
-        public async Task<IActionResult> ObterCidades(int id)
-        {
-            var dados = await genericService.ObterCidades(id);
-            return Json(dados);
-
-        }
-
-        private async Task<SelectList> ObterTipoDeClienteParaCombo()
-        {
-            var dados = await tipoDeClienteService.ObterTodos();
-            var dadosSelect = new SelectList(dados, "TipoDeClienteId", "Descricao");
-
-            return dadosSelect;
-        }
-        private async Task<SelectList> ObterTipoDePessoaParaCombo()
-        {
-            var dados = await tipoDePessoaService.ObterTodos();
-            var dadosSelect = new SelectList(dados, "TipoDePessoaId", "Descricao");
-
-            return dadosSelect;
-        }
-        private async Task<SelectList> ObterEstadosParaCombo()
-        {
-            var dados = await genericService.ObterEstados();
-            var dadosSelect = new SelectList(dados, "EstadoId", "NomeUf");
-
-            return dadosSelect;
-        }
     }
 }

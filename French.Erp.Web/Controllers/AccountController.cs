@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
 {
+    [Route("[controller]"), AllowAnonymous]
     public class AccountController : BaseController
     {
         private readonly IUsuarioService usuarioService;
@@ -24,7 +25,7 @@ namespace French.Erp.Web.Controllers
             this.usuarioService = usuarioService;
         }
 
-        [AllowAnonymous]
+        [AllowAnonymous, HttpGet("")]
         public IActionResult Login()
         {
             var model = new ModelBasic<Login>
@@ -71,7 +72,8 @@ namespace French.Erp.Web.Controllers
             return View();
         }
 
-        public async Task AutenticarUsuario(UsuarioDto usuario)
+        [NonAction]
+        protected async Task AutenticarUsuario(UsuarioDto usuario)
         {
 
             var claims = new List<Claim>();
@@ -102,7 +104,7 @@ namespace French.Erp.Web.Controllers
                                           { IsPersistent = true, ExpiresUtc = tempoSessao });
         }
 
-        [AllowAnonymous]
+        [HttpGet("LogOff"), AllowAnonymous]
         public async Task<IActionResult> LogOff()
         {
 

@@ -15,17 +15,20 @@ namespace French.Erp.Web
     using static Ioc.Bootstraper;
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IWebHostEnvironment Env { get; set; }
+        public IConfiguration Configuration { get; }
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            Env = env;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDistributedMemoryCache();
+            services.AddControllersWithViews();
 
             //IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
             //                                                             .AddJsonFile("appsettings.json").Build();
@@ -52,6 +55,8 @@ namespace French.Erp.Web
                 options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
             });
 
+            services.AddMvc().AddRazorPagesOptions(options => options.Conventions.AddAreaPageRoute("Home", "/Index", ""));
+
             services.AddMvc(config =>
             {
 
@@ -61,7 +66,6 @@ namespace French.Erp.Web
 
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
-
 
             services.AddAuthentication(optionsAuth =>
             {
@@ -74,8 +78,8 @@ namespace French.Erp.Web
             options =>
             {
                 options.Cookie.HttpOnly = true; // Um sinalizador que diz que o cookie está disponível apenas para servidores. O navegador envia apenas o cookie, mas não pode acessá-lo através do JavaScript
-                options.LoginPath = "/Account/Login";
-                options.AccessDeniedPath = "/Account/Login";
+                options.LoginPath = "/Account";
+                options.AccessDeniedPath = "/Account";
             });
 
             //container IOC and Contexts

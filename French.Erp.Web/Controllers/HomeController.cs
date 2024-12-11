@@ -6,6 +6,7 @@ using System.Diagnostics;
 
 namespace French.Erp.Web.Controllers
 {
+    [Route("[controller]")]
     public class HomeController : BaseController
     {
 
@@ -15,6 +16,7 @@ namespace French.Erp.Web.Controllers
         }
 
 
+        [HttpGet("")]
         public IActionResult Index()
         {
             if (!IsValid())
@@ -33,12 +35,14 @@ namespace French.Erp.Web.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [HttpGet("Error")]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [HttpGet("404")]
         public IActionResult Erro404()
         {
             return View("404");

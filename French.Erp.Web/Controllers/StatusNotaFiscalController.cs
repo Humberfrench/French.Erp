@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
 {
+    [Route("[controller]")]
     public class StatusNotaFiscalController : BaseController
     {
         private readonly IStatusNotaFiscalService statusNotaFiscalService;
@@ -18,6 +19,7 @@ namespace French.Erp.Web.Controllers
             this.statusNotaFiscalService = statusNotaFiscalService;
         }
 
+        [HttpGet("")]
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<StatusNotaFiscalDto>
@@ -53,7 +55,7 @@ namespace French.Erp.Web.Controllers
 
         }
 
-        [HttpPost, Route("Excluir/{id}")]
+        [HttpPost("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
             var result = await statusNotaFiscalService.Excluir(id);

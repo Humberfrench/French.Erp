@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
 {
+    [Route("[controller]")]
     public class UsuarioController : BaseController
     {
         private readonly IUsuarioService usuarioAppService;
@@ -16,6 +17,7 @@ namespace French.Erp.Web.Controllers
             this.usuarioAppService = usuarioAppService;
         }
 
+        [HttpGet("")]
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<UsuarioDto>

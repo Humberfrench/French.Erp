@@ -10,28 +10,32 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
 {
-    [Route("Tarefa")]
-    public class TarefaController : BaseController
+    [Route("[controller]")]
+    public class TarefaController : CommonController
     {
 
-        private readonly IClienteService clienteAppService;
-        private readonly ITarefaService tarefaAppService;
+        private readonly ITarefaService tarefaService;
 
-        public TarefaController(IClienteService clienteAppService,
-                                ITarefaService tarefaAppService,
-                                IHttpContextAccessor context) : base(context)
+        public TarefaController(ITarefaService tarefaService,
+                                IGenericsService genericService,
+                                ITipoDePessoaService tipoDePessoaService,
+                                ITipoDeClienteService tipoDeClienteService,
+                                IClienteService clienteService,
+                                IHttpContextAccessor context) : base(genericService,
+                                                                   tipoDePessoaService,
+                                                                   tipoDeClienteService,
+                                                                   clienteService,
+                                                                   context)
         {
-            this.tarefaAppService = tarefaAppService;
-            this.clienteAppService = clienteAppService;
-
+            this.tarefaService = tarefaService;
         }
 
-        [Route("")]
+        [HttpGet("")]
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<TarefaDto>
             {
-                Lista = (await tarefaAppService.ObterTodos()).ToList(),
+                Lista = (await tarefaService.ObterTodos()).ToList(),
                 Valor1 = 0,
                 Seletores = new SeletoresBasic
                 {
@@ -45,12 +49,12 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [Route("{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Index(int id)
         {
             var model = new ModelBasic<TarefaDto>
             {
-                Lista = (await tarefaAppService.ObterTodosDoCliente(id)).ToList(),
+                Lista = (await tarefaService.ObterTodosDoCliente(id)).ToList(),
                 Valor1 = id,
                 Seletores = new SeletoresBasic
                 {
@@ -64,7 +68,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [Route("New/{clienteId}")]
+        [HttpGet("New/{clienteId}")]
         public async Task<IActionResult> New(int clienteId)
         {
 
@@ -89,10 +93,10 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [Route("Edit/{id}")]
+        [HttpGet("Edit/{id}")]
         public async Task<IActionResult> Edit(int id)
         {
-            var dadosModel = await tarefaAppService.ObterPorId(id);
+            var dadosModel = await tarefaService.ObterPorId(id);
             if (dadosModel == null) // erro
             {
                 // tratar
@@ -119,7 +123,7 @@ namespace French.Erp.Web.Controllers
                 Erro = "",
                 ViewModel = dadosModel,
                 Lista = new List<TarefaItemDto>(), //futuramente itens de tarefa,
-                Valor1 = await tarefaAppService.ObterNumeroDaNota(dadosModel.TarefaId),
+                Valor1 = await tarefaService.ObterNumeroDaNota(dadosModel.TarefaId),
                 Seletores = new SeletoresBasic
                 {
                     Seletor1 = await ObterClienteParaCombo(),
@@ -132,7 +136,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpPost, Route("Edit")]
+        [HttpPost("Edit")]
         public async Task<IActionResult> Edit(TarefaDto tarefa)
         {
 
@@ -140,7 +144,7 @@ namespace French.Erp.Web.Controllers
             {
                 Erro = "",
                 ViewModel = tarefa,
-                Valor1 = await tarefaAppService.ObterNumeroDaNota(tarefa.TarefaId),
+                Valor1 = await tarefaService.ObterNumeroDaNota(tarefa.TarefaId),
                 Lista = new List<TarefaItemDto>(), //futuramente itens de tarefa,
                 Seletores = new SeletoresBasic
                 {
@@ -153,16 +157,6 @@ namespace French.Erp.Web.Controllers
 
             return View(model);
         }
-
-
-        private async Task<SelectList> ObterClienteParaCombo()
-        {
-            var dados = await clienteAppService.ObterTodosParaCombo();
-            var dadosSelect = new SelectList(dados, "ClienteId", "NomeCompleto");
-
-            return dadosSelect;
-        }
-
 
     }
 }

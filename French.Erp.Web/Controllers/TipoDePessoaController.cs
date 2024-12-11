@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
 {
+    [Route("[controller]")]
     public class TipoDePessoaController : BaseController
     {
         private readonly ITipoDePessoaService tipoPessoaService;
@@ -18,6 +19,7 @@ namespace French.Erp.Web.Controllers
             this.tipoPessoaService = tipoPessoaService;
         }
 
+        [HttpGet("")]
         public async Task<IActionResult> Index()
         {
             var model = new ModelBasic<TipoDePessoaDto>
@@ -52,7 +54,7 @@ namespace French.Erp.Web.Controllers
 
         }
 
-        [HttpPost, Route("Excluir/{id}")]
+        [HttpPost("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
             var result = await tipoPessoaService.Excluir(id);
