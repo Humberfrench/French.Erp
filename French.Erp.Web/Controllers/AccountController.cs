@@ -42,7 +42,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpPost, AllowAnonymous]
+        [HttpPost(""), AllowAnonymous]
         public async Task<IActionResult> Login(Login login)
         {
             var loginValidator = await usuarioService.Login(login.Usuario, login.Senha);
@@ -66,7 +66,7 @@ namespace French.Erp.Web.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpPost, AllowAnonymous]
+        [HttpPost("RecuperarSenha"), AllowAnonymous]
         public async Task<IActionResult> RecuperarSenha(Login login)
         {
             return View();

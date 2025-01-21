@@ -25,6 +25,7 @@ namespace French.Erp.Repository.Context
         public virtual DbSet<Cor> Cor { get; set; }
         public virtual DbSet<Estado> Estado { get; set; }
         public virtual DbSet<Faturamento> Faturamento { get; set; }
+        public virtual DbSet<Lead> Lead { get; set; }
         public virtual DbSet<Mes> Mes { get; set; }
         public virtual DbSet<NotaFiscal> NotaFiscal { get; set; }
         public virtual DbSet<Servico> Servico { get; set; }
@@ -165,6 +166,57 @@ namespace French.Erp.Repository.Context
                     .HasForeignKey(d => d.TipoDePessoaId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Cliente_TipoDePessoa");
+            });
+
+            modelBuilder.Entity<Lead>(entity =>
+            {
+                entity.Property(e => e.LeadId).ValueGeneratedOnAdd(); ;
+
+                entity.Property(e => e.Descricao)
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Empresa)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Contato)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Documento)
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Telefone)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.DataDeCriacao)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Documento)
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.UsuarioId).HasColumnType("int").IsRequired();
+
+                entity.Property(e => e.TipoDePessoaId).HasColumnType("int").IsRequired();
+
+                entity.Property(e => e.TipoDeClienteId).HasColumnType("int").IsRequired();
+
+                entity.Property(e => e.Efetivada).HasColumnType("bit").IsRequired();
+
             });
 
             modelBuilder.Entity<ComposicaoNotaFiscal>(entity =>

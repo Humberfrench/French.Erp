@@ -27,6 +27,10 @@ namespace French.Erp.Web.Controllers
                                 IClienteService clienteService,
                                 IHttpContextAccessor context) : base(context)
         {
+            this.genericService = genericService;
+            this.clienteService = clienteService;
+            this.tipoDePessoaService = tipoDePessoaService;
+            this.tipoDeClienteService = tipoDeClienteService;
         }
         #region Endpoints Comuns
 
