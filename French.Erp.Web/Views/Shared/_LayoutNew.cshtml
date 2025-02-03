@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="~/lib/font-awesome/css/regular.min.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/v4-shims.css" />
     <link rel="stylesheet" href="~/lib/toastr.js/toastr.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" />
 </head>
@@ -58,7 +58,7 @@
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
-                                <i class="fa fa-tachometer-alt"></i>
+                                <i class="fa fa-address-book"></i>
                                 <span>CRM</span>
                                 <span class="badge bg-warning">New</span>
                             </a>
@@ -77,7 +77,121 @@
                                 </ul>
                             </div>
                         </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-brazilian-real-sign"></i>
+                                <span>Faturamento</span>
+                                <span class="badge bg-warning">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a asp-area="" asp-controller="Faturamento" asp-action="Index">
+                                            Faturamento<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Notas Fiscais<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Arquivos NFs<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-square-pen"></i>
+                                <span>Lançamentos</span>
+                                <span class="badge bg-warning">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a asp-area="" asp-controller="Cliente" asp-action="Index">
+                                            Tarefas/Trabalhos<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Notas Fiscais<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-keyboard"></i>
+                                <span>Cadastros</span>
+                                <span class="badge bg-warning">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Bancos<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Servico" asp-action="Index">
+                                            Serviços<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Status Nota Fiscal<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Cliente" asp-action="Index">
+                                            Tipo de Cliente<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Tipo de Pessoa<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Tributos<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Tributo Nota Fiscal<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <!-- Continue com os outros itens do menu -->
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-user-group"></i>
+                                <span>Administrativo</span>
+                                <span class="badge bg-warning">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a asp-area="" asp-controller="Cliente" asp-action="Index">
+                                            Usuários<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Lead" asp-action="Index">
+                                            Seus Dados<span class="badge bg-success">Pro</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

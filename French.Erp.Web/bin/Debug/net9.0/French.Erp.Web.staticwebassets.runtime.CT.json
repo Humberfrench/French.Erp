@@ -1,0 +1,4962 @@
+{
+  "ContentRoots": [
+    "/app/wwwroot/",
+    "/app/obj/Debug/net9.0/compressed/"
+  ],
+  "Root": {
+    "Children": {
+      "css": {
+        "Children": {
+          "site-login-old.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/site-login-old.css"
+            },
+            "Patterns": null
+          },
+          "site-login.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/site-login.css"
+            },
+            "Patterns": null
+          },
+          "site.css": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "css/site.css"
+            },
+            "Patterns": null
+          },
+          "site-login-old.css.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "82uhzc9tft-5nywkyghk5.gz"
+            },
+            "Patterns": null
+          },
+          "site-login.css.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "zyb4fv2abt-sacjpksvxu.gz"
+            },
+            "Patterns": null
+          },
+          "site.css.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "j8xjb0fb07-i4rth6ju3q.gz"
+            },
+            "Patterns": null
+          }
+        },
+        "Asset": null,
+        "Patterns": null
+      },
+      "favicon.ico": {
+        "Children": null,
+        "Asset": {
+          "ContentRootIndex": 0,
+          "SubPath": "favicon.ico"
+        },
+        "Patterns": null
+      },
+      "images": {
+        "Children": {
+          "404.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/404.jpg"
+            },
+            "Patterns": null
+          },
+          "Erro.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/Erro.jpg"
+            },
+            "Patterns": null
+          },
+          "Financial-Planning.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/Financial-Planning.jpg"
+            },
+            "Patterns": null
+          },
+          "financial.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/financial.jpg"
+            },
+            "Patterns": null
+          },
+          "financial.png": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/financial.png"
+            },
+            "Patterns": null
+          },
+          "load_big.gif": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/load_big.gif"
+            },
+            "Patterns": null
+          },
+          "logo.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/logo.jpg"
+            },
+            "Patterns": null
+          },
+          "material-1-1000x563.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/material-1-1000x563.jpg"
+            },
+            "Patterns": null
+          },
+          "material-design-4k-2048x1152.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/material-design-4k-2048x1152.jpg"
+            },
+            "Patterns": null
+          },
+          "people-coffee-tea-meeting.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/people-coffee-tea-meeting.jpg"
+            },
+            "Patterns": null
+          },
+          "pexels-photo-872957.jpeg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/pexels-photo-872957.jpeg"
+            },
+            "Patterns": null
+          },
+          "pexels-photo.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/pexels-photo.jpg"
+            },
+            "Patterns": null
+          }
+        },
+        "Asset": null,
+        "Patterns": null
+      },
+      "js": {
+        "Children": {
+          "ajax.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "js/ajax.js"
+            },
+            "Patterns": null
+          },
+          "mensagens.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "js/mensagens.js"
+            },
+            "Patterns": null
+          },
+          "site-login.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "js/site-login.js"
+            },
+            "Patterns": null
+          },
+          "site.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "js/site.js"
+            },
+            "Patterns": null
+          },
+          "toastr-configuracao.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "js/toastr-configuracao.js"
+            },
+            "Patterns": null
+          },
+          "util.js": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "js/util.js"
+            },
+            "Patterns": null
+          },
+          "ajax.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "fxh6xdqwqb-resa10dl3m.gz"
+            },
+            "Patterns": null
+          },
+          "mensagens.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "vvhxfmzayw-sgo1omyhhf.gz"
+            },
+            "Patterns": null
+          },
+          "site-login.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "gwdjvwibnj-nctc56fgs7.gz"
+            },
+            "Patterns": null
+          },
+          "site.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "itlcq6tlh9-m3brcb40dk.gz"
+            },
+            "Patterns": null
+          },
+          "toastr-configuracao.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "9afatugejc-jfsa4puxxb.gz"
+            },
+            "Patterns": null
+          },
+          "util.js.gz": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 1,
+              "SubPath": "7pfat9nfir-v9kg9h5lq9.gz"
+            },
+            "Patterns": null
+          }
+        },
+        "Asset": null,
+        "Patterns": null
+      },
+      "lib": {
+        "Children": {
+          "bootstrap": {
+            "Children": {
+              "css": {
+                "Children": {
+                  "bootstrap-grid.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.rtl.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.rtl.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.rtl.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-grid.rtl.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.rtl.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.rtl.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.rtl.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-reboot.rtl.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.rtl.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.rtl.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.rtl.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap-utilities.rtl.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.rtl.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.rtl.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.rtl.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.min.css.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/css/bootstrap.rtl.min.css.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "lz5wcndfc9-bqjiyaj88i.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qh5br4ngrf-c2jlpeoesf.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "m4qjct9amt-erw9l3u2r3.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "juxis0405q-aexeepp0ev.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ij5eqbo2ti-d7shbmvgxk.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "vv19dw1vx8-ausgxo2sd3.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "u7dieu40ik-k8d9w2qqmf.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-grid.rtl.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "fwv6ba8ozu-cosvhxvwiu.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "of1malr88e-ub07r2b239.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "cyxuv0b0mu-fvhpjtyr6v.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "6stwgpf9dq-b7pk76d08c.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "pjh7kisbwz-fsbi9cje9m.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "8hja3g4p9j-rzd6atqjts.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "inp86fjxio-ee0r1s7dh0.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uc4mxnn86g-dxx9fxp4il.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.rtl.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "f2i6ukls1c-jd9uben2k1.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qvairzywx1-khv3u5hwcm.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "swiuv09rzg-r4e9w2rdcm.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "k8pi8so0dy-lcd1t2u6c8.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "bxijhi8n6s-c2oey78nd0.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "cogeu1yf23-tdbxkamptv.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "u9ui92tgch-j5mq2jizvt.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uhmx7o98cw-06098lyss8.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.rtl.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "a3anoo1h6l-nvvlpmu67g.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "po77q7d74r-s35ty4nyc5.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "3bzy166416-pj5nd1wqec.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ihr52u0ax9-46ein0sx1k.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "nwtq1s18ca-v0zj4ognzu.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uakn9me0i4-37tfw0ft22.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qs2lfseuzf-hrwsygsryq.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "b1lm21w0uv-pk9g2wxc8p.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.rtl.min.css.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "9zdxr2w90l-ft3s53vfgj.gz"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              },
+              "js": {
+                "Children": {
+                  "bootstrap.bundle.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.bundle.js"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.bundle.js.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.bundle.js.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.bundle.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.bundle.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.bundle.min.js.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.bundle.min.js.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.esm.js"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.js.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.esm.js.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.esm.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.min.js.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.esm.min.js.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.js"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.js.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.js.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.js.map": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/js/bootstrap.min.js.map"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.bundle.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "pvj0kbr28e-6cfz1n2cew.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.bundle.js.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "znpqsypxj0-6pdc2jztkx.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.bundle.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "jr9adld2mp-493y06b0oq.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.bundle.min.js.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "6onl6gve8w-iovd86k7lj.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uaxwsvlmut-vr1egmr9el.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.js.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "pyd9tv1g2z-kbrnm935zg.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "4g8y62zf81-jj8uyg4cgr.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.esm.min.js.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "yrdotmll6s-y7v9cxd14o.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "2nnbe7v5bu-notf2xhcfb.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.js.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "in33j7uoji-h1s4sie4z3.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "b6k3gimwm7-63fj8s7r0e.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.min.js.map.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "nsgir13jko-0j3bgjxly4.gz"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              },
+              "scss": {
+                "Children": {
+                  "bootstrap-grid.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/bootstrap-grid.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-reboot.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/bootstrap-reboot.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap-utilities.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/bootstrap-utilities.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "bootstrap.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/bootstrap.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "forms": {
+                    "Children": {
+                      "_floating-labels.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_floating-labels.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_form-check.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_form-check.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_form-control.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_form-control.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_form-range.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_form-range.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_form-select.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_form-select.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_form-text.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_form-text.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_input-group.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_input-group.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_labels.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_labels.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_validation.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/forms/_validation.scss"
+                        },
+                        "Patterns": null
+                      }
+                    },
+                    "Asset": null,
+                    "Patterns": null
+                  },
+                  "helpers": {
+                    "Children": {
+                      "_clearfix.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_clearfix.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_color-bg.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_color-bg.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_colored-links.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_colored-links.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_focus-ring.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_focus-ring.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_icon-link.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_icon-link.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_position.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_position.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_ratio.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_ratio.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_stacks.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_stacks.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_stretched-link.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_stretched-link.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_text-truncation.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_text-truncation.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_visually-hidden.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_visually-hidden.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_vr.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/helpers/_vr.scss"
+                        },
+                        "Patterns": null
+                      }
+                    },
+                    "Asset": null,
+                    "Patterns": null
+                  },
+                  "mixins": {
+                    "Children": {
+                      "_alert.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_alert.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_backdrop.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_backdrop.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_banner.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_banner.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_border-radius.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_border-radius.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_box-shadow.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_box-shadow.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_breakpoints.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_breakpoints.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_buttons.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_buttons.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_caret.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_caret.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_clearfix.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_clearfix.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_color-mode.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_color-mode.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_color-scheme.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_color-scheme.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_container.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_container.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_deprecate.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_deprecate.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_forms.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_forms.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_gradients.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_gradients.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_grid.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_grid.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_image.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_image.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_list-group.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_list-group.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_lists.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_lists.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_pagination.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_pagination.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_reset-text.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_reset-text.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_resize.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_resize.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_table-variants.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_table-variants.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_text-truncate.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_text-truncate.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_transition.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_transition.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_utilities.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_utilities.scss"
+                        },
+                        "Patterns": null
+                      },
+                      "_visually-hidden.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/mixins/_visually-hidden.scss"
+                        },
+                        "Patterns": null
+                      }
+                    },
+                    "Asset": null,
+                    "Patterns": null
+                  },
+                  "utilities": {
+                    "Children": {
+                      "_api.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/utilities/_api.scss"
+                        },
+                        "Patterns": null
+                      }
+                    },
+                    "Asset": null,
+                    "Patterns": null
+                  },
+                  "vendor": {
+                    "Children": {
+                      "_rfs.scss": {
+                        "Children": null,
+                        "Asset": {
+                          "ContentRootIndex": 0,
+                          "SubPath": "lib/bootstrap/scss/vendor/_rfs.scss"
+                        },
+                        "Patterns": null
+                      }
+                    },
+                    "Asset": null,
+                    "Patterns": null
+                  },
+                  "_accordion.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_accordion.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_alert.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_alert.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_badge.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_badge.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_breadcrumb.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_breadcrumb.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_button-group.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_button-group.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_buttons.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_buttons.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_card.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_card.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_carousel.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_carousel.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_close.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_close.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_containers.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_containers.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_dropdown.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_dropdown.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_forms.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_forms.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_functions.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_functions.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_grid.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_grid.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_helpers.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_helpers.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_images.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_images.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_list-group.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_list-group.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_maps.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_maps.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_mixins.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_mixins.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_modal.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_modal.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_nav.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_nav.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_navbar.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_navbar.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_offcanvas.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_offcanvas.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_pagination.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_pagination.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_placeholders.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_placeholders.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_popover.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_popover.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_progress.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_progress.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_reboot.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_reboot.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_root.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_root.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_spinners.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_spinners.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_tables.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_tables.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_toasts.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_toasts.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_tooltip.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_tooltip.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_transitions.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_transitions.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_type.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_type.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_utilities.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_utilities.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_variables-dark.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_variables-dark.scss"
+                    },
+                    "Patterns": null
+                  },
+                  "_variables.scss": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/bootstrap/scss/_variables.scss"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "font-awesome": {
+            "Children": {
+              "css": {
+                "Children": {
+                  "all.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/all.css"
+                    },
+                    "Patterns": null
+                  },
+                  "all.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/all.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/brands.css"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/brands.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/fontawesome.css"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/fontawesome.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/regular.css"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/regular.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/solid.css"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/solid.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "svg-with-js.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/svg-with-js.css"
+                    },
+                    "Patterns": null
+                  },
+                  "svg-with-js.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/svg-with-js.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-font-face.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/v4-font-face.css"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-font-face.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/v4-font-face.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/v4-shims.css"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/v4-shims.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "v5-font-face.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/v5-font-face.css"
+                    },
+                    "Patterns": null
+                  },
+                  "v5-font-face.min.css": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/css/v5-font-face.min.css"
+                    },
+                    "Patterns": null
+                  },
+                  "all.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "i1v1603rtc-49an5sjh10.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "all.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "1q4otcdk21-q2hvp77wc2.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "a6xpalth79-4e3nki6ryq.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "tficp0gkmj-63o3sbfz5s.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "73ses1yqia-2cq99ronlx.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "apw3bbl0e6-b8ictqw8dd.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "f8fxywfco6-ar970c5c9w.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "zpqbh1o43s-8wt44mvmae.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qidph19ihg-5s9azn9ndh.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "3wfdmb37s2-9x2wn7wuq3.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "svg-with-js.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "797cxom07j-r2y7izpocp.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "svg-with-js.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "cz91209br1-tuyeyrzwo9.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-font-face.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "96or6ufhpp-8tjftljet6.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-font-face.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "zjgqszfqls-g2pekimrae.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ext7pwzpry-ycdm5esokd.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "2bkhdnmgex-nos53zg4ci.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v5-font-face.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "txz177wqrc-rm5fkyu4i2.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v5-font-face.min.css.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "adh1da0eyx-hixck0pp6h.gz"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              },
+              "js": {
+                "Children": {
+                  "all.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/all.js"
+                    },
+                    "Patterns": null
+                  },
+                  "all.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/all.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/brands.js"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/brands.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "conflict-detection.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/conflict-detection.js"
+                    },
+                    "Patterns": null
+                  },
+                  "conflict-detection.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/conflict-detection.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/fontawesome.js"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/fontawesome.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/regular.js"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/regular.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/solid.js"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/solid.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/v4-shims.js"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/js/v4-shims.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "all.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "c77zsmidle-4e9ww0bakh.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "all.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "xrbikqdptz-jhh9n5lkkk.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "rw3a5k0k78-5v64mwokve.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "2rtjd5hy2z-96wbeqhklf.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "conflict-detection.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "fdv3i3nv9n-gxpqdi43c4.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "conflict-detection.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "rtao7w50j5-7n4zd1p9dc.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "622l7ne1bt-74t4er55zb.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "fontawesome.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "9joy5vvmim-4rbtqwkqw9.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "a8ymvng0th-62n48yiqqw.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "io7oiowuxz-ed1jvazsvd.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "llewok0qs4-gggiqhbraj.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "847qw4cs2q-c3e3480xp8.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "o3rme1xhgc-0xg2dzfh1w.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "v4-shims.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "iqt2vlmo6u-tblba0fw8y.gz"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              },
+              "sprites": {
+                "Children": {
+                  "brands.svg": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/sprites/brands.svg"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.svg": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/sprites/regular.svg"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.svg": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/sprites/solid.svg"
+                    },
+                    "Patterns": null
+                  },
+                  "brands.svg.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "6i8bejfth7-q89b3otcgy.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "regular.svg.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "9iu3qbkie6-0cad82hevu.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "solid.svg.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qc8uopkfxj-k14g4j5bkv.gz"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              },
+              "webfonts": {
+                "Children": {
+                  "fa-brands-400.ttf": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-brands-400.ttf"
+                    },
+                    "Patterns": null
+                  },
+                  "fa-brands-400.woff2": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-brands-400.woff2"
+                    },
+                    "Patterns": null
+                  },
+                  "fa-regular-400.ttf": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-regular-400.ttf"
+                    },
+                    "Patterns": null
+                  },
+                  "fa-regular-400.woff2": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-regular-400.woff2"
+                    },
+                    "Patterns": null
+                  },
+                  "fa-solid-900.ttf": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-solid-900.ttf"
+                    },
+                    "Patterns": null
+                  },
+                  "fa-solid-900.woff2": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-solid-900.woff2"
+                    },
+                    "Patterns": null
+                  },
+                  "fa-v4compatibility.ttf": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-v4compatibility.ttf"
+                    },
+                    "Patterns": null
+                  },
+                  "fa-v4compatibility.woff2": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/font-awesome/webfonts/fa-v4compatibility.woff2"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "jquery-validate": {
+            "Children": {
+              "additional-methods.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery-validate/additional-methods.js"
+                },
+                "Patterns": null
+              },
+              "additional-methods.min.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery-validate/additional-methods.min.js"
+                },
+                "Patterns": null
+              },
+              "jquery-validation-sri.json": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery-validate/jquery-validation-sri.json"
+                },
+                "Patterns": null
+              },
+              "jquery.validate.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery-validate/jquery.validate.js"
+                },
+                "Patterns": null
+              },
+              "jquery.validate.min.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery-validate/jquery.validate.min.js"
+                },
+                "Patterns": null
+              },
+              "localization": {
+                "Children": {
+                  "messages_ar.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ar.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ar.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ar.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_az.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_az.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_az.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_az.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bg.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_bg.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bg.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_bg.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bn_bd.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_bn_bd.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bn_bd.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_bn_bd.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ca.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ca.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ca.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ca.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_cs.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_cs.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_cs.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_cs.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_da.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_da.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_da.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_da.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_de.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_de.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_de.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_de.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_el.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_el.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_el.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_el.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_es.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_es.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_ar.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_es_ar.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_ar.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_es_ar.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_pe.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_es_pe.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_pe.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_es_pe.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_et.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_et.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_et.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_et.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_eu.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_eu.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_eu.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_eu.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fa.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_fa.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fa.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_fa.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fi.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_fi.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fi.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_fi.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fr.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_fr.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fr.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_fr.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ge.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ge.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ge.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ge.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_gl.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_gl.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_gl.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_gl.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_he.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_he.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_he.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_he.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hi.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hi.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hi.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hi.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hr.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hr.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hr.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hr.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hu.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hu.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hu.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hu.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hy_am.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hy_am.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hy_am.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_hy_am.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_id.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_id.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_id.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_id.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_is.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_is.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_is.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_is.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_it.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_it.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_it.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_it.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ja.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ja.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ja.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ja.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ka.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ka.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ka.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ka.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_kk.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_kk.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_kk.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_kk.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ko.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ko.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ko.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ko.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lt.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_lt.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lt.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_lt.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lv.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_lv.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lv.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_lv.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_mk.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_mk.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_mk.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_mk.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_my.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_my.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_my.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_my.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_nl.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_nl.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_nl.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_nl.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_no.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_no.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_no.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_no.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pl.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_pl.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pl.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_pl.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_br.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_pt_br.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_br.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_pt_br.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_pt.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_pt_pt.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_pt.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_pt_pt.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ro.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ro.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ro.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ro.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ru.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ru.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ru.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ru.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sd.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sd.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sd.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sd.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_si.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_si.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_si.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_si.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sk.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sk.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sk.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sk.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sl.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sl.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sl.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sl.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sr.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sr.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr_lat.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sr_lat.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr_lat.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sr_lat.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sv.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sv.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sv.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_sv.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_th.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_th.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_th.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_th.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tj.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_tj.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tj.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_tj.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tr.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_tr.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tr.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_tr.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_uk.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_uk.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_uk.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_uk.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ur.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ur.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ur.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_ur.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_vi.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_vi.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_vi.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_vi.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_zh.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_zh.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh_tw.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_zh_tw.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh_tw.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/messages_zh_tw.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_de.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_de.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_de.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_de.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_es_cl.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_es_cl.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_es_cl.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_es_cl.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_fi.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_fi.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_fi.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_fi.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_it.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_it.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_it.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_it.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_nl.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_nl.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_nl.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_nl.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_pt.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_pt.js"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_pt.min.js": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 0,
+                      "SubPath": "lib/jquery-validate/localization/methods_pt.min.js"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ar.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "elfyxebhjs-xjzke54njl.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ar.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "mrexn7armu-4cdyficzrp.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_az.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "201ul4tavx-4j0wd6sysx.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_az.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "tbp5cnbl65-hk38avb4md.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bg.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "6omhof12kq-nxcbhwwik4.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bg.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "n9hw1431p1-kyydgdyfyr.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bn_bd.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "4qy7twfe64-braqxquf68.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_bn_bd.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "9aa84sqgpu-uon7ajm1uq.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ca.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "60vnv5m8wv-cvjefgckz0.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ca.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "9mukw87fe5-jeoqv13ut6.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_cs.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "h79rh6qhwy-05ahct25bl.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_cs.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ah5ycs9o5z-v4c8at9csi.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_da.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "vze1x86mwc-hvbwyjmrs8.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_da.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ilf2nqkjxh-5zb0t5kin8.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_de.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "hf5mhjmg26-74k07r54w5.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_de.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uvivnamexv-h7552vhvqx.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_el.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "eijgk7k2jp-ftrq6wjw61.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_el.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qy9zjpyk1a-jifjlufufr.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ldk15xv0mk-sq4tz5b6z1.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "zzk4bl0vm6-ybhl3zwbnt.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_ar.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "356vigh9tk-3svmjt4680.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_ar.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "brngjspg9q-jpot9jpkj5.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_pe.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "k3o811nge7-dbd2bhel7x.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_es_pe.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ds4p9ylsic-rltvukiouj.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_et.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "dl2cpc2kkq-t0prl1vtcy.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_et.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qpne25g4ty-ppsr03es2a.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_eu.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "vdlaihmpb2-wy5jums86e.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_eu.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "emxq10mkeg-299lfhw7pp.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fa.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "xf5v1q34em-f24vrib8jx.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fa.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "dnotakhnjs-p7d5474hhi.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fi.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "1i3v5rrr9t-i74zcrqwnu.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fi.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "mps3eibazw-yulxmnidcm.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fr.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "pp5hf4bhql-5zv9j4prjq.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_fr.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "9blwn6bk6f-5o3vdwrs0h.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ge.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "5upnh2t69y-9rfwpussx9.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ge.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "b18xbecrzt-f12amzzhnv.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_gl.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "hwyz3k72ko-i9t4ieghxc.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_gl.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uqvwjpd4lu-lcxiz9swpj.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_he.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "3dn6x1gt30-lovjp4ry9u.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_he.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "3bccio392w-4p94qv91sb.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hi.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "sorm1q7rh7-bt5kbwtt2q.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hi.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "4n9np77pqc-9exl2pdlxc.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hr.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "t2o2e6s2f8-hs6w0crmb8.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hr.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "u90aib8n4v-feyrix9wnk.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hu.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "z05re830ip-mgmlrnip99.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hu.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "bn8gsiyi07-bezvuebgyb.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hy_am.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "mlq8ihy4u7-h1bvebrp9q.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_hy_am.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "6v79td1r4s-vbvoa94qyd.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_id.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "64adexb54u-c31e6ki5t6.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_id.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "z7d7ncz04t-gkw8pk2nfs.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_is.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "gjepyubs6z-hnoraonqdd.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_is.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "eu000on2mg-7ovpwuglye.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_it.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "e7kq78doc3-0235kmet0t.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_it.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "t4ch15skc2-pkl1atbv4o.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ja.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ashlgzylqc-poqayh2loq.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ja.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ff3v5ps62a-mrj85llrkn.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ka.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "iz1367xypx-7jck20mja3.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ka.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "u09afelrjw-uavo4klo8n.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_kk.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "t9eclwxvf7-4hu1bggsrb.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_kk.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "lhu1xpwuyv-4u956iy9xs.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ko.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "vk7x8fsovd-168l3ir3l5.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ko.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "3g9xc1zdr2-6ogb7o95po.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lt.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "lgoi5795hk-wkx2r4hlx5.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lt.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "3kdlo7hx8k-0lmjnl1k4v.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lv.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "13xveocq36-v52dkco62n.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_lv.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uyalns8c2e-vindaq3vzr.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_mk.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ztbi6nahs1-fnfmcy5qwo.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_mk.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "jz82wts738-5viucqhrzb.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_my.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ik3bj62363-ezxdrtm1cy.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_my.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "i2unw9is3f-sbeo5cgk4f.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_nl.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "t7rpby8x0w-z3rfu42ezs.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_nl.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "rqefbw0ny0-tjfaynwivk.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_no.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "yqpaap4vnn-5jkvsaamgi.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_no.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "re90uw6rfw-y4z5f2ryst.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pl.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "9pw5m17why-wx3mlhgh37.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pl.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "yjh1d6f5lj-lez6yc2zdy.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_br.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "4n0dotgz8x-web6tml14t.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_br.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "fat655m757-049mmuux44.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_pt.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "vv2kdjlsf4-nj100d0mii.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_pt_pt.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "dkz35xs3du-hr9irpklmf.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ro.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "lflvi5gtw0-bwb1gsuuum.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ro.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ubw3ma3zlj-woyz0q4n43.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ru.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "df0dwxb5xs-lutdxna36i.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ru.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "n3z4ub4aht-cdh3feilp7.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sd.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ubbo0ly0es-ag66lqh4z1.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sd.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "vpu2tf0pyy-mfwoolo5e7.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_si.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "xhsofxoh8o-wqqrq62a5z.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_si.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "njsxef4b9o-r93sjcmcpp.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sk.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "nl41q12bww-bk636y5xe8.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sk.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "x7jca4znyv-8y40zpzwbu.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sl.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "4kia2prmzu-fdlc1k76h6.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sl.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "z3zki3otiu-sau4x1e3uo.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "sugxjvxhhf-r9gqrss8w4.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "xh7yhivgvc-a5byyp98xa.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr_lat.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "wbuprw0mkh-abaoehaoce.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sr_lat.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "rfi8tfnmwr-ur8ipki1gz.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sv.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "x8zqgt1qfx-cwo81ec6ci.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_sv.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "xxlnd2aa4w-zt60ejpglz.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_th.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ew2d39k613-4ulc7x1nyn.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_th.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "gs8kyscl5d-2b9fbnajte.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tj.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "s8wenwf4v9-4ebofpec0s.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tj.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "s7n4p3rhyv-nc75aci0ep.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tr.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uj0wwk6vaz-ixw9ayor72.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_tr.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "chg999qcvg-b2y5fj8amb.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_uk.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "zr8bnkr5xo-sm7tsyflya.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_uk.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "h7osyr3ols-bau9db3eek.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ur.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "cf9zhgzz8b-pa42jgat1c.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_ur.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "m63toqimsp-89xfpa3nyf.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_vi.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "ikom0ekldp-ysksr9a5qx.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_vi.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "or51y5zg7y-krcs59o1ut.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "mvi8hv451r-rojolhatvu.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "qhd2k2f3da-yayv1u0yds.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh_tw.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "6knq2cvziw-uqvgdix0d2.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "messages_zh_tw.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uyfum9tg4r-rk61f49l4l.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_de.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "c5qlkfglst-b975f6mlyp.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_de.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "b466cm2hb8-bd92z499b7.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_es_cl.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "pd66cjlunk-peuegsc00u.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_es_cl.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "r92l1v2p6a-j34x46uyaz.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_fi.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "6jdi1hc5z0-uty6vnwisc.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_fi.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "7xhvr2xuxs-4pnjigfcx2.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_it.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "3jn2m9b89k-sw3cc3dvia.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_it.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "89h7xdidyj-j34x46uyaz.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_nl.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "wd6ftori1f-x5y2yznkg4.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_nl.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "gessuhwfhj-3exls7m7zl.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_pt.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "u1k35a5z76-dblook5b1t.gz"
+                    },
+                    "Patterns": null
+                  },
+                  "methods_pt.min.js.gz": {
+                    "Children": null,
+                    "Asset": {
+                      "ContentRootIndex": 1,
+                      "SubPath": "uz5chn9b41-lrgc3fda45.gz"
+                    },
+                    "Patterns": null
+                  }
+                },
+                "Asset": null,
+                "Patterns": null
+              },
+              "additional-methods.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "2z7eva1ux1-ilo7uva0vt.gz"
+                },
+                "Patterns": null
+              },
+              "additional-methods.min.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "ncnedhaax2-qlccset4i1.gz"
+                },
+                "Patterns": null
+              },
+              "jquery-validation-sri.json.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "uxk7yvqvt8-e0j594lf74.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.validate.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "xwqhpvmedw-lzl9nlhx6b.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.validate.min.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "2ovk91o9cs-ag7o75518u.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "jquery-validation-unobtrusive": {
+            "Children": {
+              "jquery.validate.unobtrusive.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+                },
+                "Patterns": null
+              },
+              "jquery.validate.unobtrusive.min.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+                },
+                "Patterns": null
+              },
+              "jquery.validate.unobtrusive.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "jofois3gjl-03hjc8e09r.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.validate.unobtrusive.min.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "xt3lvfkpgd-48y08845bh.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "jquery": {
+            "Children": {
+              "jquery.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery/jquery.js"
+                },
+                "Patterns": null
+              },
+              "jquery.min.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery/jquery.min.js"
+                },
+                "Patterns": null
+              },
+              "jquery.min.map": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery/jquery.min.map"
+                },
+                "Patterns": null
+              },
+              "jquery.slim.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery/jquery.slim.js"
+                },
+                "Patterns": null
+              },
+              "jquery.slim.min.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery/jquery.slim.min.js"
+                },
+                "Patterns": null
+              },
+              "jquery.slim.min.map": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/jquery/jquery.slim.min.map"
+                },
+                "Patterns": null
+              },
+              "jquery.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "5mqdyuwe63-0i3buxo5is.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.min.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "rudzc2o5yr-o1o13a6vjx.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.min.map.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "au6o49upm7-ttgo8qnofa.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.slim.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "cq9902rphy-2z0ns9nrw6.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.slim.min.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "33v9ipbaar-muycvpuwrr.gz"
+                },
+                "Patterns": null
+              },
+              "jquery.slim.min.map.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "sf57t4shnb-87fc7y1x7t.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "toastr.js": {
+            "Children": {
+              "toastr.css": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/toastr.js/toastr.css"
+                },
+                "Patterns": null
+              },
+              "toastr.js.map": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/toastr.js/toastr.js.map"
+                },
+                "Patterns": null
+              },
+              "toastr.min.css": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/toastr.js/toastr.min.css"
+                },
+                "Patterns": null
+              },
+              "toastr.min.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "lib/toastr.js/toastr.min.js"
+                },
+                "Patterns": null
+              },
+              "toastr.css.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "2vq6ouadly-7znil99lx5.gz"
+                },
+                "Patterns": null
+              },
+              "toastr.js.map.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "yf1aj5cjzj-9r5hbeiiyi.gz"
+                },
+                "Patterns": null
+              },
+              "toastr.min.css.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "btqzszfynj-fuwkiubrsj.gz"
+                },
+                "Patterns": null
+              },
+              "toastr.min.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "1tzsbpcu3a-oosw0sin1v.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          }
+        },
+        "Asset": null,
+        "Patterns": null
+      },
+      "Views": {
+        "Children": {
+          "Cliente": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/Cliente/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "1fl9x557s1-exeh9e1wly.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "Generics": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/Generics/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "sw94cqg25v-1gih53d2as.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "Servico": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/Servico/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "bhk43oyso9-4szet73owa.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "StatusNotaFiscal": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/StatusNotaFiscal/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "7xtt5bfqr3-38p61jpykd.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "Tarefa": {
+            "Children": {
+              "edit.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/Tarefa/edit.js"
+                },
+                "Patterns": null
+              },
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/Tarefa/main.js"
+                },
+                "Patterns": null
+              },
+              "edit.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "bzh5skpyga-1tksmcr3ox.gz"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "69uxmv0lau-3yibeg5pby.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "TipoDeCliente": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/TipoDeCliente/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "b897887d9h-6d5slrlb6l.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "TipoDePessoa": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/TipoDePessoa/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "1ewk2uvnpw-9xztyf7xku.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
+          "Tributo": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/Tributo/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "v2oxmj4388-ga8h7mo5dc.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          }
+        },
+        "Asset": null,
+        "Patterns": null
+      },
+      "favicon.ico.gz": {
+        "Children": null,
+        "Asset": {
+          "ContentRootIndex": 1,
+          "SubPath": "mivftgbpyp-61n19gt1b8.gz"
+        },
+        "Patterns": null
+      }
+    },
+    "Asset": null,
+    "Patterns": [
+      {
+        "ContentRootIndex": 0,
+        "Pattern": "**",
+        "Depth": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+﻿@using French.Erp.Application.DataObject;
+@model ModelBasic<FaturamentoDadosDto>
+@{
+    ViewData["Title"] = "Serviços";
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+    ViewData["User"] = Model.Nome;
+    ViewData["Admin"] = Model.Admin;
+    ViewData["Role"] = Model.Role;
+
+    IEnumerable<SelectListItem> clienteLista = Model.Seletores.Seletor1 as IEnumerable<SelectListItem>;
+
+}
+<div class="text-center">
+    <h3 class="display-4">Faturamento</h3>
+</div>
+<div class="text-right">
+    <button type="button" class="btn btn-outline-success" onclick="Servico.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
+</div>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-floating mb-3">
+                <select id="ClienteId" name="ClienteId" asp-items="clienteLista" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                    <option value="0">Selecione</option>
+                </select>
+                <label id="labelCliente" for="ClienteId">Cliente</label>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-floating mb-3">
+                <select id="Mes" name="Mes" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                    <option value="0">Selecione</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Feveiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+                <label id="Mes" for="Mes">Mês</label>
+            </div>
+
+        </div>
+        <div class="col-1">
+            <div class="form-floating mb-3">
+                <select id="Ano" name="Ano" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                    <option value="0">Sel.</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+                <label id="labelAno" for="Ano">Ano</label>
+            </div>
+
+        </div>
+        <div class="col-3">
+            <br />
+            <input type="checkbox" name="Faturado" id="Faturado" />
+            <label id="Faturado" for="Ano">Faturado</label>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-outline-primary">Pesquisar</button>
+        </div>
+    </div>
+</div>
+<table class="table table-striped table-hover table-responsive" data-item-reload="true" id="tableDados">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" style="width:10%">#</th>
+            <th scope="col" style="width:20%">Cliente</th>
+            <th scope="col" style="width:15%">Mês</th>
+            <th scope="col" style="width:10%">Ano</th>
+            <th scope="col" style="width:25%">Valor</th>
+            <th scope="col" style="width:10%">Faturado</th>
+            <th scope="col" class="text-right" style="width:10%">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Lista)
+        {
+            <tr>
+                <th scope="row">@item.FaturamentoId</th>
+                <td>@item.Cliente</td>
+                <td>@Mes(item.Mes)</td>
+                <td>@item.Ano</td>
+                <td>R$ @item.Valor.ToString("F2").Replace(".", ",")</td>
+                <td>
+                    @if (item.Faturado)
+                    {
+                        <button type="button" class="btn btn-outline-success"><i class="fa fa-circle-check">&nbsp;</i></button>
+                    }
+                    else
+                    {
+                        <button type="button" class="btn btn-outline-danger"><i class="fa fa-circle-exclamation">&nbsp;</i></button>
+                    }
+                </td>
+                <td class="text-right">
+                    <button type="button" class="btn btn-outline-success" onclick="Servico.Edit('@item.FaturamentoId', '@item.FaturamentoId','@item.FaturamentoId')"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-outline-danger" onclick="Servico.Excluir('@item.FaturamentoId')"><i class="fa fa-trash-o"></i></button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+@{
+    string Mes(int mes)
+    {
+        var mesNominal = "";
+        switch (mes)
+        {
+            case 1:
+                mesNominal = "Janeiro";
+                break;
+            case 2:
+                mesNominal = "Fevereiro";
+                break;
+            case 3:
+                mesNominal = "Março";
+                break;
+            case 4:
+                mesNominal = "Abril";
+                break;
+            case 5:
+                mesNominal = "Maio";
+                break;
+            case 6:
+                mesNominal = "Junho";
+                break;
+            case 7:
+                mesNominal = "Julho";
+                break;
+            case 8:
+                mesNominal = "Agosto";
+                break;
+            case 9:
+                mesNominal = "Setembro";
+                break;
+            case 10:
+                mesNominal = "Outubro";
+                break;
+            case 11:
+                mesNominal = "Novembro";
+                break;
+            case 12:
+                mesNominal = "Dezembro";
+                break;
+        }
+        return mesNominal;
+    }
+}
+
+@* <partial name="Edit" />
+ *@
+@section scripts
+{
+    <script src="~/Views/Servico/main.js"></script>
+}
