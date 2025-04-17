@@ -10,10 +10,9 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class TarefaRepository : BaseRepository<Tarefa, Cliente, TarefaItem>, ITarefaRepository, IBaseRepository<Tarefa>
+    public class TarefaRepository : BaseRepository<Tarefa>, ITarefaRepository, IBaseRepository<Tarefa>
     {
-        public TarefaRepository(IMyContextManager<ThisDatabase<Tarefa>> context,
-                                IMyContextManager<ThisDatabase<Tarefa, Cliente, TarefaItem>> contextManager) : base(context, contextManager)
+        public TarefaRepository(IMyContextManager<ThisDatabase<Tarefa>> context) : base(context)
         {
 
         }
