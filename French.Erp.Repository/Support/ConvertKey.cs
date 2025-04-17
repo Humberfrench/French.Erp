@@ -1,23 +1,23 @@
 using Dapper;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities.Support;
-using French.Erp.Repository.Interfaces;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System;
 using System.Data;
 using System.Linq;
 
 namespace French.Erp.Repository.Support
 {
-    public class ConvertKey : IConvertKey
+    public class ConvertKey : IConvertKey, IDisposable  
     {
-        private readonly IContextManager contextManager;
-        private readonly IDbConnection Connection;
+        private IDbConnection Connection;
+        private bool disposedValue;
 
-
-        public ConvertKey(IContextManager contextManager)
+        public ConvertKey(IConfiguration configuration)
         {
-            this.contextManager = contextManager;
-            Connection = new SqlConnection(contextManager.GetConnectionString);
+            var connString = configuration.GetConnectionString("DbContextConnString");
+            Connection = new SqlConnection(connString);
         }
 
         public Chave Decript(byte[] chave)
@@ -28,11 +28,13 @@ namespace French.Erp.Repository.Support
 
                         Exec CloseKeys";
 
+            Connection.Open();
             var result = Connection.Query<Chave>(sql, new { @chave = chave }).FirstOrDefault();
             if (result != null)
             {
                 result.ChaveEncript = chave;
             }
+            Connection.Close();
 
             return result;
 
@@ -46,17 +48,36 @@ namespace French.Erp.Repository.Support
 
                         Exec CloseKeys";
 
+            Connection.Open();
             var result = Connection.Query<Chave>(sql, new { @chave = chave }).FirstOrDefault();
             if (result != null)
             {
                 result.ChaveDecript = chave;
             }
+            Connection.Close();
 
             return result;
 
         }
 
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    Connection.Dispose();
+                    Connection = null;
+                }
+                disposedValue = true;
+            }
+        }
 
-
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
+        }
     }
 }

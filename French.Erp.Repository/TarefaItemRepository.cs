@@ -1,6 +1,8 @@
-﻿using French.Erp.Application.Interfaces.Repository;
+﻿using Dietcode.Database.Domain;
+using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
-using French.Erp.Repository.Interfaces;
+using Dietcode.Database.Orm;
+using Dietcode.Database.Orm.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,10 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class TarefaItemRepository : BaseRepository<TarefaItem>, ITarefaItemRepository, IBaseRepository<TarefaItem>
+    public class TarefaItemRepository : BaseRepository<TarefaItem, Servico>, ITarefaItemRepository, IBaseRepository<TarefaItem>
     {
-        public TarefaItemRepository(IContextManager contextManager) : base(contextManager)
+        public TarefaItemRepository(IMyContextManager<ThisDatabase<TarefaItem>> context,
+                                    IMyContextManager<ThisDatabase<TarefaItem, Servico>> contextManager) : base(context, contextManager)
         {
 
         }

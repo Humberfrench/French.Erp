@@ -1,8 +1,10 @@
-﻿using Dapper;
+﻿using Dietcode.Database.Domain;
+using Dapper;
 using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
-using French.Erp.Repository.Interfaces;
+using Dietcode.Database.Orm;
+using Dietcode.Database.Orm.Context;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,7 +13,7 @@ namespace French.Erp.Repository
 {
     public class FaturamentoRepository : BaseRepository<Faturamento>, IFaturamentoRepository, IBaseRepository<Faturamento>
     {
-        public FaturamentoRepository(IContextManager contextManager) : base(contextManager)
+        public FaturamentoRepository(IMyContextManager<ThisDatabase<Faturamento>> contextManager) : base(contextManager)
         {
 
         }

@@ -1,7 +1,9 @@
-﻿using Dapper;
+﻿using Dietcode.Database.Domain;
+using Dapper;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
-using French.Erp.Repository.Interfaces;
+using Dietcode.Database.Orm;
+using Dietcode.Database.Orm.Context;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +11,7 @@ namespace French.Erp.Repository
 {
     public class NotaFiscalRepository : BaseRepository<NotaFiscal>, INotaFiscalRepository, IBaseRepository<NotaFiscal>
     {
-        public NotaFiscalRepository(IContextManager contextManager) : base(contextManager)
+        public NotaFiscalRepository(IMyContextManager<ThisDatabase<NotaFiscal>> contextManager) : base(contextManager)
         {
 
 

@@ -1,19 +1,22 @@
-﻿using Dietcode.Core.DomainValidator;
+﻿using Validation = Dietcode.Core.DomainValidator;
 using French.Erp.Domain.Validations.Lead;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace French.Erp.Domain.Entities
 {
+    [Table("Lead")]
     public partial class Lead
     {
-        private readonly ValidationResult validationResult;
+        private readonly Validation.ValidationResult validationResult;
         private bool isValid;
 
         public Lead()
         {
-            validationResult = new ValidationResult();
+            validationResult = new Validation.ValidationResult();
             isValid = false;
             Descricao = string.Empty;
             Empresa = string.Empty;
@@ -24,6 +27,7 @@ namespace French.Erp.Domain.Entities
             Efetivada = false;
         }
 
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LeadId { get; set; }
 
         public string Descricao { get; set; }
@@ -89,7 +93,7 @@ namespace French.Erp.Domain.Entities
         #endregion
 
         #region Dados de Validação
-        public virtual ValidationResult ValidationResult => validationResult;
+        public virtual Validation.ValidationResult ValidationResult => validationResult;
 
         public virtual bool IsValid()
         {
@@ -106,7 +110,7 @@ namespace French.Erp.Domain.Entities
 
         }
 
-        public virtual ValidationResult Validar(Lead entity)
+        public virtual Validation.ValidationResult Validar(Lead entity)
         {
             var entidadeNomeValidate = new LeadEstaConsistente();
             var validationResultEntidade = entidadeNomeValidate.Validar(entity);

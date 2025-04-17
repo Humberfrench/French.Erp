@@ -1,16 +1,19 @@
-﻿using French.Erp.Application.Interfaces.Repository;
+﻿using Dietcode.Database.Domain;
+using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
-using French.Erp.Repository.Interfaces;
+using Dietcode.Database.Orm;
+using Dietcode.Database.Orm.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System;
 
 namespace French.Erp.Repository
 {
     public class ClienteRepository : BaseRepository<Cliente>, IClienteRepository, IBaseRepository<Cliente>
     {
-        public ClienteRepository(IContextManager contextManager) : base(contextManager)
+        public ClienteRepository(IMyContextManager<ThisDatabase<Cliente>> context) : base(context)
         {
 
         }
@@ -77,14 +80,23 @@ namespace French.Erp.Repository
 
             //return await resultado.Result;
 
-            return await Task.Run(() => this.DbSet.Include(c => c.Tarefa)
-                                                  .Include(c => c.NotaFiscal)
-                                                  .Include(c => c.Faturamento)
-                                                  .Include(c => c.Cidade)
-                                                  .Include(c => c.TipoDeCliente)
-                                                  .Include(c => c.TipoDePessoa)
-                                                  .ToList());
+            try
+            {
+                return await Task.Run(() => this.DbSet.Include(c => c.Tarefa)
+                                                      .Include(c => c.NotaFiscal)
+                                                      .Include(c => c.Faturamento)
+                                                      .Include(c => c.Cidade)
+                                                      .Include(c => c.TipoDeCliente)
+                                                      .Include(c => c.TipoDePessoa)
+                                                      .ToList());
 
+            }
+            catch (Exception ex)
+            {
+
+                var err = ex.Message;
+                return null;
+            }
         }
 
         public new async Task<Cliente> ObterPorId(int id)

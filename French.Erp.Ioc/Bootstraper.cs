@@ -2,6 +2,10 @@
 
 namespace French.Erp.Ioc
 {
+    using Dietcode.Database.Domain;
+    using Dietcode.Database.Orm;
+    using Dietcode.Database.Orm.Context;
+    using Dietcode.Database.Orm.UnitOfWork;
     using French.Erp.Application.Interfaces.Repository;
     using French.Erp.Application.Interfaces.Services;
     using French.Erp.Repository.Support;
@@ -10,10 +14,8 @@ namespace French.Erp.Ioc
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Repository;
-    using Repository.Context;
-    using Repository.Interfaces;
-    using Repository.UnitOfWork;
     using Services;
+    using static Dietcode.Database.Orm.Builder;
 
     public static class Bootstraper
     {
@@ -23,16 +25,16 @@ namespace French.Erp.Ioc
             //Services
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-            services.AddScoped<IContextManager, ContextManager>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped<IContextManager, ContextManager>();
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
             //services.AddScoped<IConfiguration, ConfigurationSection>();
             //services.AddScoped<IConfiguration, ConfigurationRoot>();
             //services.AddScoped<IConfigurationProvider, ConfigurationProvider>();
 
-            services.AddDbContext<FrenchContext>(options => options.UseSqlServer(configuration.GetConnectionString("FrenchContext")));
+            BuilderStart(services);
 
             //Services
-            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            //services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
             services.AddScoped<IConvertKey, ConvertKey>();
 

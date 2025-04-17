@@ -1,26 +1,32 @@
-﻿using Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Validations.Tarefas;
-using System;
+﻿using Validation = Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Validations.TipoDePessoas;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System;
+using French.Erp.Domain.Validations.Tarefas;
 
 #nullable disable
 
 namespace French.Erp.Domain.Entities
 {
+    [Table("Tarefa")]
     public partial class Tarefa
     {
-        private readonly ValidationResult validationResult;
+        private readonly Validation.ValidationResult validationResult;
         private bool isValid;
 
         public Tarefa()
         {
-            validationResult = new ValidationResult();
+            validationResult = new Validation.ValidationResult();
             isValid = false;
             ComposicaoNotaFiscal = new HashSet<ComposicaoNotaFiscal>();
             TarefaItem = new HashSet<TarefaItem>();
         }
 
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TarefaId { get; set; }
         public int ClienteId { get; set; }
         public int? NotaFiscalId { get; set; }
@@ -42,7 +48,7 @@ namespace French.Erp.Domain.Entities
         public virtual ICollection<TarefaItem> TarefaItem { get; set; }
 
         #region Dados de Validação
-        public virtual ValidationResult ValidationResult => validationResult;
+        public virtual Validation.ValidationResult ValidationResult => validationResult;
 
         public virtual bool IsValid()
         {
@@ -59,7 +65,7 @@ namespace French.Erp.Domain.Entities
 
         }
 
-        public virtual ValidationResult Validar(Tarefa entity)
+        public virtual Validation.ValidationResult Validar(Tarefa entity)
         {
             var entidadeNomeValidate = new TarefaEstaConsistente();
             var validationResultEntidade = entidadeNomeValidate.Validar(entity);

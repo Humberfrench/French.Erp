@@ -1,7 +1,9 @@
 ﻿using Dapper;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
-using French.Erp.Repository.Interfaces;
+using Dietcode.Database.Domain;
+using Dietcode.Database.Orm;
+using Dietcode.Database.Orm.Context;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -9,7 +11,7 @@ namespace French.Erp.Repository
 {
     public class CidadeRepository : BaseRepository<Cidade>, ICidadeRepository, IBaseRepository<Cidade>
     {
-        public CidadeRepository(IContextManager contextManager) : base(contextManager)
+        public CidadeRepository(IMyContextManager<ThisDatabase<Cidade>> contextManager) : base(contextManager)
         {
 
         }

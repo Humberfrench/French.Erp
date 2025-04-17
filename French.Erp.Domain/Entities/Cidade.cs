@@ -2,11 +2,15 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Validation = Dietcode.Core.DomainValidator;
 
 #nullable disable
 
 namespace French.Erp.Domain.Entities
 {
+    [Table("Cidade")]
     public partial class Cidade
     {
         public Cidade()
@@ -17,6 +21,7 @@ namespace French.Erp.Domain.Entities
         /// <summary>
         /// Codigo
         /// </summary>
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CidadeId { get; set; }
         /// <summary>
         /// Nome

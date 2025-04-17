@@ -1,12 +1,14 @@
-﻿using French.Erp.Application.Interfaces.Repository;
+﻿using Dietcode.Database.Domain;
+using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
-using French.Erp.Repository.Interfaces;
+using Dietcode.Database.Orm;
+using Dietcode.Database.Orm.Context;
 
 namespace French.Erp.Repository
 {
     public class ServicoRepository : BaseRepository<Servico>, IServicoRepository, IBaseRepository<Servico>
     {
-        public ServicoRepository(IContextManager contextManager) : base(contextManager)
+        public ServicoRepository(IMyContextManager<ThisDatabase<Servico>> contextManager) : base(contextManager)
         {
 
         }

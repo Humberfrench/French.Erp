@@ -1,5 +1,6 @@
 using French.Erp.Domain.Entities;
 using System.Threading.Tasks;
+using Dietcode.Database.Domain;
 
 namespace French.Erp.Application.Interfaces.Repository
 {
