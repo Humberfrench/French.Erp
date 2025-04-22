@@ -15,11 +15,22 @@ namespace French.Erp.Domain.Entities
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EstadoId { get; set; }
-        [Column, MaxLength(2)]
+
+        /// <summary>
+        /// UF
+        /// </summary>
+        [Required]
+        [MaxLength(2)]
         public string SiglaUf { get; set; }
-        [Column, MaxLength(50)]
+
+        /// <summary>
+        /// Descricao
+        /// </summary>
+        [Required]
+        [MaxLength(50)]
         public string NomeUf { get; set; }
 
-        public virtual IList<Cidade> Cidade { get; set; }
+        [InverseProperty("Estado")]
+        public virtual IList<Cidade> Cidades { get; set; } = new List<Cidade>();
     }
 }

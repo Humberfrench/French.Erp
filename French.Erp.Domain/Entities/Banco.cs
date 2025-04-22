@@ -9,8 +9,12 @@ namespace French.Erp.Domain.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BancoId { get; set; }
 
+        [Required]
+        [StringLength(10)]
         public string Codigo { get; set; }
 
+        [Required]
+        [StringLength(150)]
         public string Nome { get; set; }
 
         public bool Status { get; set; }

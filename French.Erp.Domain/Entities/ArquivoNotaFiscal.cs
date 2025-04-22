@@ -14,9 +14,14 @@ namespace French.Erp.Domain.Entities
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ArquivoNotaFiscalId { get; set; }
+
         public int NotaFiscalId { get; set; }
+
+        [Required]
         public byte[] Arquivo { get; set; }
 
+        [ForeignKey("NotaFiscalId")]
+        [InverseProperty("ArquivoNotaFiscals")]
         public virtual NotaFiscal NotaFiscal { get; set; }
     }
 }

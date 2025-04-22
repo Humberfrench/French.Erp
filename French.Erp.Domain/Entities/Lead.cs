@@ -30,26 +30,37 @@ namespace French.Erp.Domain.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LeadId { get; set; }
 
+        [Column, MaxLength(150)]
         public string Descricao { get; set; }
 
+        [Column, MaxLength(100)]
         public string Empresa { get; set; }
 
+        [Column, MaxLength(100)]
         public string Contato { get; set; }
 
+        [Column, MaxLength(20)]
         public string Documento { get; set; }
 
+        [Column, MaxLength(50)]
         public string Telefone { get; set; }
 
+        [Column, MaxLength(150)]
         public string Email { get; set; }
 
+        [Column(TypeName = "datetime")]
         public DateTime DataDeCriacao { get; set; }
 
+        [Column]
         public int UsuarioId { get; set; }
 
+        [Column]
         public bool Efetivada { get; set; }
 
+        [Column]
         public byte TipoDePessoaId { get; set; }
 
+        [Column]
         public byte TipoDeClienteId { get; set; }
 
         #region De Lead para Cliente

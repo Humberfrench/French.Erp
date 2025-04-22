@@ -25,13 +25,21 @@ namespace French.Erp.Domain.Entities
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int FaturamentoId { get; set; }
+        [Column]
         public int ClienteId { get; set; }
+        [Column]
         public short Ano { get; set; }
+        [Column]
         public byte Mes { get; set; }
+        [Column]
         public decimal Valor { get; set; }
+        [Column]
         public bool Faturado { get; set; }
+        [Column]
         public int UsuarioId { get; set; }
 
+        [ForeignKey("ClienteId")]
+        [InverseProperty("Faturamentos")]
         public virtual Cliente Cliente { get; set; }
 
 

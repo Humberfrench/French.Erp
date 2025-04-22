@@ -14,11 +14,22 @@ namespace French.Erp.Domain.Entities
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ComposicaoNotaFiscalId { get; set; }
+
+        [Column, Required]
         public int NotaFiscalId { get; set; }
+
+        [Column,Required]
         public int TarefaId { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal Total { get; set; }
 
+        [ForeignKey("NotaFiscalId")]
+        [InverseProperty("ComposicaoNotaFiscals")]
         public virtual NotaFiscal NotaFiscal { get; set; }
+
+        [ForeignKey("TarefaId")]
+        [InverseProperty("ComposicaoNotaFiscals")]
         public virtual Tarefa Tarefa { get; set; }
     }
 }

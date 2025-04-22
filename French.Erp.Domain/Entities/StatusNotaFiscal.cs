@@ -19,16 +19,22 @@ namespace French.Erp.Domain.Entities
 
         public StatusNotaFiscal()
         {
-            NotaFiscal = new HashSet<NotaFiscal>();
+            NotaFiscal = new List<NotaFiscal>();
             validationResult = new Validation.ValidationResult();
             isValid = null;
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public byte StatusNotaFiscalId { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+
         public string Descricao { get; set; }
 
-        public virtual ICollection<NotaFiscal> NotaFiscal { get; set; }
+        [InverseProperty("StatusNotaFiscal")]
+        public virtual IList<NotaFiscal> NotaFiscal { get; set; } 
+
         #region Dados de Validação
         public virtual Validation.ValidationResult ValidationResult => validationResult;
 

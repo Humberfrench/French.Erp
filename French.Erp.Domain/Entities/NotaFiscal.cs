@@ -14,28 +14,58 @@ namespace French.Erp.Domain.Entities
     {
         public NotaFiscal()
         {
-            ArquivoNotaFiscal = new HashSet<ArquivoNotaFiscal>();
-            ComposicaoNotaFiscal = new HashSet<ComposicaoNotaFiscal>();
-            TributoNotaFiscal = new HashSet<TributoNotaFiscal>();
+            ArquivoNotaFiscals = new List<ArquivoNotaFiscal>();
+            ComposicaoNotaFiscals = new List<ComposicaoNotaFiscal>();
+            TributoNotaFiscals = new List<TributoNotaFiscal>();
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int NotaFiscalId { get; set; }
+
+        [Required, Column, MaxLength(10)]
         public string Numero { get; set; }
+
         public int ClienteId { get; set; }
+
+        [Required, Column, MaxLength(100)]
         public string CodigoVerificacao { get; set; }
-        public DateTime Data { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateOnly Data { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal Valor { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal ImpostoTotalRetido { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal ValorLiquido { get; set; }
+
+        [Column, MaxLength(50)]
         public string Descricao { get; set; }
+
+        [Column]
         public byte StatusNotaFiscalId { get; set; }
+
+        [Column]
         public int UsuarioId { get; set; }
 
+        [InverseProperty("NotaFiscal")]
+        public virtual IList<ArquivoNotaFiscal> ArquivoNotaFiscals { get; set; } = new List<ArquivoNotaFiscal>();
+
+        [ForeignKey("ClienteId")]
+        [InverseProperty("NotaFiscals")]
         public virtual Cliente Cliente { get; set; }
+
+        [InverseProperty("NotaFiscal")]
+        public virtual IList<ComposicaoNotaFiscal> ComposicaoNotaFiscals { get; set; } = new List<ComposicaoNotaFiscal>();
+
+        [ForeignKey("StatusNotaFiscalId")]
+        [InverseProperty("NotaFiscals")]
         public virtual StatusNotaFiscal StatusNotaFiscal { get; set; }
-        public virtual ICollection<ArquivoNotaFiscal> ArquivoNotaFiscal { get; set; }
-        public virtual ICollection<ComposicaoNotaFiscal> ComposicaoNotaFiscal { get; set; }
-        public virtual ICollection<TributoNotaFiscal> TributoNotaFiscal { get; set; }
+
+        [InverseProperty("NotaFiscal")]
+        public virtual IList<TributoNotaFiscal> TributoNotaFiscals { get; set; } = new List<TributoNotaFiscal>();
     }
 }

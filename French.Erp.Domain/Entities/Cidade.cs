@@ -10,28 +10,32 @@ using Validation = Dietcode.Core.DomainValidator;
 
 namespace French.Erp.Domain.Entities
 {
+
     [Table("Cidade")]
     public partial class Cidade
     {
         public Cidade()
         {
-            Cliente = new HashSet<Cliente>();
+            Clientes = new List<Cliente>();
         }
-
         /// <summary>
         /// Codigo
         /// </summary>
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CidadeId { get; set; }
-        /// <summary>
-        /// Nome
-        /// </summary>
+
+        [Required]
+        [StringLength(100)]
         public string Nome { get; set; }
+
         public int EstadoId { get; set; }
 
-        public virtual Estado Estado { get; set; }
-
         [JsonIgnore]
-        public virtual ICollection<Cliente> Cliente { get; set; }
+        [InverseProperty("Cidade")]
+        public virtual IList<Cliente> Clientes { get; set; } = new List<Cliente>();
+
+        [ForeignKey("EstadoId")]
+        [InverseProperty("Cidades")]
+        public virtual Estado Estado { get; set; }
     }
 }

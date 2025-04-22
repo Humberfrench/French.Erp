@@ -19,17 +19,23 @@ namespace French.Erp.Domain.Entities
 
         public Servico()
         {
-            TarefaItem = new HashSet<TarefaItem>();
+            TarefaItems = new List<TarefaItem>();
             validationResult = new Validation.ValidationResult();
             isValid = null;
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ServicoId { get; set; }
+        [Required]
+        [MaxLength(30)]
         public string Nome { get; set; }
+
+        [Required]
+        [MaxLength(75)]
         public string Descricao { get; set; }
 
-        public virtual ICollection<TarefaItem> TarefaItem { get; set; }
+        [InverseProperty("Servico")]
+        public virtual IList<TarefaItem> TarefaItems { get; set; } 
 
         #region Dados de Validação
         public virtual Validation.ValidationResult ValidationResult => validationResult;

@@ -21,81 +21,92 @@ namespace French.Erp.Domain.Entities
         {
             validationResult = new Validation.ValidationResult();
             isValid = null;
-            Faturamento = new List<Faturamento>();
-            NotaFiscal = new List<NotaFiscal>();
-            Tarefa = new List<Tarefa>();
+            Faturamentos = new List<Faturamento>();
+            NotaFiscals = new List<NotaFiscal>();
+            Tarefas = new List<Tarefa>();
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ClienteId { get; set; }
-        
-        [Column, MaxLength(100)]
+
+        [Required]
+        [MaxLength(50)]
         public string Nome { get; set; }
-        
-        [Column, MaxLength(100)]
+
+        [Required]
+        [MaxLength(100)]
         public string RazaoSocial { get; set; }
-        
-        [Column, MaxLength(20)]
+
+        [Required]
+        [MaxLength(30)]
         public string Documento { get; set; }
 
-        [Column]
         public byte TipoDeClienteId { get; set; }
 
-        [Column]
         public byte TipoDePessoaId { get; set; }
 
-        [Column, MaxLength(15)]
+        [MaxLength(50)]
         public string Telefone { get; set; }
 
-        [Column, MaxLength(50)]
+        [MaxLength(50)]
         public string Contato { get; set; }
 
-        [Column, MaxLength(100)]
+        [MaxLength(100)]
         public string Email { get; set; }
 
-        [Column, MaxLength(20)]
+        [MaxLength(50)]
         public string InscricaoEstadual { get; set; }
 
-        [Column, MaxLength(20)]
+        [MaxLength(50)]
         public string CadastroMunicipal { get; set; }
 
-        [Column, MaxLength(100)]
+        [MaxLength(100)]
         public string Endereco { get; set; }
 
-        [Column, MaxLength(5)]
+        [MaxLength(5)]
         public string Numero { get; set; }
 
-        [Column, MaxLength(20)]
+        [MaxLength(20)]
         public string Complemento { get; set; }
 
-        [Column, MaxLength(50)]
+        [MaxLength(50)]
         public string Bairro { get; set; }
 
-        [Column, MaxLength(10)]
+        [MaxLength(20)]
         public string Cep { get; set; }
 
-        [Column]
-        public int UsuarioId { get; set; }
-
-        [Column]
         public int? EstadoId { get; set; }
 
-        [Column]
         public int? CidadeId { get; set; }
 
-        [Column]
+        [Column(TypeName = "datetime")]
         public DateTime? DataCriacao { get; set; }
 
-        [Column]
+        [Column(TypeName = "datetime")]
         public DateTime? DataAlteracao { get; set; }
 
-        
+        public int UsuarioId { get; set; }
+
+        [ForeignKey("CidadeId")]
+        [InverseProperty("Clientes")]
         public virtual Cidade Cidade { get; set; }
+
+        [InverseProperty("Cliente")]
+        public virtual IList<Faturamento> Faturamentos { get; set; } = new List<Faturamento>();
+
+        [InverseProperty("Cliente")]
+        public virtual IList<NotaFiscal> NotaFiscals { get; set; } = new List<NotaFiscal>();
+
+        [InverseProperty("Cliente")]
+        public virtual IList<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
+
+        [ForeignKey("TipoDeClienteId")]
+        [InverseProperty("Clientes")]
         public virtual TipoDeCliente TipoDeCliente { get; set; }
+
+        [ForeignKey("TipoDePessoaId")]
+        [InverseProperty("Clientes")]
         public virtual TipoDePessoa TipoDePessoa { get; set; }
-        public virtual IList<Faturamento> Faturamento { get; set; }
-        public virtual IList<NotaFiscal> NotaFiscal { get; set; }
-        public virtual IList<Tarefa> Tarefa { get; set; }
 
         #region Dados de Validação
         public virtual Validation.ValidationResult ValidationResult => validationResult;
