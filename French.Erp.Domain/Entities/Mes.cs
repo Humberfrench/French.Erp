@@ -13,12 +13,13 @@ namespace French.Erp.Domain.Entities
         /// <summary>
         /// Numero
         /// </summary>
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public byte MesId { get; set; }
 
         /// <summary>
         /// Nome
         /// </summary>
-        [Required,MaxLength(15)]
+        [Column, Required, MaxLength(15)]
 
         public string Nome { get; set; }
     }

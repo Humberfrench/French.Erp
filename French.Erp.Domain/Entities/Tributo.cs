@@ -21,7 +21,7 @@ namespace French.Erp.Domain.Entities
         {
             validationResult = new Validation.ValidationResult();
             isValid = null;
-            TributoNotaFiscal = new HashSet<TributoNotaFiscal>();
+            TributoNotaFiscals = new List<TributoNotaFiscal>();
         }
 
         /// <summary>
@@ -29,21 +29,36 @@ namespace French.Erp.Domain.Entities
         /// </summary>
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TributoId { get; set; }
+
         /// <summary>
         /// Descricao
         /// </summary>
-        public string Descricao { get; set; } 
+        [Required]
+        [MaxLength(100)]
+        public string Descricao { get; set; }
+
         /// <summary>
         /// Valor
         /// </summary>
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal Percentual { get; set; }
+
+        [Column]
         public bool RetemNaNota { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal FaixaInicial { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal FaixaFinal { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal ValorDeducao { get; set; }
 
-        public virtual ICollection<TributoNotaFiscal> TributoNotaFiscal { get; set; }
- 
+        [InverseProperty("Tributo")]
+        public virtual IList<TributoNotaFiscal> TributoNotaFiscals { get; set; } = new List<TributoNotaFiscal>();
+
+
         #region Dados de Validação
         public virtual Validation.ValidationResult ValidationResult => validationResult;
 

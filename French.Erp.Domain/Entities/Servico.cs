@@ -26,12 +26,11 @@ namespace French.Erp.Domain.Entities
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ServicoId { get; set; }
-        [Required]
-        [MaxLength(30)]
+
+        [Column, Required, MaxLength(30)]
         public string Nome { get; set; }
 
-        [Required]
-        [MaxLength(75)]
+        [Column, Required, MaxLength(75)]
         public string Descricao { get; set; }
 
         [InverseProperty("Servico")]
