@@ -46,8 +46,8 @@ namespace French.Erp.Domain.Entities
         [Column]
         public int TentativasInvalidas { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateOnly DataNascimento { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime DataNascimento { get; set; }
 
         [Column(TypeName = "datetime")]
         public DateTime? DataLogin { get; set; }

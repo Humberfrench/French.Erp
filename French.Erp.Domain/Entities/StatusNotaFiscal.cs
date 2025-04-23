@@ -29,7 +29,6 @@ namespace French.Erp.Domain.Entities
 
         [Required]
         [MaxLength(50)]
-
         public string Descricao { get; set; }
 
         [InverseProperty("StatusNotaFiscal")]

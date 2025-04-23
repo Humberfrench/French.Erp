@@ -19,7 +19,7 @@ namespace French.Erp.Domain.Entities
 
         public TipoDeCliente()
         {
-            Cliente = new HashSet<Cliente>();
+            Clientes = new List<Cliente>();
             validationResult = new Validation.ValidationResult();
             isValid = null;
         }
@@ -29,7 +29,8 @@ namespace French.Erp.Domain.Entities
         public string Descricao { get; set; }
 
         [JsonIgnore]
-        public virtual ICollection<Cliente> Cliente { get; set; }
+        [InverseProperty("TipoDeCliente")]
+        public virtual IList<Cliente> Clientes { get; set; }
 
         #region Dados de Validação
         public virtual Validation.ValidationResult ValidationResult => validationResult;
