@@ -29,8 +29,8 @@ namespace French.Erp.Domain.Entities
         [Column]
         public int ServicoId { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateOnly? Data { get; set; }
+        [Column(TypeName = "DateTime")]
+        public DateTime? Data { get; set; }
 
         [Column(TypeName = "numeric(18, 2)")]
         public decimal HorasOrcadas { get; set; }

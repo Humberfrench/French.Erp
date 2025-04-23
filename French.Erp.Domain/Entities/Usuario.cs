@@ -68,6 +68,8 @@ namespace French.Erp.Domain.Entities
         public bool Ativo { get; set; }
         #region Dados de Validação
 
+        [MaxLength(50)]
+        public string SenhaText { get; set; }
         public virtual Validation.ValidationResult ValidationResult => validationResult;
 
         public virtual bool IsValid()

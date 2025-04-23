@@ -82,9 +82,9 @@ namespace French.Erp.Repository
 
             try
             {
-                return await Task.Run(() => this.DbSet.Include(c => c.Tarefa)
-                                                      .Include(c => c.NotaFiscal)
-                                                      .Include(c => c.Faturamento)
+                return await Task.Run(() => this.DbSet.Include(c => c.Tarefas)
+                                                      .Include(c => c.NotaFiscals)
+                                                      .Include(c => c.Faturamentos)
                                                       .Include(c => c.Cidade)
                                                       .Include(c => c.TipoDeCliente)
                                                       .Include(c => c.TipoDePessoa)
@@ -104,9 +104,9 @@ namespace French.Erp.Repository
 
             return await Task.Run(() => this.DbSet.Include(c => c.TipoDeCliente)
                                                   .Include(c => c.TipoDePessoa)
-                                                  .Include(c => c.Tarefa)
-                                                  .Include(c => c.NotaFiscal)
-                                                  .Include(c => c.Faturamento)
+                                                  .Include(c => c.Tarefas)
+                                                  .Include(c => c.NotaFiscals)
+                                                  .Include(c => c.Faturamentos)
                                                   .Include(c => c.Cidade)
                                                   .FirstOrDefaultAsync(c => c.ClienteId == id));
         }

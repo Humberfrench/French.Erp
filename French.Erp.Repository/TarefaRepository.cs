@@ -20,16 +20,16 @@ namespace French.Erp.Repository
         public new async Task<IEnumerable<Tarefa>> ObterTodos()
         {
             return await Task.Run(() => this.DbSet.Include(t => t.Cliente)
-                                                  .Include(t => t.TarefaItem)
-                                                  .ThenInclude(c => c.Tarefa.TarefaItem)
+                                                  .Include(t => t.TarefaItems)
+                                                  .ThenInclude(c => c.Tarefa.TarefaItems)
                                                   .ToList());
         }
 
         public async Task<IEnumerable<Tarefa>> ObterTodosDoCliente(int clienteId)
         {
             return await Task.Run(() => this.DbSet.Include(t => t.Cliente)
-                                                  .Include(t => t.TarefaItem)
-                                                  .ThenInclude(c => c.Tarefa.TarefaItem)
+                                                  .Include(t => t.TarefaItems)
+                                                  .ThenInclude(c => c.Tarefa.TarefaItems)
                                                   .Where(c => c.ClienteId == clienteId)
                                                   .ToList());
         }
@@ -38,8 +38,8 @@ namespace French.Erp.Repository
         {
 
             return await Task.Run(() => this.DbSet.Include(t => t.Cliente)
-                                                  .Include(t => t.TarefaItem)
-                                                  .ThenInclude(c => c.Tarefa.TarefaItem)
+                                                  .Include(t => t.TarefaItems)
+                                                  .ThenInclude(c => c.Tarefa.TarefaItems)
                                                   .FirstOrDefaultAsync(c => c.TarefaId == id));
         }
 

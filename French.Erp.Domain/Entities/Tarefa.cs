@@ -62,11 +62,11 @@ namespace French.Erp.Domain.Entities
         [Column(TypeName = "numeric(18, 2)")]
         public decimal? Comissao { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateOnly? DataInicio { get; set; }
+        [Column(TypeName = "DateTime")]
+        public DateTime? DataInicio { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateOnly? DataFim { get; set; }
+        [Column(TypeName = "DateTime")]
+        public DateTime? DataFim { get; set; }
 
         [Column, Required]
         public int UsuarioId { get; set; }

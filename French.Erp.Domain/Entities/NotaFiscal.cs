@@ -30,8 +30,8 @@ namespace French.Erp.Domain.Entities
         [Required, Column, MaxLength(100)]
         public string CodigoVerificacao { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateOnly Data { get; set; }
+        [Column(TypeName = "DateTime")]
+        public DateTime Data { get; set; }
 
         [Column(TypeName = "numeric(18, 2)")]
         public decimal Valor { get; set; }
