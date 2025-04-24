@@ -2,7 +2,7 @@
 using French.Erp.Domain.Validations.TipoDePessoas;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using French.Erp.Domain.Validations.TipoDeClientes;
@@ -28,8 +28,7 @@ namespace French.Erp.Domain.Entities
         public byte TipoDeClienteId { get; set; }
         public string Descricao { get; set; }
 
-        [JsonIgnore]
-        [InverseProperty("TipoDeCliente")]
+        [JsonIgnore, InverseProperty("TipoDeCliente")]
         public virtual IList<Cliente> Clientes { get; set; }
 
         #region Dados de Validação

@@ -2,9 +2,9 @@
 using French.Erp.Domain.Validations.TipoDePessoas;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 #nullable disable
 
@@ -30,8 +30,7 @@ namespace French.Erp.Domain.Entities
         [Column, MaxLength(50)]
         public string Descricao { get; set; }
 
-        [JsonIgnore]
-        [InverseProperty("TipoDePessoa")]
+        [JsonIgnore, InverseProperty("TipoDePessoa")]
         public virtual IList<Cliente> Clientes { get; set; }
 
         #region Dados de Validação

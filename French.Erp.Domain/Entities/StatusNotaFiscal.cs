@@ -19,7 +19,7 @@ namespace French.Erp.Domain.Entities
 
         public StatusNotaFiscal()
         {
-            NotaFiscal = new List<NotaFiscal>();
+            NotaFiscals = new List<NotaFiscal>();
             validationResult = new Validation.ValidationResult();
             isValid = null;
         }
@@ -32,7 +32,7 @@ namespace French.Erp.Domain.Entities
         public string Descricao { get; set; }
 
         [InverseProperty("StatusNotaFiscal")]
-        public virtual IList<NotaFiscal> NotaFiscal { get; set; } 
+        public virtual IList<NotaFiscal> NotaFiscals { get; set; } 
 
         #region Dados de Validação
         public virtual Validation.ValidationResult ValidationResult => validationResult;

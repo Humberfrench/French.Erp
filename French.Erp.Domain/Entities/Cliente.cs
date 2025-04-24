@@ -97,7 +97,7 @@ namespace French.Erp.Domain.Entities
         [InverseProperty("Cliente")]
         public virtual IList<NotaFiscal> NotaFiscals { get; set; } = new List<NotaFiscal>();
 
-        [InverseProperty("Clientes")]
+        [InverseProperty("Cliente")]
         public virtual IList<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
 
         [ForeignKey("TipoDeClienteId")]
