@@ -15,6 +15,7 @@ namespace French.Erp.Domain.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ArquivoNotaFiscalId { get; set; }
 
+        [Required]
         public int NotaFiscalId { get; set; }
 
         [Required]

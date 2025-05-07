@@ -26,6 +26,7 @@ namespace French.Erp.Domain.Entities
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public byte TipoDeClienteId { get; set; }
+        [Column, MaxLength(50)]
         public string Descricao { get; set; }
 
         [JsonIgnore, InverseProperty("TipoDeCliente")]

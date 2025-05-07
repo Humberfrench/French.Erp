@@ -23,19 +23,19 @@ namespace French.Erp.Domain.Entities
             isValid = null;
         }
 
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Required]
         public int FaturamentoId { get; set; }
-        [Column]
+        [Column, Required]
         public int ClienteId { get; set; }
-        [Column]
+        [Column, Required]
         public short Ano { get; set; }
-        [Column]
+        [Column, Required]
         public byte Mes { get; set; }
-        [Column]
+        [Column, Required]
         public decimal Valor { get; set; }
-        [Column]
+        [Column, Required]
         public bool Faturado { get; set; }
-        [Column]
+        [Column, Required]
         public int UsuarioId { get; set; }
 
         [ForeignKey("ClienteId")]
