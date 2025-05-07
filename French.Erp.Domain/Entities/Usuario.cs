@@ -66,6 +66,7 @@ namespace French.Erp.Domain.Entities
 
         [Column]
         public bool Ativo { get; set; }
+
         #region Dados de Validação
 
         [MaxLength(50), NotMapped]
