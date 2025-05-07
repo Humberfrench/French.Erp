@@ -3,6 +3,304 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "Views/Banco/main.4uqnqs168z.js",
+      "AssetFile": "Views/Banco/main.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001179245283"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "847"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WhiY383lMJ7iP+E1SdRj+mrZIpMfLXoqIQHs66WrAa8=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 20:53:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4uqnqs168z"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU="
+        },
+        {
+          "Name": "label",
+          "Value": "Views/Banco/main.js"
+        }
+      ]
+    },
+    {
+      "Route": "Views/Banco/main.4uqnqs168z.js",
+      "AssetFile": "Views/Banco/main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3344"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 20:53:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4uqnqs168z"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU="
+        },
+        {
+          "Name": "label",
+          "Value": "Views/Banco/main.js"
+        }
+      ]
+    },
+    {
+      "Route": "Views/Banco/main.4uqnqs168z.js.gz",
+      "AssetFile": "Views/Banco/main.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "847"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WhiY383lMJ7iP+E1SdRj+mrZIpMfLXoqIQHs66WrAa8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 20:53:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4uqnqs168z"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WhiY383lMJ7iP+E1SdRj+mrZIpMfLXoqIQHs66WrAa8="
+        },
+        {
+          "Name": "label",
+          "Value": "Views/Banco/main.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "Views/Banco/main.js",
+      "AssetFile": "Views/Banco/main.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001179245283"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "847"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WhiY383lMJ7iP+E1SdRj+mrZIpMfLXoqIQHs66WrAa8=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 20:53:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU="
+        }
+      ]
+    },
+    {
+      "Route": "Views/Banco/main.js",
+      "AssetFile": "Views/Banco/main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3344"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 20:53:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nMF9hvT5eoMejdXc4PTrejMvvqEtDSE2pjYBINl5CzU="
+        }
+      ]
+    },
+    {
+      "Route": "Views/Banco/main.js.gz",
+      "AssetFile": "Views/Banco/main.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "847"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WhiY383lMJ7iP+E1SdRj+mrZIpMfLXoqIQHs66WrAa8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 May 2025 20:53:43 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WhiY383lMJ7iP+E1SdRj+mrZIpMfLXoqIQHs66WrAa8="
+        }
+      ]
+    },
+    {
       "Route": "Views/Cliente/main.exeh9e1wly.js",
       "AssetFile": "Views/Cliente/main.js.gz",
       "Selectors": [

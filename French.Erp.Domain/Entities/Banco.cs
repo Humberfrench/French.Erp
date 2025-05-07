@@ -26,6 +26,8 @@ namespace French.Erp.Domain.Entities
         [Required, StringLength(150)]
         public string Nome { get; set; }
 
+        [Required, StringLength(50)]
+        public string Apelido { get; set; }
         [Required]
         public bool Status { get; set; }
 

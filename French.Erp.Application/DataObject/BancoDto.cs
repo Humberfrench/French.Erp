@@ -15,6 +15,9 @@ namespace French.Erp.Application.DataObject
         [Required, StringLength(10)]
         public string Codigo { get; set; }
 
+        [Required, StringLength(50)]
+        public string Apelido { get; set; }
+
         [Required, StringLength(150)]
         public string Nome { get; set; }
 

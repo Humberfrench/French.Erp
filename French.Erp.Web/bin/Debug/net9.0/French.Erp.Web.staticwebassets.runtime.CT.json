@@ -4745,6 +4745,28 @@
       },
       "Views": {
         "Children": {
+          "Banco": {
+            "Children": {
+              "main.js": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "Views/Banco/main.js"
+                },
+                "Patterns": null
+              },
+              "main.js.gz": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 1,
+                  "SubPath": "8jko87j97w-4uqnqs168z.gz"
+                },
+                "Patterns": null
+              }
+            },
+            "Asset": null,
+            "Patterns": null
+          },
           "Cliente": {
             "Children": {
               "main.js": {
