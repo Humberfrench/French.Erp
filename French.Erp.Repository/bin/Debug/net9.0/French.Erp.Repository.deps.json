@@ -105,38 +105,6 @@
           }
         }
       },
-      "Dietcode.Database.Domain/1.5.0": {
-        "dependencies": {
-          "Dietcode.Core.DomainValidator": "2.1.0",
-          "Dietcode.Core.Lib": "2.2.0"
-        },
-        "runtime": {
-          "lib/net9.0/Dietcode.Database.Domain.dll": {
-            "assemblyVersion": "1.5.0.0",
-            "fileVersion": "1.5.0.0"
-          }
-        }
-      },
-      "Dietcode.Database.Orm/1.5.0": {
-        "dependencies": {
-          "Dietcode.Core.DomainValidator": "2.1.0",
-          "Dietcode.Core.Lib": "2.2.0",
-          "Dietcode.Database.Domain": "1.5.0",
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
-          "Microsoft.EntityFrameworkCore": "9.0.4",
-          "Microsoft.EntityFrameworkCore.Proxies": "9.0.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
-          "Microsoft.Extensions.Configuration": "9.0.4",
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
-          "Microsoft.Extensions.Configuration.Json": "9.0.4"
-        },
-        "runtime": {
-          "lib/net9.0/Dietcode.Database.Orm.dll": {
-            "assemblyVersion": "1.5.0.0",
-            "fileVersion": "1.5.0.0"
-          }
-        }
-      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -1289,6 +1257,38 @@
           }
         }
       },
+      "Dietcode.Database.Domain/1.5.0": {
+        "dependencies": {
+          "Dietcode.Core.DomainValidator": "2.1.0",
+          "Dietcode.Core.Lib": "2.2.0"
+        },
+        "runtime": {
+          "Dietcode.Database.Domain.dll": {
+            "assemblyVersion": "1.5.0.0",
+            "fileVersion": "1.5.0.0"
+          }
+        }
+      },
+      "Dietcode.Database.Orm/1.5.0": {
+        "dependencies": {
+          "Dietcode.Core.DomainValidator": "2.1.0",
+          "Dietcode.Core.Lib": "2.2.0",
+          "Dietcode.Database.Domain": "1.5.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "Microsoft.EntityFrameworkCore.Proxies": "9.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
+          "Microsoft.Extensions.Configuration": "9.0.4",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
+          "Microsoft.Extensions.Configuration.Json": "9.0.4"
+        },
+        "runtime": {
+          "Dietcode.Database.Orm.dll": {
+            "assemblyVersion": "1.5.0.0",
+            "fileVersion": "1.5.0.0"
+          }
+        }
+      },
       "French.Erp.Application/1.0.0": {
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.1.0",
@@ -1364,20 +1364,6 @@
       "sha512": "sha512-Ir5X+p5QsaQFYC9oRggs6wsvfYKP6axqqBAqfiEY/UZsnDJLwbRzV9ulT/dHCospu4HrCQubPZHtiCgyoEv4Mw==",
       "path": "dietcode.core.lib/2.2.0",
       "hashPath": "dietcode.core.lib.2.2.0.nupkg.sha512"
-    },
-    "Dietcode.Database.Domain/1.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-KsfHmAMQQEtGk4adkayrT2DDfPZNtLVdyZqvlsN6Sz/I6YwgrC+i4b+wjp/XE55JWvsM6T100KVf/pIFU3guZg==",
-      "path": "dietcode.database.domain/1.5.0",
-      "hashPath": "dietcode.database.domain.1.5.0.nupkg.sha512"
-    },
-    "Dietcode.Database.Orm/1.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3oc4agQC/ivkszbM3M+Kvy59mlmynzYjjyQIFzNIkO3BXcJxIaTzEVdul0uEVPIzcVcTy3nHo1gP2F4fZXjYGQ==",
-      "path": "dietcode.database.orm/1.5.0",
-      "hashPath": "dietcode.database.orm.1.5.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -2029,6 +2015,16 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "Dietcode.Database.Domain/1.5.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dietcode.Database.Orm/1.5.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "French.Erp.Application/1.0.0": {
       "type": "project",

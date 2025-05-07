@@ -7,12 +7,13 @@
   <ItemGroup>
     <PackageReference Include="Dietcode.Core.DomainValidator" Version="2.1.0" />
     <PackageReference Include="Dietcode.Core.Lib" Version="2.2.0" />
-	<PackageReference Include="Dietcode.Database.Domain" Version="1.5.0" />
+	<!--<PackageReference Include="Dietcode.Database.Domain" Version="1.5.0" />-->
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\French.Erp.Application\French.Erp.Application.csproj" />
     <ProjectReference Include="..\French.Erp.Domain\French.Erp.Domain.csproj" />
+	  <ProjectReference Include="C:\Users\humbe\OneDrive\Desenvolvimento\DevDietcode\DietTools\Dietcode.Database.Domain\Dietcode.Database.Domain.csproj" />
   </ItemGroup>
 
 </Project>

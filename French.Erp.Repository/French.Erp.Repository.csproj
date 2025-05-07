@@ -8,8 +8,8 @@
     <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="Dietcode.Core.DomainValidator" Version="2.1.0" />
     <PackageReference Include="Dietcode.Core.Lib" Version="2.2.0" />
-    <PackageReference Include="Dietcode.Database.Domain" Version="1.5.0" />
-    <PackageReference Include="Dietcode.Database.Orm" Version="1.5.0" />
+    <!--<PackageReference Include="Dietcode.Database.Domain" Version="1.5.0" />
+    <PackageReference Include="Dietcode.Database.Orm" Version="1.5.0" />-->
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="9.0.4" />
@@ -27,6 +27,8 @@
   <ItemGroup>
     <ProjectReference Include="..\French.Erp.Application\French.Erp.Application.csproj" />
     <ProjectReference Include="..\French.Erp.Domain\French.Erp.Domain.csproj" />
+    <ProjectReference Include="C:\Users\humbe\OneDrive\Desenvolvimento\DevDietcode\DietTools\Dietcode.Database.Domain\Dietcode.Database.Domain.csproj" />
+    <ProjectReference Include="C:\Users\humbe\OneDrive\Desenvolvimento\DevDietcode\DietTools\Dietcode.Database.Orm\Dietcode.Database.Orm.csproj" />
   </ItemGroup>
 
 </Project>

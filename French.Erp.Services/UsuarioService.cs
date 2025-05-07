@@ -1,5 +1,6 @@
 ﻿using Dietcode.Core.DomainValidator;
 using Dietcode.Core.Lib;
+using Dietcode.Database.Domain;
 using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
@@ -111,9 +112,12 @@ namespace French.Erp.Services
         }
         public async Task<ValidationResult<UsuarioDto>> Login(string login, string senha)
         {
+            usuarioRepository.BeginTransaction();
             var validationResult = new ValidationResult<UsuarioDto>();
 
             var usuario = await usuarioRepository.ObterUsuarioPorLogin(login);
+           
+            //TODO: POR VALIDACOES
 
             if (usuario == null)
             {
@@ -123,7 +127,6 @@ namespace French.Erp.Services
                     Login = login,
                 };
                 return validationResult;
-
             }
 
             var senhaBanco = convertKey.Decript(usuario.Senha).ChaveDecript;
@@ -135,11 +138,27 @@ namespace French.Erp.Services
                 {
                     Login = login,
                 };
+
+                usuario.TentativasInvalidas++;
+                await usuarioRepository.Atualizar(usuario);
+                usuarioRepository.SaveChanges();
+
                 return validationResult;
             }
 
+            usuario.DataLogin = DateTime.Now;
+            usuario.TentativasInvalidas = 0;
+
+            await usuarioRepository.Atualizar(usuario);
+
             validationResult.Retorno = AtualizaDadosUsuario(usuario);
 
+            var retGravacao = usuarioRepository.SaveChanges();
+
+            if(retGravacao.Invalid)
+            {
+                return retGravacao.Converter<UsuarioDto>();
+            }
             return validationResult;
         }
 

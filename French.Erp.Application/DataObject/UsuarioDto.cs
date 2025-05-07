@@ -28,7 +28,7 @@ namespace French.Erp.Application.DataObject
         public string Documento { get; set; }
 
         [MaxLength(50)]
-        public string SenhaText { get; set; }
+        public string Senha { get; set; }
 
         [Required, Range(0, 5)]
         public int TentativasInvalidas { get; set; }
