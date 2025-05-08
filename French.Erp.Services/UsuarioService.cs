@@ -8,6 +8,7 @@ using French.Erp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Markup;
 
 namespace French.Erp.Services
 {
@@ -141,7 +142,7 @@ namespace French.Erp.Services
 
                 usuario.TentativasInvalidas++;
                 await usuarioRepository.Atualizar(usuario);
-                usuarioRepository.SaveChanges();
+                usuarioRepository.Commit();
 
                 return validationResult;
             }
@@ -151,14 +152,14 @@ namespace French.Erp.Services
 
             await usuarioRepository.Atualizar(usuario);
 
-            validationResult.Retorno = AtualizaDadosUsuario(usuario);
-
-            var retGravacao = usuarioRepository.SaveChanges();
-
+            var retGravacao = usuarioRepository.Commit();
             if(retGravacao.Invalid)
             {
                 return retGravacao.Converter<UsuarioDto>();
             }
+
+            validationResult.Retorno = AtualizaDadosUsuario(usuario);
+
             return validationResult;
         }
 

@@ -11,8 +11,8 @@
           "Dapper": "2.1.66",
           "Dietcode.Core.DomainValidator": "2.1.0",
           "Dietcode.Core.Lib": "2.2.0",
-          "Dietcode.Database.Domain": "1.5.0",
-          "Dietcode.Database.Orm": "1.5.0",
+          "Dietcode.Database.Domain": "1.6.0",
+          "Dietcode.Database.Orm": "1.6.0",
           "French.Erp.Application": "1.0.0",
           "French.Erp.Domain": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
@@ -1257,23 +1257,23 @@
           }
         }
       },
-      "Dietcode.Database.Domain/1.5.0": {
+      "Dietcode.Database.Domain/1.6.0": {
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.1.0",
           "Dietcode.Core.Lib": "2.2.0"
         },
         "runtime": {
           "Dietcode.Database.Domain.dll": {
-            "assemblyVersion": "1.5.0.0",
-            "fileVersion": "1.5.0.0"
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
           }
         }
       },
-      "Dietcode.Database.Orm/1.5.0": {
+      "Dietcode.Database.Orm/1.6.0": {
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.1.0",
           "Dietcode.Core.Lib": "2.2.0",
-          "Dietcode.Database.Domain": "1.5.0",
+          "Dietcode.Database.Domain": "1.6.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
           "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.Proxies": "9.0.4",
@@ -1284,8 +1284,8 @@
         },
         "runtime": {
           "Dietcode.Database.Orm.dll": {
-            "assemblyVersion": "1.5.0.0",
-            "fileVersion": "1.5.0.0"
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
           }
         }
       },
@@ -1293,7 +1293,7 @@
         "dependencies": {
           "Dietcode.Core.DomainValidator": "2.1.0",
           "Dietcode.Core.Lib": "2.2.0",
-          "Dietcode.Database.Domain": "1.5.0",
+          "Dietcode.Database.Domain": "1.6.0",
           "French.Erp.Domain": "1.0.0"
         },
         "runtime": {
@@ -2016,12 +2016,12 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
-    "Dietcode.Database.Domain/1.5.0": {
+    "Dietcode.Database.Domain/1.6.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Dietcode.Database.Orm/1.5.0": {
+    "Dietcode.Database.Orm/1.6.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
