@@ -105,7 +105,7 @@
                                                     <hr class="dropdown-divider">
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="#" onclick="Usuario.Edit('@item.UsuarioId', '@item.Nome', '@item.Documento')">
+                                                    <a class="dropdown-item" href="#" onclick="Usuario.Edit('@item.UsuarioId', '@item.Login', '@item.Nome', '@item.Email', '@item.Celular', '@item.Documento', '@item.TentativasInvalidas', '@item.DataLogin', '@item.DataCriacao', '@item.DataAtualizacao', '@item.ValidadeSenha', '@item.Ativo', '@item.Admin')">
                                                         <i class="fa fa-pencil"></i>&nbsp;Editar
                                                     </a>
                                                 </li>
@@ -118,7 +118,7 @@
                                                     <hr class="dropdown-divider">
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="#" onclick="Usuario.Edit('@item.UsuarioId', '@item.Nome', '@item.Documento')">
+                                                    <a class="dropdown-item" href="#" onclick="Usuario.ResetSenha('@item.UsuarioId', '@item.Login')">
                                                         <i class="fa fa-user-secret"></i>&nbsp;Reset Senha
                                                     </a>
                                                 </li>

@@ -1,18 +1,17 @@
 ﻿/// <reference path="../lib/toastr.js/toastr.min.js" />
 /// <reference path="toastr-configuracao.js" />
-var Mensagens = function () { }
 
-Mensagens.Erro = function (mensagem, mensagemTitulo)
-{
-    toastr["error"](mensagem, mensagemTitulo);
-}
-
-Mensagens.Sucesso = function (mensagem, mensagemTitulo)
-{
-    toastr["success"](mensagem, mensagemTitulo);
-}
-
-Mensagens.Info = function (mensagem, mensagemTitulo)
-{
-    toastr["info"](mensagem, mensagemTitulo);
-}
+const Mensagens = {
+    Erro(mensagem, titulo)
+    {
+        toastr.error(mensagem, titulo);
+    },
+    Sucesso(mensagem, titulo)
+    {
+        toastr.success(mensagem, titulo);
+    },
+    Info(mensagem, titulo)
+    {
+        toastr.info(mensagem, titulo);
+    }
+};
