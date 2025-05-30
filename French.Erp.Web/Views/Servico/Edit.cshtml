@@ -11,16 +11,19 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-xl-12 col-md-12 col-lg-12">
-                        <label id="labelDescricao" for="Nome" class="col-form-label">Nome</label>
                         <input type="hidden" id="ServicoId" name="ServicoId" value="" />
-                        <input type="text" id="Nome" name="Nome" value="" class="form-control" placeholder="Descricao" />
+                        <div class="form-floating mb-3">
+                            <input type="text" id="Nome" name="Nome" value="" class="form-control" placeholder="Descricao" />
+                            <label id="labelNome" for="Nome" class="col-form-label">Nome</label>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-xl-12 col-md-12 col-lg-12">
-                        <label id="labelDescricao" for="Descricao" class="col-form-label">Descrição</label>
-                        <input type="hidden" id="Id" name="Id" value="" />
-                        <input type="text" id="Descricao" name="Descricao" value="" class="form-control" placeholder="Descricao" />
+                        <div class="form-floating mb-3">
+                            <input type="text" id="Descricao" name="Descricao" value="" class="form-control" placeholder="Descricao" />
+                            <label id="labelDescricao" for="Descricao" class="col-form-label">Descrição</label>
+                        </div>
                     </div>
                 </div>
             </div>
