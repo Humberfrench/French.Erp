@@ -112,7 +112,7 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a asp-area="" asp-controller="Cliente" asp-action="Index">
+                                        <a asp-area="" asp-controller="Tarefa" asp-action="Index">
                                             Tarefas/Trabalhos<span class="badge bg-success">Pro</span>
                                         </a>
                                     </li>
@@ -227,17 +227,17 @@
         </div>
     </footer>
  *@
-    <script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js"></script>
-    <script type="text/javascript" src="~/lib/font-awesome/js/v4-shims.js"></script>
-    <script type="text/javascript" src="~/lib/font-awesome/js/fontawesome.min.js"></script>
-    <script type="text/javascript" src="~/lib/toastr.js/toastr.min.js"></script>
-    <script type="text/javascript" src="~/js/toastr-configuracao.js"></script>
-    <script type="text/javascript" src="~/js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript" src="~/js/ajax.js" asp-append-version="true"></script>
-    <script type="text/javascript" src="~/js/mensagens.js" asp-append-version="true"></script>
-    <script type="text/javascript" src="~/js/util.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/lib/jquery/jquery.min.js" defer></script>
+    <script type="text/javascript" src="~/lib/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js" defer></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/v4-shims.js" defer></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/fontawesome.min.js" defer></script>
+    <script type="text/javascript" src="~/lib/toastr.js/toastr.min.js" defer></script>
+    <script type="text/javascript" src="~/js/toastr-configuracao.js" defer></script>
+    <script type="text/javascript" src="~/js/site.js" asp-append-version="true" defer></script>
+    <script type="text/javascript" src="~/js/ajax.js" asp-append-version="true" defer></script>
+    <script type="text/javascript" src="~/js/mensagens.js" asp-append-version="true" defer></script>
+    <script type="text/javascript" src="~/js/util.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

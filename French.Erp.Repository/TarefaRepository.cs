@@ -21,7 +21,6 @@ namespace French.Erp.Repository
         {
             return await Task.Run(() => this.DbSet.Include(t => t.Cliente)
                                                   .Include(t => t.TarefaItems)
-                                                  .ThenInclude(c => c.Tarefa.TarefaItems)
                                                   .ToList());
         }
 
@@ -29,7 +28,6 @@ namespace French.Erp.Repository
         {
             return await Task.Run(() => this.DbSet.Include(t => t.Cliente)
                                                   .Include(t => t.TarefaItems)
-                                                  .ThenInclude(c => c.Tarefa.TarefaItems)
                                                   .Where(c => c.ClienteId == clienteId)
                                                   .ToList());
         }
@@ -39,7 +37,6 @@ namespace French.Erp.Repository
 
             return await Task.Run(() => this.DbSet.Include(t => t.Cliente)
                                                   .Include(t => t.TarefaItems)
-                                                  .ThenInclude(c => c.Tarefa.TarefaItems)
                                                   .FirstOrDefaultAsync(c => c.TarefaId == id));
         }
 
