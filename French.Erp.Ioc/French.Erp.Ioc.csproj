@@ -8,10 +8,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.4" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4" />
-		<!--<PackageReference Include="Dietcode.Database.Domain" Version="1.5.0" />
-		<PackageReference Include="Dietcode.Database.Orm" Version="1.5.0" />-->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.5" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.5" />
+		<PackageReference Include="Dietcode.Database.Domain" Version="1.7.0" />
+		<PackageReference Include="Dietcode.Database.Orm" Version="1.7.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,8 +19,6 @@
 		<ProjectReference Include="..\French.Erp.Domain\French.Erp.Domain.csproj" />
 		<ProjectReference Include="..\French.Erp.Repository\French.Erp.Repository.csproj" />
 		<ProjectReference Include="..\French.Erp.Services\French.Erp.Services.csproj" />
-		<ProjectReference Include="C:\Users\humbe\OneDrive\Desenvolvimento\DevDietcode\DietTools\Dietcode.Database.Domain\Dietcode.Database.Domain.csproj" />
-		<ProjectReference Include="C:\Users\humbe\OneDrive\Desenvolvimento\DevDietcode\DietTools\Dietcode.Database.Orm\Dietcode.Database.Orm.csproj" />
 	</ItemGroup>
 
 </Project>
