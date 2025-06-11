@@ -58,7 +58,7 @@ namespace French.Erp.Web.Controllers
                         UsuarioReset = login.UsuarioReset
                     },
                 };
-                return View("Index", model);
+                return View(model);
             }
 
             await AutenticarUsuario(loginValidator.Retorno);

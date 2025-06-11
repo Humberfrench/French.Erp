@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-4">
                 <h3 class="text-center text-uppercase">Acesso ao Sistema</h3>
-                <form asp-controller="Account" asp-action="Login" method="post" id="formLogin" class="login-form" autocomplete="off">
+                <form asp-controller="Account" asp-action="Login" method="post" id="formLogin" class="login-form needs-validation" autocomplete="off" novalidate="novalidate">
                     <div class="row">
                         <div class="form-group">
                             <div class="form-floating">
@@ -38,6 +38,7 @@
                             </label>
                         </div>
                         <div class="form-group text-end">
+                            <button type="button" class="btn btn-outline-danger">Recuperar Senha</button>
                             <button type="submit" class="btn btn-outline-primary">Acesso</button>
                         </div>
                     </div>
@@ -93,3 +94,6 @@
         </div>
     </div>
 </section>
+@section Scripts {
+    <script src="~/views/login/main.js" defer></script>
+}
