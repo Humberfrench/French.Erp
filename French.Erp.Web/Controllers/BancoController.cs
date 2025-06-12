@@ -31,7 +31,7 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Gravar(BancoDto banco)
+        public async Task<IActionResult> Gravar([FromBody] BancoDto banco)
         {
             var result = await bancoAppService.Gravar(banco);
 

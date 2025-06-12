@@ -11,7 +11,53 @@
     <h3 class="display-4">Bancos</h3>
 </div>
 <div class="text-end">
-    <button type="button" class="btn btn-outline-success" onclick="Banco.Novo();"><i class="fa fa-file"></i>&nbsp;Novo Banco</button>
+    <button type="button" id="botaoNovo" name="botaoNovo" class="btn btn-outline-success" onclick="Banco.novo();"><i class="fa fa-file"></i>&nbsp;Novo Banco</button>
+</div>
+<br />
+<div class="form-floating d-none" id="divNovo" name="divNovo">
+    <div class="card">
+        <div class="card-header bg-black text-white"><b>Novo Banco</b></div>
+        <div class="card-body">
+            <div class="row" id="formNovo">
+                <div class="col-1">
+                    <div class="form-floating mb-3" data-parent="codigo">
+                        <input type="hidden" id="BancoId" name="BancoId" value="" />
+                        <input type="text" id="Codigo" name="Codigo" value="" class="form-control" placeholder="Codigo" />
+                        <label for="Codigo">Codigo</label>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-floating mb-3" data-parent="apelido">
+                        <input type="text" id="Apelido" name="Apelido" value="" class="form-control" placeholder="Apelido" />
+                        <label for="Apelido">Apelido</label>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-floating mb-3" data-parent="nome">
+                        <input type="text" id="Nome" name="Nome" value="" class="form-control" placeholder="Nome" />
+                        <label for="Nome">Nome</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="status">
+                        <select class="form-control form-select" id="Status" name="Status">
+                            <option value="">Selecione o Status</option>
+                            <option value="1">Ativo</option>
+                            <option value="0">Inativo</option>
+                        </select>
+                        <label for="Status">Status</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <br />
+                    <button type="button" class="btn btn-success" onclick="Banco.novoGravar(formNovo)"><i class="fa fa-save"></i></button>
+                    <button type="button" class="btn btn-primary" onclick="Banco.limpar()"><i class="fa fa-eraser"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </div>
 <br />
 <div style="overflow: visible;">
@@ -30,27 +76,52 @@
             @foreach (var item in Model.Lista)
             {
                 <tr scope="row">
-                    <td>@item.BancoId</td>
-                    <td>@item.Codigo</td>
-                    <td>@item.Apelido</td>
-                    <td>@item.Nome</td>
-                    <td>
-                        @if (item.Status)
-                        {
-                            <button type="button" class="btn btn-success" title="Desativar">
-                                <i class="fa fa-check"></i>
-                            </button>
-                        }
-                        else
-                        {
-                            <button type="button" class="btn btn-danger" title="Ativar">
-                                <i class="fa fa-ban"></i>
-                            </button>
-                        }
+                    <td data-parent="id">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="BancoId" name="BancoId" value="@item.BancoId" class="form-control" placeholder="Id" readonly="readonly" />
+                            <label for="BancoId">Id</label>
+                        </div>
+                    </td>
+                    <td data-parent="codigo">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="Codigo" name="Codigo" value="@item.Codigo" class="form-control" placeholder="Codigo" />
+                            <label for="Codigo">Codigo</label>
+                        </div>
+                    </td>
+                    <td data-parent="apelido">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="Apelido" name="Apelido" value="@item.Apelido" class="form-control" placeholder="Apelido" />
+                            <label for="Apelido">Apelido</label>
+                        </div>
+                    </td>
+                    <td data-parent="nome">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="Nome" name="Nome" value="@item.Nome" class="form-control" placeholder="Nome" />
+                            <label for="Nome">Nome</label>
+                        </div>
+                    </td>
+                    <td data-parent="status">
+                        <div class="form-floating mb-3" data-parent="status">
+                            <select class="form-control form-select" id="Status" name="Status">
+                                @if (item.Status)
+                                {
+                                    <option value="">Selecione o Status</option>
+                                    <option value="1" selected="selected">Ativo</option>
+                                    <option value="0">Inativo</option>
+                                }
+                                else
+                                {
+                                    <option value="">Selecione o Status</option>
+                                    <option value="1">Ativo</option>
+                                    <option value="0" selected="selected">Inativo</option>
+                                }
+                            </select>
+                            <label for="Status">Status</label>
+                        </div>
                     </td>
                     <td class="text-right">
-                        <button type="button" class="btn btn-success" onclick="Banco.Edit('@item.BancoId', '@item.Codigo', '@item.Apelido','@item.Nome','@item.Status')"><i class="fa fa-pencil"></i></button>
-                        <button type="button" class="btn btn-danger" onclick="Banco.Excluir('@item.BancoId')"><i class="fa fa-trash-o"></i></button>
+                        <button type="button" class="btn btn-success" onclick="Banco.gravar(this)"><i class="fa fa-save"></i></button>
+                        <button type="button" class="btn btn-danger" onclick="Banco.excluir('@item.BancoId')"><i class="fa fa-trash-o"></i></button>
                     </td>
                 </tr>
             }
@@ -58,7 +129,6 @@
         </tbody>
     </table>
 </div>
-<partial name="Edit" />
 
 @section scripts
 {
