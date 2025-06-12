@@ -33,7 +33,7 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Gravar(ServicoDto servico)
+        public async Task<IActionResult> Gravar([FromBody] ServicoDto servico)
         {
             var result = await servicoService.Gravar(servico);
 

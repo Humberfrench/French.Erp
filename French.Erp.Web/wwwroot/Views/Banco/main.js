@@ -135,7 +135,7 @@ const Banco = {
         codigo.classList.remove('is-invalid');
         nome.classList.remove('is-invalid');
         apelido.classList.remove('is-invalid');
-        codigo.classList.remove('is-invalid');
+        statusField.classList.remove('is-invalid');
 
         if (codigo.value === '0' || codigo.value === '')
         {
