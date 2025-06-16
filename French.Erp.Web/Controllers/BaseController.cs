@@ -44,7 +44,7 @@ namespace French.Erp.Web.Controllers
             return true;
         }
 
-        public UsuarioDto UsuarioViewModel
+        public UsuarioDto Usuario
         {
             get
             {

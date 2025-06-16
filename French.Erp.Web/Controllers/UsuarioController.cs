@@ -29,5 +29,19 @@ namespace French.Erp.Web.Controllers
             };
             return View(model);
         }
+        [HttpGet("User/Data")]
+        public async Task<IActionResult> UserData()
+        {
+            int usuarioId = Usuario.UsuarioId;
+
+            var model = new ModelBasic<UsuarioDto>
+            {
+                ViewModel = (await usuarioAppService.Obter(usuarioId)),
+                Nome = Nome,
+                Role = Admin ? "Administrador" : "Usuário",
+                Admin = Admin,
+            };
+            return View(model);
+        }    
     }
 }

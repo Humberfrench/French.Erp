@@ -1,0 +1,132 @@
+﻿@using French.Erp.Application.DataObject;
+@using System.Globalization
+@model ModelBasic<UsuarioDto>
+
+@{
+    ViewData["Title"] = "Usuário";
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+    ViewData["User"] = Model.Nome;
+    ViewData["Role"] = Model.Role;
+    ViewData["Admin"] = Model.Admin;
+    var item = Model.ViewModel;
+    var dataLogin = item.DataLogin.HasValue ? item.DataLogin.Value.ToString("dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture) : string.Empty;
+}
+<div class="text-center">
+    <h3 class="display-4">Usuários</h3>
+</div>
+<br />
+<div class="form-floating" id="divNovo" name="divNovo">
+    <div class="card">
+        <div class="card-header bg-black text-white"><b>Novo Usuário</b></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-floating mb-3" data-parent="nome">
+                        <input type="text" id="Nome" name="Nome" value="@item.Nome" class="form-control" placeholder="Nome" />
+                        <label for="Nome">Nome</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="login">
+                        <input type="text" id="Login" name="Login" value="@item.Login" class="form-control" placeholder="Login" />
+                        <label for="Login">Login</label>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-floating mb-3" data-parent="email">
+                        <input type="text" id="Email" name="Apelido" value="@item.Email" class="form-control" placeholder="Email" />
+                        <label for="Email">Email</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="documento">
+                        <input type="text" id="Documento" name="Login" value="@item.Documento" class="form-control" placeholder="Documento" />
+                        <label for="Documento">Documento</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="celular">
+                        <input type="text" id="Celular" name="Login" value="@item.Celular" class="form-control" placeholder="Celular" />
+                        <label for="Login">Celular</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="datanascimento">
+                        <input type="text" id="DataNascimento" name="DataNascimento" value="@item.DataNascimento.ToString("dd-mm-yyyy")" class="form-control" placeholder="" />
+                        <label for="DataNascimento">Data Nascimento</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="datalogin">
+                        <input type="datetime" id="DataLogin" name="DataLogin" value="@dataLogin" class="form-control" placeholder="" />
+                        <label for="DataLogin">Data Login</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3">
+                        <input type="datetime" id="ValidadeSenha" name="ValidadeSenha" value="@item.ValidadeSenha.ToString("dd-MM-yyyy HH:mm:ss")" class="form-control" placeholder="" />
+                        <label for="ValidadeSenha">Validade Senha</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="form-floating mb-3" data-parent="ativo">
+                        <select class="form-control form-select" id="Ativo" name="Ativo">
+                            @if (item.Ativo)
+                            {
+                                <option value="1" selected="selected">Ativo</option>
+                                <option value="0">Inativo</option>
+                            }
+                            else
+                            {
+                                <option value="1">Ativo</option>
+                                <option value="0" selected="selected">Inativo</option>
+                            }
+                        </select>
+                        <label for="Status">Ativo</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="form-floating mb-3" data-parent="admin">
+                        <select class="form-control form-select" id="Admin" name="Admin" >
+                            @if (@item.Admin)
+                            {
+                                <option value="1" selected="selected">Sim</option>
+                                <option value="0">Não</option>
+                            }
+                            else
+                            {
+                                <option value="1">Sim</option>
+                                <option value="0" selected="selected">Não</option>
+                            }
+                        </select>
+                        <label for="Status">Admin?</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="form-floating mb-3">
+                        <input type="datetime" id="TentativasInvalidas" name="TentativasInvalidas" value="@item.TentativasInvalidas" class="form-control" placeholder="" />
+                        <label for="ValidadeSenha">Ten.Inv.</label>
+                    </div>
+                </div>                
+                <div class="col-1">
+                    <div class="form-floating mb-3">
+                        <input type="datetime" id="UsuarioId" name="UsuarioId" value="@item.UsuarioId" class="form-control" placeholder="" />
+                        <label for="UsuarioId">ID</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-3">
+                <div class="alert alert-info">Esta tela é apenas informativa.</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br />
+
+@section scripts
+{
+    <script src="~/Views/Usuario/main.js" defer></script>
+}

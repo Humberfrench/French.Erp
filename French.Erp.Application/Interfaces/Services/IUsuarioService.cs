@@ -13,5 +13,6 @@ namespace French.Erp.Application.Interfaces.Services
         Task<ValidationResult<bool>> Excluir(int id);
         Task<ValidationResult<UsuarioDto>> AlterarSenha(int usuarioId, string senhaAnterior, string senhaNova);
         Task<IEnumerable<UsuarioDto>> ObterTodos();
+        Task<UsuarioDto> Obter(int id);
     }
 }

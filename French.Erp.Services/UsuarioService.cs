@@ -187,5 +187,11 @@ namespace French.Erp.Services
             return usuarios.ConvertObjects<List<UsuarioDto>>();
 
         }
+        public async Task<UsuarioDto> Obter(int id)
+        {
+            var usuarios = await usuarioRepository.ObterPorId(id);
+
+            return usuarios.ConvertObjects<UsuarioDto>();
+        }    
     }
 }
