@@ -1,21 +1,44 @@
 ﻿@using French.Erp.Application.DataObject;
-    using French.Erp.Application.DataObject;
 @model ModelBasic<TipoDeClienteDto>
 @{
     ViewData["Title"] = "Tipo de Cliente";
     Layout = "~/Views/Shared/_LayoutNew.cshtml";
     ViewData["User"] = Model.Nome;
-    ViewData["Admin"] = Model.Admin;
     ViewData["Role"] = Model.Role;
+    ViewData["Admin"] = Model.Admin;
 }
 <div class="text-center">
     <h3 class="display-4">Tipo de Cliente</h3>
 </div>
-<div class="text-right">
-    <button type="button" class="btn btn-success" onclick="TipoDeCliente.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
+<div class="text-end">
+    <button type="button" id="botaoNovo" name="botaoNovo" class="btn btn-outline-success" onclick="TipoDeCliente.novo();"><i class="fa fa-file"></i>&nbsp;Novo Serviço</button>
 </div>
 <br />
-<div class="table-responsive" style="overflow: visible;">
+<div class="form-floating d-none" id="divNovo" name="divNovo">
+    <div class="card">
+        <div class="card-header bg-black text-white"><b>Novo Tipo de Cliente</b></div>
+        <div class="card-body">
+            <div class="row" id="formNovo">
+                <div class="col-11">
+                    <div class="form-floating mb-3" data-parent="descricao">
+                        <input type="hidden" id="TipoDeClienteId" name="TipoDeClienteId" value="" />
+                        <input type="text" id="Descricao" name="Descricao" value="" class="form-control" placeholder="Descricao" />
+                        <label for="Descricao">Descrição</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <br />
+                    <button type="button" class="btn btn-success" onclick="TipoDeCliente.novoGravar(formNovo)"><i class="fa fa-save"></i></button>
+                    <button type="button" class="btn btn-primary" onclick="TipoDeCliente.limpar()"><i class="fa fa-eraser"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<br />
+<div class="table-responsive">
     <table class="table table-striped table-hover table-sm dataTable" data-item-reload="true" id="tableDados">
         <thead class="thead-dark">
             <tr>
@@ -28,11 +51,20 @@
             @foreach (var item in Model.Lista)
             {
                 <tr>
-                    <th scope="row">@item.TipoDeClienteId</th>
-                    <td>@item.Descricao</td>
+                    <td data-parent="id">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="TipoDeClienteId" name="TipoDeClienteId" value="@item.TipoDeClienteId" class="form-control" placeholder="Id" readonly="readonly" />
+                            <label for="TipoDeClienteId">Id</label>
+                        </div>
+                    </td>
+                    <td data-parent="descricao">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="Descricao" name="Descricao" value="@item.Descricao" class="form-control" placeholder="Descricao" />
+                            <label for="Descricao">Descrição</label>
+                        </div>
+                    </td>
                     <td class="text-right">
-                        <button type="button" class="btn btn-success" onclick="TipoDeCliente.Edit('@item.TipoDeClienteId', '@item.Descricao')"><i class="fa fa-pencil"></i></button>
-                        <button type="button" class="btn btn-danger" onclick="TipoDeCliente.Excluir('@item.TipoDeClienteId')"><i class="fa fa-trash-o"></i></button>
+                        <button type="button" class="btn btn-danger" onclick="TipoDeCliente.excluir('@item.TipoDeClienteId')"><i class="fa fa-trash-o"></i></button>
                     </td>
                 </tr>
             }
@@ -40,7 +72,6 @@
         </tbody>
     </table>
 </div>
-<partial name="Edit" />
 
 @section scripts
 {

@@ -1,104 +1,145 @@
 ﻿/// <reference path="../../js/ajax.js" />
 /// <reference path="../../js/mensagens.js" />
-var TipoDeCliente = new function () { }
 
 
-$(document).ready(function ()
-{
-
-});
-
-$("#Gravar").click(function ()
-{
-    if ($("#Descricao").val() === '')
+const TipoDeCliente = {
+    init: function ()
     {
-        Mensagens.Erro("Preencher o campo de Descrição!", "Erro.");
-        $("#Descricao").focus();
-        return false;
+        //TipoDeCliente.initFormValidation(); // Chama o método para inicializar a validação do formulário
+    },
+    novo: function ()
+    {
+        const novo = document.getElementById("divNovo");
+        const botaoNovo = document.getElementById("botaoNovo");
+        botaoNovo.classList.add("d-none");
+        novo.classList.remove("d-none");
+    },
+    limpar: function ()
+    {
+        const novo = document.getElementById("divNovo");
+        const botaoNovo = document.getElementById("botaoNovo");
+        botaoNovo.classList.remove("d-none");
+        novo.classList.add("d-none");
+    },
+    excluir: function (id)
+    {
+        const opcoes = new Object;
+        opcoes.url = "/TipoDeCliente/Excluir/" + id;
+        opcoes.headers = {};
+        opcoes.callBackSuccess = function (response)
+        {
+            const dataObj = eval(response);
+            if (dataObj.erro)
+            {
+                Mensagens.Erro(dataObj.mensagem, "Erro!");
+                return;
+            }
+            Mensagens.Sucesso(dataObj.mensagem, "Sucesso!");
+            setTimeout(function ()
+            {
+                location.reload();
+            }, 1500);
+        };
+
+        opcoes.dadoEnvio = {};
+
+        opcoes.type = "POST";
+        opcoes.async = false;
+
+        Ajax.Execute(opcoes);
+
+    },
+    saveAll: function (id, descricao)
+    {
+        const token = $('input[name="__RequestVerificationToken"]').val();
+
+        const opcoes = {
+            url: "/TipoDeCliente/Gravar/",
+            headers: {
+                "__RequestVerificationToken": token
+            },
+            type: "POST",
+            dadoEnvio: {
+                TipoDeClienteId: id,
+                Nome: nome,
+                Codigo: codigo,
+                Apelido: apelido,
+                Status: statusField === '1'
+            },
+            callBackSuccess: function (response)
+            {
+                if (response.erro)
+                {
+                    Mensagens.Erro(response.mensagem, "Erro!");
+                    return;
+                }
+                Mensagens.Sucesso(response.mensagem, "Sucesso!");
+                setTimeout(() =>
+                {
+                    location.reload();
+                }, 1500);
+            }
+        };
+
+        Ajax.Execute(opcoes);
+    },
+    novoGravar: function (element)
+    {
+        const codigoCol = element.closest("div").querySelector("[data-parent='codigo']");
+        const descricaoCol = element.closest("div").querySelector("[data-parent='nome']");
+
+        const id = codigoCol.querySelector("#TipoDeClienteId");
+        const descricao = descricaoCol.querySelector("#Nome");
+
+        if (!TipoDeCliente.validateInputs(id, descricao))
+        {
+            return;
+        }
+
+        TipoDeCliente.saveAll(id.value, descricao.value)
+
+    },
+    gravar: function (element)
+    {
+        const idCol = element.closest("tr").querySelector("[data-parent='descricao']");
+
+        const id = idCol.querySelector("#TipoDeClienteId");
+        const descricao = nomeCol.querySelector("#Descricao");
+
+        if (!TipoDeCliente.validateInputs(id, descricao))
+        {
+            return;
+        }
+
+        TipoDeCliente.saveAll(id.value, descricao.value)
+
+    },
+    validateInputs: function (id, descricao, nome, apelido, statusField)
+    {
+        var valid = true;
+        var mensagem = "";
+
+        id.classList.add('is-valid');
+        descricao.classList.remove('is-invalid');
+
+        if (descricao.value === '0' || descricao.value === '')
+        {
+            mensagem += "Selecione um Código para o Tipo de Cliente!<br />";
+            descricao.classList.add('is-invalid');
+            valid = false;
+        }
+
+        if (valid)
+        {
+            descricao.classList.add('is-valid');
+        }
+        else
+        {
+            Mensagens.Erro(mensagem, "Erro.");
+        }
+
+        return valid;
+
     }
-    TipoDeCliente.Gravar();
-});
-
-TipoDeCliente.Limpar = function ()
-{
-    $("#TipoDeClienteId").val('0');
-    $("#Descricao").val('');
-}
-
-TipoDeCliente.Edit = function (id, descricao)
-{
-    $("#TipoDeClienteId").val(id);
-    $("#Descricao").val(descricao);
-    $("#Descricao").focus();
-    $("#modalEdicao").modal('show');
-}
-
-TipoDeCliente.Novo = function ()
-{
-    TipoDeCliente.Limpar()
-    $("#Descricao").focus();
-    $("#modalEdicao").modal('show');
-}
-
-TipoDeCliente.Gravar = function ()
-{
-
-    var token = $('input[name="__RequestVerificationToken"]').val();
-    var opcoes = new Object;
-    opcoes.url = "/TipoDeCliente/Gravar/";
-    opcoes.headers = {};
-    opcoes.headers["__RequestVerificationToken"] = token;
-    opcoes.callBackSuccess = function (response)
-    {
-        var dataObj = eval(response);
-        if (dataObj.erro)
-        {
-            Mensagens.Erro(dataObj.mensagem, "Erro!");
-            return;
-        }
-        Mensagens.Sucesso(dataObj.mensagem, "Sucesso!");
-        TipoDeCliente.Limpar()
-        $("#modalEdicao").modal('hide');
-        setTimeout(function ()
-        {
-            location.reload();
-        }, 1500);
-    };
-
-    opcoes.dadoEnvio = new Object;
-    opcoes.dadoEnvio.TipoDeClienteId = $("#TipoDeClienteId").val();
-    opcoes.dadoEnvio.Descricao = $("#Descricao").val();
-
-    opcoes.type = "POST";
-    opcoes.async = false;
-
-    Ajax.Execute(opcoes);
-
-}
-
-TipoDeCliente.Excluir = function (id) {
-
-    var opcoes = new Object;
-    opcoes.url = "/TipoDeCliente/Excluir/" + id;
-    opcoes.headers = {};
-    opcoes.callBackSuccess = function (response) {
-        var dataObj = eval(response);
-        if (dataObj.erro) {
-            Mensagens.Erro(dataObj.mensagem, "Erro!");
-            return;
-        }
-        Mensagens.Sucesso(dataObj.mensagem, "Sucesso!");
-        setTimeout(function () {
-            location.reload();
-        }, 1500);
-    };
-
-    opcoes.dadoEnvio = {};
-
-    opcoes.type = "POST";
-    opcoes.async = false;
-
-    Ajax.Execute(opcoes);
-
-}
+};
 
