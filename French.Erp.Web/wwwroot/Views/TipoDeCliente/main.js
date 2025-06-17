@@ -114,7 +114,7 @@ const TipoDeCliente = {
         TipoDeCliente.saveAll(id.value, descricao.value)
 
     },
-    validateInputs: function (id, descricao, nome, apelido, statusField)
+    validateInputs: function (id, descricao)
     {
         var valid = true;
         var mensagem = "";
@@ -124,7 +124,7 @@ const TipoDeCliente = {
 
         if (descricao.value === '0' || descricao.value === '')
         {
-            mensagem += "Selecione um Código para o Tipo de Cliente!<br />";
+            mensagem += "Selecione uma descrição para o Tipo de Cliente!<br />";
             descricao.classList.add('is-invalid');
             valid = false;
         }

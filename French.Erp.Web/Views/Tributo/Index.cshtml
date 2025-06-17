@@ -8,41 +8,146 @@
     ViewData["User"] = Model.Nome;
     ViewData["Admin"] = Model.Admin;
     ViewData["Role"] = Model.Role;
+    
 }
 <div class="text-center">
-    <h3 class="display-4">Tributo</h3>
+    <h3 class="display-4">Tributos</h3>
 </div>
-<div class="text-right">
-    <button type="button" class="btn btn-success" onclick="Tributo.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
+<div class="text-end">
+    <button type="button" id="botaoNovo" name="botaoNovo" class="btn btn-outline-success" onclick="Tributo.novo();"><i class="fa fa-file"></i>&nbsp;Novo Tipo</button>
+</div>
+<br />
+<div class="form-floating d-none shadow-lg" id="divNovo" name="divNovo">
+    <div class="card">
+        <div class="card-header bg-black text-white"><b>Novo Tipo de Pessoa</b></div>
+        <div class="card-body">
+            <div class="row" id="formNovo">
+                <div class="col-3">
+                    <div class="form-floating mb-3" data-parent="descricao">
+                        <input type="hidden" id="TributoId" name="TributoId" value="" />
+                        <input type="text" id="Descricao" name="Descricao" value="" class="form-control" placeholder="Descricao" />
+                        <label for="Descricao">Descrição</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="form-floating mb-3" data-parent="percentual">
+                        <input type="text" id="Percentual" name="Percentual" value="" class="form-control" placeholder="Percentual" />
+                        <label for="Percentual">Perc.</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="form-floating mb-3" data-parent="retencao">
+                        <select class="form-control form-select" id="RetemNaNota" name="RetemNaNota">
+                            <option value="" selected="selected">Selecione</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                        <label for="RetemNaNota">Retém</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="faixainicial">
+                        <input type="text" id="FaixaInicial" name="FaixaInicial" value="" class="form-control" placeholder="FaixaInicial" />
+                        <label for="FaixaInicial">Fx.Ini</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="faixafinal">
+                        <input type="text" id="FaixaFinal" name="FaixaFinal" value="" class="form-control" placeholder="FaixaFinal" />
+                        <label for="FaixaFinal">Fx.Fim</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating mb-3" data-parent="valordeducao">
+                        <input type="text" id="ValorDeducao" name="ValorDeducao" value="" class="form-control" placeholder="ValorDeducao" />
+                        <label for="ValorDeducao">Dedução</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <br />
+                    <button type="button" class="btn btn-success" onclick="Tributo.novoGravar(formNovo)"><i class="fa fa-save"></i></button>
+                    <button type="button" class="btn btn-primary" onclick="Tributo.limpar()"><i class="fa fa-eraser"></i></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </div>
 <br />
 <div class="table-responsive" style="overflow: visible;">
-    <table class="table table-striped table-hover table-sm dataTable" data-item-reload="true" id="tableDados">
-        <thead class="table-primary">
-            <tr>
+    <table class="table table-striped table-hover table-responsive-xxl dataTable" data-item-reload="true" id="tableDados">
+        <thead>
+            <tr class="table-dark">
                 <th scope="col" style="width:5%">#</th>
-                <th scope="col" style="width:30%">Descrição</th>
+                <th scope="col" style="width:40%">Descrição</th>
                 <th scope="col" style="width:10%">Percentual</th>
                 <th scope="col" style="width:10%">Retem?</th>
                 <th scope="col" style="width:10%">Fx.Ini.</th>
                 <th scope="col" style="width:10%">Fx.Fim</th>
                 <th scope="col" style="width:10%">Dedução</th>
-                <th scope="col" class="text-right" style="width:15%">Ações</th>
+                <th scope="col" class="text-right" style="width:5%">Ações</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Lista)
             {
                 <tr>
-                    <th scope="row">@item.TributoId</th>
-                    <td>@item.Descricao</td>
-                    <td>@item.Percentual</td>
-                    <td>@item.RetemNaNota.ToSimNao()</td>
-                    <td>@item.FaixaInicial.ToMoeda()</td>
-                    <td>@item.FaixaFinal.ToMoeda()</td>
-                    <td>@item.ValorDeducao.ToMoeda()</td>
+                    <th scope="row">
+                        <div class="form-floating mb-3" data-parent="id">
+                            <input type="text" id="TributoId" name="TributoId" value="@item.TributoId" class="form-control" readonly="readonly" />
+                            <label for="TributoId">#</label>
+                        </div>
+                    </th>
+                    <td>
+                        <div class="form-floating mb-3" data-parent="descricao">
+                            <input type="text" id="Descricao" name="Descricao" value="@item.Descricao" class="form-control" placeholder="Descricao" />
+                            <label for="Descricao">Descrição</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-floating mb-3" data-parent="percentual">
+                            <input type="text" id="Percentual" name="Percentual" value="@item.Percentual" class="form-control" placeholder="Percentual" />
+                            <label for="Percentual">Percentual</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-floating mb-3" data-parent="retencao">
+                            <select class="form-control form-select" id="RetemNaNota" name="RetemNaNota">
+                                @if (item.RetemNaNota)
+                                {
+                                    <option value="1" selected="selected">Sim</option>
+                                    <option value="0">Não</option>
+                                }
+                                else
+                                {
+                                    <option value="1">Sim</option>
+                                    <option value="0" selected="selected">Não</option>
+                                }
+
+                            </select>
+                            <label for="RetemNaNota">Retém</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-floating mb-3" data-parent="faixainicial">
+                            <input type="text" id="FaixaInicial" name="FaixaInicial" value="@item.FaixaInicial" class="form-control" placeholder="FaixaInicial" />
+                            <label for="FaixaInicial">FaixaInicial</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-floating mb-3" data-parent="faixafinal">
+                            <input type="text" id="FaixaFinal" name="FaixaFinal" value="@item.FaixaFinal" class="form-control" placeholder="FaixaFinal" />
+                            <label for="FaixaFinal">FaixaFinal</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-floating mb-3" data-parent="valordeducao">
+                            <input type="text" id="ValorDeducao" name="ValorDeducao" value="@item.ValorDeducao" class="form-control" placeholder="ValorDeducao" />
+                            <label for="ValorDeducao">ValorDeducao</label>
+                        </div>
+                    </td>
                     <td class="text-right">
-                        <button type="button" class="btn btn-success" onclick="Tributo.Edit('@item.TributoId', '@item.Descricao', '@item.RetemNaNota', '@item.Percentual', '@item.FaixaInicial', '@item.FaixaFinal', '@item.ValorDeducao')"><i class="fa fa-pencil"></i></button>
                         <button type="button" class="btn btn-danger" onclick="Tributo.Excluir('@item.TributoId')"><i class="fa fa-trash-o"></i></button>
                     </td>
                 </tr>
@@ -51,8 +156,6 @@
         </tbody>
     </table>
 </div>
-
-<partial name="Edit" />
 
 @section scripts
 {

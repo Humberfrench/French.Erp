@@ -24,6 +24,7 @@ namespace French.Erp.Application.DataObject
         public DateTime Data { get; set; }
         public decimal Valor { get; set; }
         public decimal ImpostoTotalRetido { get; set; }
+        public decimal PercentualImposto { get; set; }
         public decimal ValorLiquido { get; set; }
         public string Descricao { get; set; }
         public byte StatusNotaFiscalId { get; set; }

@@ -40,6 +40,9 @@ namespace French.Erp.Domain.Entities
         public decimal ImpostoTotalRetido { get; set; }
 
         [Column(TypeName = "numeric(18, 2)")]
+        public decimal PercentualImposto { get; set; }
+
+        [Column(TypeName = "numeric(18, 2)")]
         public decimal ValorLiquido { get; set; }
 
         [Column, MaxLength(50)]
