@@ -8,15 +8,10 @@ using French.Erp.Domain.Validations;
 namespace French.Erp.Domain.Entities
 {
     [Table("Usuario")]
-    public class Usuario
+    public class Usuario : EntityBase<Usuario>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
-
         public Usuario()
         {
-            validationResult = new Validation.ValidationResult();
-            isValid = null;
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -64,40 +59,14 @@ namespace French.Erp.Domain.Entities
         [Column]
         public bool Ativo { get; set; }
 
-        #region Dados de Validação
 
         [MaxLength(50), NotMapped]
         public string SenhaText { get; set; }
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        #region Dados de Validação
+        protected override Validation.Validator<Usuario> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar(this);
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
+            return new UsuarioEstaConsistente();
         }
-
-        public virtual Validation.ValidationResult Validar(Usuario entity)
-        {
-            var entidadeNomeValidate = new UsuarioEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
-        }
-
         #endregion
 
     }

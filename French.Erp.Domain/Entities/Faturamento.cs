@@ -12,15 +12,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace French.Erp.Domain.Entities
 {
     [Table("Faturamento")]
-    public partial class Faturamento
+    public partial class Faturamento : EntityBase<Faturamento>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
-
         public Faturamento()
         {
-            validationResult = new Validation.ValidationResult();
-            isValid = null;
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Required]
@@ -44,34 +39,9 @@ namespace French.Erp.Domain.Entities
 
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Faturamento> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar();
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
-        }
-
-        public virtual Validation.ValidationResult Validar()
-        {
-            //var entidadeNomeValidate = new ClienteEstaConsistente();
-            //var validationResultEntidade = entidadeNomeValidate.Validar(this);
-            //isValid = validationResultEntidade.Valid;
-            //if (!validationResultEntidade.Valid)
-            //{
-            //    validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            //}
-
-            return validationResult;
+            return null; //new ClienteEstaConsistente();
         }
 
         #endregion

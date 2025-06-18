@@ -10,16 +10,12 @@ using French.Erp.Domain.Validations;
 namespace French.Erp.Domain.Entities
 {
     [Table("StatusNotaFiscal")]
-    public partial class StatusNotaFiscal
+    public partial class StatusNotaFiscal : EntityBase<StatusNotaFiscal>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
 
         public StatusNotaFiscal()
         {
             NotaFiscals = new List<NotaFiscal>();
-            validationResult = new Validation.ValidationResult();
-            isValid = null;
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -33,35 +29,11 @@ namespace French.Erp.Domain.Entities
         public virtual IList<NotaFiscal> NotaFiscals { get; set; }
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<StatusNotaFiscal> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar(this);
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
+            return new StatusNotaFiscalEstaConsistente();
         }
 
-        public virtual Validation.ValidationResult Validar(StatusNotaFiscal entity)
-        {
-            var entidadeNomeValidate = new StatusNotaFiscalEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
-        }
 
         #endregion
     }

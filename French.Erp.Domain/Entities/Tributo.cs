@@ -10,15 +10,10 @@ using French.Erp.Domain.Validations;
 namespace French.Erp.Domain.Entities
 {
     [Table("Tributo")]
-    public partial class Tributo
+    public partial class Tributo : EntityBase<Tributo>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
-
         public Tributo()
         {
-            validationResult = new Validation.ValidationResult();
-            isValid = null;
             TributoNotaFiscals = new List<TributoNotaFiscal>();
         }
 
@@ -58,34 +53,9 @@ namespace French.Erp.Domain.Entities
 
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Tributo> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar(this);
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
-        }
-
-        public virtual Validation.ValidationResult Validar(Tributo entity)
-        {
-            var entidadeNomeValidate = new TributoEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
+            return new TributoEstaConsistente();
         }
 
         #endregion

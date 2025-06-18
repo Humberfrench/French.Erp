@@ -10,16 +10,12 @@ using French.Erp.Domain.Validations;
 namespace French.Erp.Domain.Entities
 {
     [Table("Servico")]
-    public partial class Servico
+    public partial class Servico : EntityBase<Servico>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
 
         public Servico()
         {
             TarefaItems = new List<TarefaItem>();
-            validationResult = new Validation.ValidationResult();
-            isValid = null;
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -35,36 +31,11 @@ namespace French.Erp.Domain.Entities
         public virtual IList<TarefaItem> TarefaItems { get; set; }
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Servico> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar(this);
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
+            return new ServicoEstaConsistente();
         }
-
-        public virtual Validation.ValidationResult Validar(Servico entity)
-        {
-            var entidadeNomeValidate = new ServicoEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
-        }
-
         #endregion
     }
+
 }

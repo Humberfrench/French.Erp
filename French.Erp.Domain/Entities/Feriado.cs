@@ -9,16 +9,11 @@ using Validation = Dietcode.Core.DomainValidator;
 namespace French.Erp.Domain.Entities
 {
     [Table("Feriado")]
-    public partial class Feriado
+    public partial class Feriado : EntityBase<Feriado>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
-
         public Feriado()
         {
             Nome = string.Empty;
-            validationResult = new Validation.ValidationResult();
-            isValid = null;
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -44,36 +39,11 @@ namespace French.Erp.Domain.Entities
 
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Feriado> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar(this);
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
+            return new FeriadoEstaConsistente();
         }
-
-        public virtual Validation.ValidationResult Validar(Feriado entity)
-        {
-            var entidadeNomeValidate = new FeriadoEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
-        }
-
         #endregion
     }
-}
+
+    }

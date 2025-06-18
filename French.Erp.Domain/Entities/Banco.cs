@@ -6,15 +6,13 @@ using Validation = Dietcode.Core.DomainValidator;
 namespace French.Erp.Domain.Entities
 {
     [Table("Bancos")]
-    public partial class Banco
+    public partial class Banco : EntityBase<Banco>
     {
         private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
 
         public Banco()
         {
             validationResult = new Validation.ValidationResult();
-            isValid = null;
         }
 
         [Key, Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -32,34 +30,9 @@ namespace French.Erp.Domain.Entities
         public bool Status { get; set; }
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Banco> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar();
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
-        }
-
-        public virtual Validation.ValidationResult Validar()
-        {
-            var entidadeNomeValidate = new BancoEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(this);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
+            return new BancoEstaConsistente();
         }
 
         #endregion

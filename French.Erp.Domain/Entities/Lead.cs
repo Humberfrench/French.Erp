@@ -8,15 +8,11 @@ using French.Erp.Domain.Validations;
 namespace French.Erp.Domain.Entities
 {
     [Table("Lead")]
-    public partial class Lead
+    public partial class Lead : EntityBase<Lead>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool isValid;
 
         public Lead()
         {
-            validationResult = new Validation.ValidationResult();
-            isValid = false;
             Descricao = string.Empty;
             Empresa = string.Empty;
             Contato = string.Empty;
@@ -103,36 +99,11 @@ namespace French.Erp.Domain.Entities
         #endregion
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Lead> ObterValidador()
         {
-            if (!isValid)
-            {
-                var validationDados = Validar(this);
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid;
-
+            return new LeadEstaConsistente();
         }
-
-        public virtual Validation.ValidationResult Validar(Lead entity)
-        {
-            var entidadeNomeValidate = new LeadEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
-        }
-
         #endregion
     }
+
 }

@@ -11,15 +11,11 @@ using French.Erp.Domain.Validations;
 namespace French.Erp.Domain.Entities
 {
     [Table("Tarefa")]
-    public partial class Tarefa
+    public partial class Tarefa : EntityBase<Tarefa>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool isValid;
 
         public Tarefa()
         {
-            validationResult = new Validation.ValidationResult();
-            isValid = false;
             ComposicaoNotaFiscals = new List<ComposicaoNotaFiscal>();
             TarefaItems = new List<TarefaItem>();
         }
@@ -81,34 +77,9 @@ namespace French.Erp.Domain.Entities
 
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Tarefa> ObterValidador()
         {
-            if (!isValid)
-            {
-                var validationDados = Validar(this);
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid;
-
-        }
-
-        public virtual Validation.ValidationResult Validar(Tarefa entity)
-        {
-            var entidadeNomeValidate = new TarefaEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(entity);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
+            return new TarefaEstaConsistente();
         }
 
         #endregion

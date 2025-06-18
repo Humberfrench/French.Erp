@@ -12,15 +12,10 @@ using French.Erp.Domain.Validations;
 namespace French.Erp.Domain.Entities
 {
     [Table("Cliente")]
-    public partial class Cliente
+    public partial class Cliente : EntityBase<Cliente>
     {
-        private readonly Validation.ValidationResult validationResult;
-        private bool? isValid;
-
         public Cliente()
         {
-            validationResult = new Validation.ValidationResult();
-            isValid = null;
             Faturamentos = new List<Faturamento>();
             NotaFiscals = new List<NotaFiscal>();
             Tarefas = new List<Tarefa>();
@@ -109,34 +104,9 @@ namespace French.Erp.Domain.Entities
         public virtual TipoDePessoa TipoDePessoa { get; set; }
 
         #region Dados de Validação
-        public virtual Validation.ValidationResult ValidationResult => validationResult;
-
-        public virtual bool IsValid()
+        protected override Validation.Validator<Cliente> ObterValidador()
         {
-            if (!isValid.HasValue)
-            {
-                var validationDados = Validar();
-                if (!validationDados.Valid)
-                {
-                    validationDados.Erros.ToList().ForEach(e => validationResult.Add(e));
-                }
-                return validationResult.Valid;
-            }
-            return isValid.Value;
-
-        }
-
-        public virtual Validation.ValidationResult Validar()
-        {
-            var entidadeNomeValidate = new ClienteEstaConsistente();
-            var validationResultEntidade = entidadeNomeValidate.Validar(this);
-            isValid = validationResultEntidade.Valid;
-            if (!validationResultEntidade.Valid)
-            {
-                validationResultEntidade.Erros.ToList().ForEach(e => validationResult.Add(e));
-            }
-
-            return validationResult;
+            return new ClienteEstaConsistente();
         }
 
         #endregion
