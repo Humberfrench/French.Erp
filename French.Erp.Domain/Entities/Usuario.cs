@@ -1,12 +1,9 @@
-using Validation = Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Validations.TipoDePessoas;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System;
-using French.Erp.Domain.Validations.Usuarios;
+using System.Linq;
+using Validation = Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Validations;
 
 namespace French.Erp.Domain.Entities
 {

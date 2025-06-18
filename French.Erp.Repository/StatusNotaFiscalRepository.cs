@@ -1,8 +1,8 @@
 ﻿using Dietcode.Database.Domain;
-using French.Erp.Application.Interfaces.Repository;
-using French.Erp.Domain.Entities;
 using Dietcode.Database.Orm;
 using Dietcode.Database.Orm.Context;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Domain.Entities;
 
 namespace French.Erp.Repository
 {

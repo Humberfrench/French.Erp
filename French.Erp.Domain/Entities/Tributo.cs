@@ -1,18 +1,16 @@
-﻿using Validation = Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Validations.TipoDePessoas;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using French.Erp.Domain.Validations.Tributos;
+using System.Linq;
+using Validation = Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Validations;
 
 #nullable disable
 
 namespace French.Erp.Domain.Entities
 {
     [Table("Tributo")]
-    public partial class Tributo 
+    public partial class Tributo
     {
         private readonly Validation.ValidationResult validationResult;
         private bool? isValid;

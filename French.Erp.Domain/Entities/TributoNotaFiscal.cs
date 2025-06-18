@@ -1,9 +1,4 @@
-﻿using Validation = Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Validations.TipoDePessoas;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable

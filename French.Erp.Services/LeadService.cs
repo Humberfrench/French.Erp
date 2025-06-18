@@ -31,7 +31,7 @@ namespace French.Erp.Services
             }
 
             var cliente = retorno.Retorno.ToCliente(leadEntryDto.RazaoSocial, leadEntryDto.InscricaoEstadual,
-                                                    leadEntryDto.CadastroMunicipal, leadEntryDto.Endereco, 
+                                                    leadEntryDto.CadastroMunicipal, leadEntryDto.Endereco,
                                                     leadEntryDto.Numero, leadEntryDto.Bairro, leadEntryDto.Complemento,
                                                     leadEntryDto.CidadeId.HasValue ? leadEntryDto.CidadeId.Value : 0,
                                                     leadEntryDto.EstadoId.HasValue ? leadEntryDto.EstadoId.Value : 0,
@@ -44,7 +44,7 @@ namespace French.Erp.Services
 
         public async Task<ValidationResult> CriarCliente(int id)
         {
-            var retorno = await GetLead(id);           
+            var retorno = await GetLead(id);
             if (retorno.Invalid)
             {
                 return retorno.Converter();
@@ -80,7 +80,7 @@ namespace French.Erp.Services
                 retorno.Add("Lead não encontrado.");
                 return retorno;
             }
-            
+
             retorno.Retorno = lead;
             return retorno;
 

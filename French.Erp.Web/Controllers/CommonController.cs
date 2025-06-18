@@ -1,15 +1,7 @@
-﻿using Dietcode.Core.DomainValidator.Interfaces;
-using French.Erp.Application.DataObject;
-using French.Erp.Application.Interfaces.Services;
+﻿using French.Erp.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.IO;
-using System.Linq;
-using System.Security.Claims;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers

@@ -1,6 +1,5 @@
 ﻿using Dietcode.Core.DomainValidator;
 using Dietcode.Core.Lib;
-using Dietcode.Database.Domain;
 using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
@@ -8,7 +7,6 @@ using French.Erp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Windows.Markup;
 
 namespace French.Erp.Services
 {
@@ -117,7 +115,7 @@ namespace French.Erp.Services
             var validationResult = new ValidationResult<UsuarioDto>();
 
             var usuario = await usuarioRepository.ObterUsuarioPorLogin(login);
-           
+
             //TODO: POR VALIDACOES
 
             if (usuario == null)
@@ -153,7 +151,7 @@ namespace French.Erp.Services
             await usuarioRepository.Atualizar(usuario);
 
             var retGravacao = usuarioRepository.Commit();
-            if(retGravacao.Invalid)
+            if (retGravacao.Invalid)
             {
                 return retGravacao.Converter<UsuarioDto>();
             }
@@ -192,6 +190,6 @@ namespace French.Erp.Services
             var usuarios = await usuarioRepository.ObterPorId(id);
 
             return usuarios.ConvertObjects<UsuarioDto>();
-        }    
+        }
     }
 }

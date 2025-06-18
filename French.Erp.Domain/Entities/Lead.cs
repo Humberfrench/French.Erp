@@ -1,10 +1,9 @@
-﻿using Validation = Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Validations.Lead;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using Validation = Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Validations;
 
 namespace French.Erp.Domain.Entities
 {
@@ -64,7 +63,7 @@ namespace French.Erp.Domain.Entities
         public byte TipoDeClienteId { get; set; }
 
         #region De Lead para Cliente
-        public  Cliente ToCliente()
+        public Cliente ToCliente()
         {
             var cliente = new Cliente
             {
@@ -83,7 +82,7 @@ namespace French.Erp.Domain.Entities
             return cliente;
         }
         public Cliente ToCliente(string razaoSocial, string inscricaoEstadual = "", string cadastroMunicipal = "",
-                                 string endereco = "", string numero = "", string bairro = "", string complemento = "", 
+                                 string endereco = "", string numero = "", string bairro = "", string complemento = "",
                                  int cidadeId = 0, int estadoId = 0, string cep = "")
         {
             var cliente = ToCliente();

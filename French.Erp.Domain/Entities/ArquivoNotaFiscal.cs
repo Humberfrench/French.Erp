@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System;
 using System.Collections.Generic;
 using Validation = Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Validations;
 
 #nullable disable
 

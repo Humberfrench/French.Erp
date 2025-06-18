@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace French.Erp.Application.DataObject
+﻿namespace French.Erp.Application.DataObject
 {
     public class LeadEntryDto
     {

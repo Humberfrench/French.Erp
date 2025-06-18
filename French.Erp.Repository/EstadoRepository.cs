@@ -1,9 +1,9 @@
-﻿using Dietcode.Database.Domain;
-using Dapper;
-using French.Erp.Application.Interfaces.Repository;
-using French.Erp.Domain.Entities;
+﻿using Dapper;
+using Dietcode.Database.Domain;
 using Dietcode.Database.Orm;
 using Dietcode.Database.Orm.Context;
+using French.Erp.Application.Interfaces.Repository;
+using French.Erp.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

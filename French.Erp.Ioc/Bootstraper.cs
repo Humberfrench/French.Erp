@@ -2,16 +2,11 @@
 
 namespace French.Erp.Ioc
 {
-    using Dietcode.Database.Domain;
-    using Dietcode.Database.Orm;
-    using Dietcode.Database.Orm.Context;
-    using Dietcode.Database.Orm.UnitOfWork;
     using French.Erp.Application.Interfaces.Repository;
     using French.Erp.Application.Interfaces.Services;
     using French.Erp.Repository.Support;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc.Infrastructure;
-    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Repository;
     using Services;

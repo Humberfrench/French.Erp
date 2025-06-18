@@ -42,6 +42,6 @@ namespace French.Erp.Web.Controllers
                 Admin = Admin,
             };
             return View(model);
-        }    
+        }
     }
 }

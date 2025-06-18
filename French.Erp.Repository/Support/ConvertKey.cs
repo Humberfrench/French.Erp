@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace French.Erp.Repository.Support
 {
-    public class ConvertKey : IConvertKey, IDisposable  
+    public class ConvertKey : IConvertKey, IDisposable
     {
         private IDbConnection Connection;
         private bool disposedValue;

@@ -1,4 +1,4 @@
-﻿using French.Erp.Domain.Validations.Banco;
+﻿using French.Erp.Domain.Validations;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;

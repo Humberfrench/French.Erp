@@ -1,15 +1,11 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace French.Erp.Application.DataObject
 {
     public class UsuarioDto
     {
-        [Required, Range(1,10000)]
+        [Required, Range(1, 10000)]
         public int UsuarioId { get; set; }
 
         [Required, MaxLength(20)]

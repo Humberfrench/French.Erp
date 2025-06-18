@@ -56,7 +56,7 @@ namespace French.Erp.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AlterarStatus(int banco, bool status)
         {
-            var result = await bancoAppService.AlterarStatus( banco, status);
+            var result = await bancoAppService.AlterarStatus(banco, status);
 
             var returnData = new
             {

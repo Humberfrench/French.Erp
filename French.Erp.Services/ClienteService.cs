@@ -115,7 +115,7 @@ namespace French.Erp.Services
                 result = DeserializeObject<Destiny>(value);
                 return result;
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 return result;
             }

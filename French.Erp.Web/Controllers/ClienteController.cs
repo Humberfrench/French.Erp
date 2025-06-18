@@ -3,7 +3,6 @@ using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 using System.Threading.Tasks;
 

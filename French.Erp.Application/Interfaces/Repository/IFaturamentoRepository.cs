@@ -1,11 +1,8 @@
-﻿using French.Erp.Application.DataObject;
+﻿using Dietcode.Database.Domain;
+using French.Erp.Application.DataObject;
 using French.Erp.Domain.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Dietcode.Database.Domain;
 
 namespace French.Erp.Application.Interfaces.Repository
 {

@@ -62,11 +62,11 @@ namespace French.Erp.Services
             {
                 var faturamento = await faturamentoRepository.ObterPorId(faturamentoDados.FaturamentoId);
                 faturamento.Mes = faturamentoDados.Mes;
-                    faturamento.Ano = faturamentoDados.Ano;
-                    faturamento.ClienteId = faturamentoDados.ClienteId;
-                    faturamento.Valor = faturamentoDados.Valor;
-                    faturamento.UsuarioId = faturamentoDados.UsuarioId;
-                    faturamento.Faturado = faturamentoDados.Faturado;
+                faturamento.Ano = faturamentoDados.Ano;
+                faturamento.ClienteId = faturamentoDados.ClienteId;
+                faturamento.Valor = faturamentoDados.Valor;
+                faturamento.UsuarioId = faturamentoDados.UsuarioId;
+                faturamento.Faturado = faturamentoDados.Faturado;
 
                 //validate
                 if (!faturamento.IsValid())

@@ -15,7 +15,7 @@ namespace French.Erp.Web.Controllers
         private readonly IFaturamentoService faturamentoService;
         private readonly IClienteService clienteService;
 
-        public FaturamentoController(IFaturamentoService faturamentoService, 
+        public FaturamentoController(IFaturamentoService faturamentoService,
                                      IClienteService clienteService,
                                      IHttpContextAccessor context) : base(null, null, null,
                                                                           clienteService,
@@ -47,8 +47,8 @@ namespace French.Erp.Web.Controllers
         {
             var model = new ModelBasic<FaturamentoDadosDto>
             {
-                Lista = (await faturamentoService.Obter(UsuarioId, 
-                                                        faturamentoPesquisaPost.ClienteId, 
+                Lista = (await faturamentoService.Obter(UsuarioId,
+                                                        faturamentoPesquisaPost.ClienteId,
                                                         faturamentoPesquisaPost.Mes,
                                                         faturamentoPesquisaPost.Ano,
                                                         faturamentoPesquisaPost.Faturado)).ToList(),

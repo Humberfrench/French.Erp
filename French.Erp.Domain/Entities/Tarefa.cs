@@ -1,12 +1,10 @@
-﻿using Validation = Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Validations.TipoDePessoas;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System;
-using French.Erp.Domain.Validations.Tarefas;
+using System.Linq;
+using Validation = Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Validations;
 
 #nullable disable
 
@@ -28,7 +26,7 @@ namespace French.Erp.Domain.Entities
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Required]
         public int TarefaId { get; set; }
-        
+
         [Column, Required]
         public int ClienteId { get; set; }
 
@@ -76,10 +74,10 @@ namespace French.Erp.Domain.Entities
         public virtual Cliente Cliente { get; set; }
 
         [InverseProperty("Tarefa")]
-        public virtual IList<ComposicaoNotaFiscal> ComposicaoNotaFiscals { get; set; } 
+        public virtual IList<ComposicaoNotaFiscal> ComposicaoNotaFiscals { get; set; }
 
         [InverseProperty("Tarefa")]
-        public virtual IList<TarefaItem> TarefaItems { get; set; } 
+        public virtual IList<TarefaItem> TarefaItems { get; set; }
 
 
         #region Dados de Validação

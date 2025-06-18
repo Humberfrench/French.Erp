@@ -1,11 +1,9 @@
-﻿using Validation = Dietcode.Core.DomainValidator;
-using French.Erp.Domain.Validations.TipoDePessoas;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using French.Erp.Domain.Validations.Servicos;
+using System.Linq;
+using Validation = Dietcode.Core.DomainValidator;
+using French.Erp.Domain.Validations;
 
 #nullable disable
 
@@ -34,7 +32,7 @@ namespace French.Erp.Domain.Entities
         public string Descricao { get; set; }
 
         [InverseProperty("Servico")]
-        public virtual IList<TarefaItem> TarefaItems { get; set; } 
+        public virtual IList<TarefaItem> TarefaItems { get; set; }
 
         #region Dados de Validação
         public virtual Validation.ValidationResult ValidationResult => validationResult;
