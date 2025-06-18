@@ -1,24 +1,27 @@
 ﻿/// <reference path="../../js/ajax.js" />
 /// <reference path="../../js/mensagens.js" />
 
-var Generics = new function () { }
-
-Generics.Cidades = [];
-
-Generics.ObterCidades = function (id)
-{
-    var opcoes = new Object;
-    opcoes.url = "/Cliente/ObterCidades/" + id;
-    opcoes.headers = {};
-    opcoes.callBackSuccess = function (response)
+const Generics = {
+    init: function ()
     {
-        Generics.Cidades = response;
-    };
 
-    opcoes.dadoEnvio = {};
+    },
+    cidades: [],
+    obterCidades: function (id)
+    {
+        const opcoes = {
+            url: "/Cliente/ObterCidades/" + id,
+            headers: {},
+            callBackSuccess: function (response)
+            {
+                Generics.cidades = response;
+            },
+            dadoEnvio: {},
+            type: "GET",
+            async: false
+        };
 
-    opcoes.type = "GET";
-    opcoes.async = false;
+        Ajax.Execute(opcoes);
 
-    Ajax.Execute(opcoes);
+    }
 }

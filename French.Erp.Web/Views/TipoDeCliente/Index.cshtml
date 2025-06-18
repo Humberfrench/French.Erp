@@ -40,8 +40,8 @@
 <br />
 <div class="table-responsive">
     <table class="table table-striped table-hover table-sm dataTable" data-item-reload="true" id="tableDados">
-        <thead class="thead-dark">
-            <tr>
+        <thead>
+            <tr class="table-dark">
                 <th scope="col" style="width:10%">#</th>
                 <th scope="col" style="width:70%">Descrição</th>
                 <th scope="col" class="text-right" style="width:20%">Ações</th>
@@ -64,6 +64,7 @@
                         </div>
                     </td>
                     <td class="text-right">
+                        <button type="button" class="btn btn-success" onclick="TipoDeCliente.gravar(this)"><i class="fa fa-save"></i></button>
                         <button type="button" class="btn btn-danger" onclick="TipoDeCliente.excluir('@item.TipoDeClienteId')"><i class="fa fa-trash-o"></i></button>
                     </td>
                 </tr>

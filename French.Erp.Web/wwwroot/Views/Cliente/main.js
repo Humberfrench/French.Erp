@@ -220,8 +220,8 @@ Cliente.Excluir = function (id)
 
 Cliente.RenderizarComboCidades = function (id)
 {
-    Generics.ObterCidades(id);
-    var cidades = Generics.Cidades;
+    Generics.obterCidades(id);
+    var cidades = Generics.cidades;
     var opcoes = '<option value="0">Selecione</option>';
     for (var i = 0; i < cidades.length; i++)
     {
@@ -229,7 +229,6 @@ Cliente.RenderizarComboCidades = function (id)
     }
 
     $("#CidadeId").html(opcoes);
-    //$("#CidadeId").selectpicker('refresh')
 }
 
 Cliente.VerNotasFiscais = function (id)

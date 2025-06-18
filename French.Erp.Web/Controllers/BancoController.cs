@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
 {
+    [Route("[controller]")]
     public class BancoController : BaseController
     {
         private readonly IBancoService bancoAppService;

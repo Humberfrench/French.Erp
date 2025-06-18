@@ -24,6 +24,7 @@ namespace French.Erp.Web.Controllers
             this.tipoDePessoaService = tipoDePessoaService;
             this.tipoDeClienteService = tipoDeClienteService;
         }
+
         #region Endpoints Comuns
 
         [HttpGet("ObterCidades/{id}")]

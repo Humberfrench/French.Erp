@@ -54,6 +54,15 @@
                                 <li><a class="dropdown-item" asp-area="" asp-controller="StatusNotaFiscal" asp-action="Index">Status Nota Fiscal</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarFeriado" role="button" data-bs-toggle="dropdown" aria-expanded="false">Feriados</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarFeriado">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Feriado" asp-action="Index">Todos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Feriado" asp-action="Fixos">Fixos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Feriado" asp-action="Moveis">Móveis</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Feriado" asp-action="Locais">Locais</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuário</a>
                         </li>
