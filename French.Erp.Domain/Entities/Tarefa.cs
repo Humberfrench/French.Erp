@@ -57,10 +57,10 @@ namespace French.Erp.Domain.Entities
         public decimal? Comissao { get; set; }
 
         [Column(TypeName = "DateTime")]
-        public DateTime? DataInicio { get; set; }
+        public DateTime DataInicio { get; set; }
 
         [Column(TypeName = "DateTime")]
-        public DateTime? DataFim { get; set; }
+        public DateTime DataFim { get; set; }
 
         [Column, Required]
         public int UsuarioId { get; set; }

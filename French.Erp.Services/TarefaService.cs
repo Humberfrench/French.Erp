@@ -5,6 +5,7 @@ using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Application.Interfaces.Services;
 using French.Erp.Domain.Entities;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace French.Erp.Services
@@ -111,7 +112,19 @@ namespace French.Erp.Services
             var tarefas = await repositoryTarefa.ObterTodosDoCliente(clienteId);
             return tarefas.ConvertObjects<List<TarefaDto>>();
         }
-
+        public async Task<IEnumerable<TarefaDto>> ObterTodosDoCliente(int id, int ano, int mes = 0)
+        {
+            var tarefas = new List<Tarefa>();
+            if (mes == 0)
+            {
+                tarefas = (await repositoryTarefa.ObterTodosDoCliente(id, ano)).ToList();
+            }
+            else
+            {
+                tarefas = (await repositoryTarefa.ObterTodosDoCliente(id, ano, mes)).ToList();
+            }
+            return tarefas.ConvertObjects<List<TarefaDto>>();
+        }
         public async Task<TarefaDto> ObterPorId(int id)
         {
             var tarefa = await repositoryTarefa.ObterPorId(id);

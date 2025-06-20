@@ -34,8 +34,27 @@ namespace French.Erp.Web.Controllers
         {
             var model = new ModelBasic<TarefaDto>
             {
-                Lista = (await tarefaService.ObterTodos()).ToList(),
+                Lista = new List<TarefaDto>(),
                 Valor1 = 0,
+                Seletores = new SeletoresBasic
+                {
+                    Seletor1 = await ObterClienteParaCombo(),
+                },
+                Nome = Nome,
+                Role = Admin ? "Administrador" : "Usuário",
+                Admin = Admin,
+            };
+
+            return View(model);
+        }
+
+        [HttpGet("Cliente/{id}/Ano/{ano}/Mes/{mes}")]
+        public async Task<IActionResult> Index(int id, int ano, int mes = 0)
+        {
+            var model = new ModelBasic<TarefaDto>
+            {
+                Lista = (await tarefaService.ObterTodosDoCliente(id, ano, mes)).ToList(),
+                Valor1 = id,
                 Seletores = new SeletoresBasic
                 {
                     Seletor1 = await ObterClienteParaCombo(),

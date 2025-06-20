@@ -23,8 +23,8 @@ namespace French.Erp.Application.DataObject
         public decimal? ValorHora { get; set; }
         public decimal? ValorCobrado { get; set; }
         public decimal? Comissao { get; set; }
-        public DateTime? DataInicio { get; set; }
-        public DateTime? DataFim { get; set; }
+        public DateTime DataInicio { get; set; }
+        public DateTime DataFim { get; set; }
 
         public virtual ClienteDto Cliente { get; set; }
         public virtual ICollection<ComposicaoNotaFiscalDto> ComposicaoNotaFiscal { get; set; }

@@ -1,6 +1,5 @@
 ﻿@using French.Erp.Application.DataObject;
 @using Dietcode.Core.Lib;
-    using French.Erp.Application.DataObject;
 @model ModelBasic<TarefaDto>
 @{
     ViewData["Title"] = "Tarefa";
@@ -18,17 +17,59 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-8 col-sm-8 col-xl-8 col-md-8 col-lg-8">
-                <label id="labelCliente" for="Cliente" class="col-form-label">Cliente</label>
-                <select id="Cliente" name="Cliente" asp-items="Model.Seletores.Seletor1" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="false">
-                    <option value="0">Todos os Clientes</option>
-                </select>
-                <input type="hidden" value="@clienteId" id="ClienteId" name="ClienteId" />
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <select id="Cliente" name="Cliente" asp-items="Model.Seletores.Seletor1"  required="required" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="false">
+                        <option value="0">Todos os Clientes</option>
+                    </select>
+                    <label id="labelCliente" for="Cliente" class="col-form-label">Cliente</label>
+                </div>
             </div>
-            <div class="col-2 col-sm-2 col-xl-2 col-md-2 col-lg-2">&nbsp;</div>
-            <div class="col-2 col-sm-2 col-xl-2 col-md-2 col-lg-2">
-                &nbsp;<br />
-                <button type="button" class="btn btn-success" onclick="Tarefa.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
+            <div class="col-2">
+                <div class="form-floating mb-3">
+                    <select class="form-control form-select" id="Mes" name="Mes" placeholder="Mes" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                        <option value="0">Todos</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                    <label for="Mes">Mes</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-floating mb-3">
+                    <select class="form-control form-select" id="Ano" name="Ano" placeholder="Ano" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                        <option value="0">Todos</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                    <label for="Ano">Ano</label>
+                </div>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-outline-primary h-100 w-100" onclick="Tarefa.Novo();"><i class="fa fa-search"></i>&nbsp;Verificar</button>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-outline-success h-100 w-100" onclick="Tarefa.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
             </div>
         </div>
     </div>

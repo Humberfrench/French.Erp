@@ -55,6 +55,7 @@ namespace French.Erp.Web.Controllers
                     Seletor2 = await ObterCidades()
                 },
             };
+            ViewBag.Header = "Fixos";
 
             return View("Index", model);
         }
@@ -74,7 +75,7 @@ namespace French.Erp.Web.Controllers
                     Seletor2 = await ObterCidades()
                 },
             };
-
+            ViewBag.Header = "Móveis";
             return View("Index", model);
         }
 
@@ -93,6 +94,7 @@ namespace French.Erp.Web.Controllers
                     Seletor2 = await ObterCidades()
                 },
             };
+            ViewBag.Header = "Locais";
 
             return View("Index", model);
         }

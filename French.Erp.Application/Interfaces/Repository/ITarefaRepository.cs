@@ -10,5 +10,7 @@ namespace French.Erp.Application.Interfaces.Repository
         new Task<IEnumerable<Tarefa>> ObterTodos();
         new Task<Tarefa> ObterPorId(int id);
         Task<IEnumerable<Tarefa>> ObterTodosDoCliente(int clienteId);
+        Task<IEnumerable<Tarefa>> ObterTodosDoCliente(int clienteId, int ano, int mes);
+        Task<IEnumerable<Tarefa>> ObterTodosDoCliente(int clienteId, int ano);
     }
 }

@@ -2,15 +2,16 @@
 @model ModelBasic<FeriadoDto>
 @{
     ViewData["Title"] = "Feriados";
+     
     Layout = "~/Views/Shared/_LayoutNew.cshtml";
     ViewData["User"] = Model.Nome;
     ViewData["Role"] = Model.Role;
     ViewData["Admin"] = Model.Admin;
 }
 <div class="text-center">
-    <h3 class="display-4">Feriados - Todos</h3>
+    <h3 class="display-4">Feriados - @ViewBag.Header</h3>
 </div>
-<partial name="NovoFeriado" model="@Model" />
+<partial name="NovoFeriado"/>
 
 <br />
 <partial name="TableFeriado" model="@Model" />

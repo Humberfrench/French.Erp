@@ -1,0 +1,27 @@
+﻿@using French.Erp.Application.DataObject;
+
+<div class="text-end">
+    <button type="button" id="botaoNovo" name="botaoNovo" class="btn btn-outline-success" onclick="Feriado.novo();"><i class="fa fa-file"></i>&nbsp;Novo Feriado</button>
+</div>
+<br />
+<div class="form-floating d-none shadow-lg" id="divNovo" name="divNovo">
+    <div class="card">
+        <div class="card-header bg-black text-white"><b>Novo Feriado</b></div>
+        <div class="card-body">
+            <div class="row" id="formNovo">
+                <div class="col-11">
+                    <div class="form-floating mb-3" data-parent="descricao">
+                        <input type="hidden" id="FeriadoId" name="FeriadoId" value="" />
+                        <input type="text" id="Descricao" name="Descricao" value="" class="form-control" placeholder="Descricao" />
+                        <label for="Descricao">Descrição</label>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <br />
+                    <button type="button" class="btn btn-success" onclick="Feriado.novoGravar(formNovo)"><i class="fa fa-save"></i></button>
+                    <button type="button" class="btn btn-primary" onclick="Feriado.limpar()"><i class="fa fa-eraser"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
