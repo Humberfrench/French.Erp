@@ -180,6 +180,19 @@ const Feriado = {
         return valid;
 
     },
+    renderCidades: function (state, city) {
+
+        Generics.obterCidades(state);
+        var cidades = Generics.cidades;
+        var opcoes = '<option value="0">Todos</option>';
+        for (var i = 0; i < cidades.length; i++)
+        {
+            opcoes += Util.ObterLista(cidades[i].cidadeId, cidades[i].nome) + '\n';
+        }
+
+        $("#CidadeId").html(opcoes);
+        $("#CidadeId").val(city); // Define a cidade selecionada após renderizar o combo)
+    },
     renderizarComboCidades: function (element)
     {
         Generics.obterCidades(element.value);

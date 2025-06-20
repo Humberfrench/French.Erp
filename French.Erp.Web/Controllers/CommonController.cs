@@ -1,7 +1,11 @@
-﻿using French.Erp.Application.Interfaces.Services;
+﻿using French.Erp.Application.DataObject;
+using French.Erp.Application.Interfaces.Services;
+using French.Erp.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace French.Erp.Web.Controllers
@@ -36,6 +40,13 @@ namespace French.Erp.Web.Controllers
         }
 
         [NonAction]
+        public async Task<List<CidadeDto>> ObterCidades()
+        {
+            var dados = await genericService.ObterCidades();
+            return dados.ToList();
+        }        
+        
+        [NonAction]
         public async Task<SelectList> ObterTipoDeClienteParaCombo()
         {
             var dados = await tipoDeClienteService.ObterTodos();
@@ -69,6 +80,8 @@ namespace French.Erp.Web.Controllers
 
             return dadosSelect;
         }
+
+
 
 
         #endregion

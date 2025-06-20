@@ -3,6 +3,16 @@
 
 @{
     IEnumerable<SelectListItem> estadoLista = Model.Seletores.Seletor1 as IEnumerable<SelectListItem>;
+    IEnumerable<CidadeDto> cidadeLista = Model.Seletores.Seletor2 as IEnumerable<CidadeDto>;
+
+    IEnumerable<SelectListItem> GetCidades(int id)
+    {
+        return cidadeLista.Where(c => c.EstadoId == id).Select(c => new SelectListItem
+        {
+            Value = c.CidadeId.ToString(),
+            Text = c.Nome
+        });
+    }
 }
 
 <div class="table-responsive">
@@ -114,7 +124,7 @@
                     </td>
                     <td data-parent="estado">
                         <div class="form-floating mb-3">
-                            <select id="EstadoId" name="EstadoId" asp-items="estadoLista" asp-for="@item.EstadoId" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true" onchange="Feriado.renderizarComboCidades(this)">
+                            <select id="EstadoId" name="EstadoId" asp-items="estadoLista" asp-for="@item.EstadoId" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true" onloadstart="Feriado.renderCidades('@item.EstadoId','@item.CidadeId')" onchange="Feriado.renderizarComboCidades(this)">
                                 <option value="0">Todos</option>
                             </select>
                             <label for="EstadoId">Estado</label>
@@ -122,7 +132,7 @@
                     </td>
                     <td data-parent="cidade">
                         <div class="form-floating mb-3">
-                            <select id="CidadeId" name="CidadeId" asp-for="@item.CidadeId" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                            <select id="CidadeId" name="CidadeId" asp-items="GetCidades(item.EstadoId)" asp-for="@item.CidadeId" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
                                 <option value="0">Todos</option>
                             </select>
                             <label for="CidadeId">Cidade</label>

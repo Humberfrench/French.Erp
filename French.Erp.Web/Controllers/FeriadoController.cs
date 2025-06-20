@@ -31,7 +31,8 @@ namespace French.Erp.Web.Controllers
                 Admin = Admin,
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterEstadosParaCombo()
+                    Seletor1 = await ObterEstadosParaCombo(),
+                    Seletor2 = await ObterCidades()
                 },
             };
 
@@ -40,21 +41,60 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpGet("Fixos")]
-        public IActionResult Fixos() // Todos
+        public async Task<IActionResult> Fixos() // Todos
         {
-            return View();
+            var model = new ModelBasic<FeriadoDto>
+            {
+                Lista = (await feriadoAppService.ObterFixos()).ToList(),
+                Nome = Nome,
+                Role = Admin ? "Administrador" : "Usuário",
+                Admin = Admin,
+                Seletores = new SeletoresBasic
+                {
+                    Seletor1 = await ObterEstadosParaCombo(),
+                    Seletor2 = await ObterCidades()
+                },
+            };
+
+            return View("Index", model);
         }
 
         [HttpGet("Moveis")]
-        public IActionResult Moveis() // Todos
+        public async Task<IActionResult> Moveis() // Todos
         {
-            return View();
+            var model = new ModelBasic<FeriadoDto>
+            {
+                Lista = (await feriadoAppService.ObterMoveis()).ToList(),
+                Nome = Nome,
+                Role = Admin ? "Administrador" : "Usuário",
+                Admin = Admin,
+                Seletores = new SeletoresBasic
+                {
+                    Seletor1 = await ObterEstadosParaCombo(),
+                    Seletor2 = await ObterCidades()
+                },
+            };
+
+            return View("Index", model);
         }
 
         [HttpGet("Locais")]
-        public IActionResult Locais() // Todos
+        public async Task<IActionResult> Locais() // Todos
         {
-            return View();
+            var model = new ModelBasic<FeriadoDto>
+            {
+                Lista = (await feriadoAppService.ObterLocais()).ToList(),
+                Nome = Nome,
+                Role = Admin ? "Administrador" : "Usuário",
+                Admin = Admin,
+                Seletores = new SeletoresBasic
+                {
+                    Seletor1 = await ObterEstadosParaCombo(),
+                    Seletor2 = await ObterCidades()
+                },
+            };
+
+            return View("Index", model);
         }
 
     }
