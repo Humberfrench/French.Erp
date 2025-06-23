@@ -6,10 +6,10 @@ if (typeof jQuery === 'undefined')
 {
     console.log('jQuery está carregado!');
 }
-const $body = jQuery("body");
 
 $(function ()
 {
+    const $body = jQuery("body");
     $('[data-toggle="tooltip"]').tooltip();
 
     $("form").on('submit', function ()
