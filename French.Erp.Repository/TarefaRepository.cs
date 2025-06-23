@@ -1,6 +1,8 @@
-﻿using Dietcode.Database.Domain;
+﻿using Dapper;
+using Dietcode.Database.Domain;
 using Dietcode.Database.Orm;
 using Dietcode.Database.Orm.Context;
+using French.Erp.Application.DataObject;
 using French.Erp.Application.Interfaces.Repository;
 using French.Erp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +16,20 @@ namespace French.Erp.Repository
     {
         public TarefaRepository(IMyContextManager<ThisDatabase<Tarefa>> context) : base(context)
         {
+
+
+        }
+
+        public async Task<IEnumerable<ClienteDadosDto>> ObterTodosClientes()
+        {
+            var sql = $@"SELECT	distinct c.ClienteId , c.Nome, c.RazaoSocial
+                            FROM	Tarefa t
+                            JOIN	Cliente c
+                            ON		t.ClienteId = c.ClienteId
+                            ORDER BY Nome";
+            var query = await Connection.QueryAsync<ClienteDadosDto>(sql);
+
+            return query.ToList();
 
         }
 

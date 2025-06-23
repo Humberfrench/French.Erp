@@ -8,8 +8,8 @@
     ViewData["Admin"] = Model.Admin;
     Layout = "~/Views/Shared/_LayoutNew.cshtml";
     var clienteId = (int)Model.Valor1;
-    var linha = 0;
-
+    var ano = (int)Model.Valor2;
+    var mes = (int)Model.Valor3;
 }
 <div class="text-center">
     <h3 class="display-4">Tarefa</h3>
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-floating mb-3">
-                    <select id="Cliente" name="Cliente" asp-items="Model.Seletores.Seletor1"  required="required" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="false">
+                    <select id="Cliente" name="Cliente" asp-items="Model.Seletores.Seletor1" asp-for="Valor1" required="required" class="form-select" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="false">
                         <option value="0">Todos os Clientes</option>
                     </select>
                     <label id="labelCliente" for="Cliente" class="col-form-label">Cliente</label>
@@ -27,7 +27,7 @@
             </div>
             <div class="col-2">
                 <div class="form-floating mb-3">
-                    <select class="form-control form-select" id="Mes" name="Mes" placeholder="Mes" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                    <select class="form-control form-select" id="Mes" name="Mes" placeholder="Mes" asp-for="Valor3" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
                         <option value="0">Todos</option>
                         <option value="1">Janeiro</option>
                         <option value="2">Fevereiro</option>
@@ -47,7 +47,7 @@
             </div>
             <div class="col-2">
                 <div class="form-floating mb-3">
-                    <select class="form-control form-select" id="Ano" name="Ano" placeholder="Ano" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
+                    <select class="form-control form-select" id="Ano" name="Ano" placeholder="Ano" asp-for="Valor2" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
                         <option value="0">Todos</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
@@ -66,92 +66,75 @@
                 </div>
             </div>
             <div class="col-1">
-                <button type="button" class="btn btn-outline-primary h-100 w-100" onclick="Tarefa.Novo();"><i class="fa fa-search"></i>&nbsp;Verificar</button>
+                <button type="button" class="btn btn-outline-primary h-100 w-100" onclick="Tarefa.obter();"><i class="fa fa-search"></i>&nbsp;Verificar</button>
             </div>
             <div class="col-1">
-                <button type="button" class="btn btn-outline-success h-100 w-100" onclick="Tarefa.Novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
+                <button type="button" class="btn btn-outline-success h-100 w-100" onclick="Tarefa.novo();"><i class="fa fa-file"></i>&nbsp;Novo</button>
             </div>
         </div>
     </div>
 </div>
 <br />
 <div class="table-responsive" style="overflow: visible;">
-    <div class="accordion" id="accordionExample">
-        @foreach (var item in Model.Lista)
-        {
-            linha++;
-            <div class="card">
-                <div class="card-header" id="headingOne_@linha">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse_@linha" aria-expanded="true" aria-controls="collapse_@linha">
-                            @item.Nome
-                            @if (item.TarefaItem.Count > 0)
-                            {
-                                <span class="badge badge-info">@item.TarefaItem.Count Itens </span>
-                            }
-                        </button>
-                    </h2>
-                </div>
+    <table class="table table-striped table-hover table-sm dataTable" data-item-reload="true" id="tableDados">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" style="width:38%">Tarefa</th>
+                <th scope="col" style="width:25%" colspan="2">Valores</th>
+                <th scope="col" style="width:8%">Horas</th>
+                <th scope="col" style="width:8%">Vl.Hora</th>
+                <th scope="col" style="width:8%">Início</th>
+                <th scope="col" style="width:8%">Fim</th>
+                <th scope="col" class="text-right" style="width:5%">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Lista)
+            {
+                <tr>
+                    <td>
+                        @item.Nome
+                        @if (item.TarefaItem.Count > 0)
+                        {
+                            <span class="badge badge-info">@item.TarefaItem.Count Itens </span>
+                        }
+                    </td>
+                    <td>
+                        Orçado:&nbsp;@item.ValorOrcado.ToMoeda()<br />
+                        Vl.Bruto:&nbsp;@item.ValorBruto.ToMoeda()<br />
+                        Desconto:&nbsp;@item.ValorDesconto.ToMoeda()<br />
+                        Cobrado:&nbsp;@item.ValorCobrado.ToMoeda()<br />
+                    </td>
+                    <td>
+                        Comissão:&nbsp;@item.Comissao.ToMoeda()<br />
+                        Desconto:&nbsp;@item.ValorDesconto.ToMoeda()<br />
+                    </td>
+                    <td>@item.TotalHoras</td>
+                    <td>@item.ValorHora.ToMoeda()</td>
+                    <td>@item.DataInicio.ToDateFormated()</td>
+                    <td>@item.DataFim.ToDateFormated()</td>
+                    <td class="text-right">
+                        @*<button type="button" class="btn btn-success" onclick="Tarefa.Edit('@item.TarefaId', '@item.Nome')"><i class="fa fa-pencil"></i></button>
+            <button type="button" class="btn btn-danger" onclick="Tarefa.Excluir('@item.TarefaId')"><i class="fa fa-trash-o"></i></button>*@
+                        <div class="btn-group dropleft">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-star"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="Tarefa" asp-action="Edit" asp-route-id="0"><i class="fa fa-file"></i>&nbsp;Novo</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-controller="Tarefa" asp-action="Edit" asp-route-id="@item.TarefaId"><i class="fa fa-pencil"></i>&nbsp;Editar </a>
+                                <a class="dropdown-item" href="#" onclick="Tarefa.Excluir('@item.TarefaId')"><i class="fa fa-trash-o"></i>&nbsp;Excluir</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" onclick="Tarefa.Excluir('@item.TarefaId')"><i class="fa fa-inbox"></i>&nbsp;Ver/Editar Itens</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
 
-                <div id="collapse_@linha" class="collapse" aria-labelledby="headingOne_@linha" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <table class="table table-striped table-hover table-sm dataTable" data-item-reload="true" id="tableDados">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col" colspan="6" class="bg-danger">Valores</th>
-                                    <th scope="col" colspan="2" class="bg-secondary">Horas</th>
-                                    <th scope="col" colspan="2" class="bg-primary">Datas</th>
-                                    <th scope="col" class="text-right" rowspan="2">Ações</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col" style="width:11%">Orçado</th>
-                                    <th scope="col" style="width:11%">Bruto</th>
-                                    <th scope="col" style="width:10%">Desconto</th>
-                                    <th scope="col" style="width:11%">Cobrado</th>
-                                    <th scope="col" style="width:10%">Comissão</th>
-                                    <th scope="col" style="width:10%">Desconto</th>
-                                    <th scope="col" style="width:10%">Total</th>
-                                    <th scope="col" style="width:10%">Valor</th>
-                                    <th scope="col" style="width:10%">Início</th>
-                                    <th scope="col" style="width:10%">Fim</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>@item.ValorOrcado.ToMoeda()</td>
-                                    <td>@item.ValorBruto.ToMoeda()</td>
-                                    <td>@item.ValorDesconto.ToMoeda()</td>
-                                    <td>@item.ValorCobrado.ToMoeda()</td>
-                                    <td>@item.Comissao.ToMoeda()</td>
-                                    <td>@item.ValorDesconto.ToMoeda()</td>
-                                    <td>@item.TotalHoras</td>
-                                    <td>@item.ValorHora.ToMoeda()</td>
-                                    <td>@item.DataInicio.ToDateFormated()</td>
-                                    <td>@item.DataFim.ToDateFormated()</td>
-                                    <td class="text-right">
-                                        <div class="btn-group dropleft">
-                                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa fa-star"></i>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" asp-controller="Tarefa" asp-action="Edit" asp-route-id="0"><i class="fa fa-file"></i>&nbsp;Novo</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" asp-controller="Tarefa" asp-action="Edit" asp-route-id="@item.TarefaId"><i class="fa fa-pencil"></i>&nbsp;Editar </a>
-                                                <a class="dropdown-item" href="#" onclick="Tarefa.Excluir('@item.TarefaId')"><i class="fa fa-trash-o"></i>&nbsp;Excluir</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#" onclick="Tarefa.Excluir('@item.TarefaId')"><i class="fa fa-inbox"></i>&nbsp;Ver/Editar Itens</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-
+        </tbody>
+    </table>
 </div>
 
 @section scripts

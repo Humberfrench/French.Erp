@@ -1,11 +1,10 @@
 ﻿/// <reference path="../../js/ajax.js" />
 /// <reference path="../../js/mensagens.js" />
-var Tarefa = new function () { }
 
-const Feriado = {
+const Tarefa = {
     init: function ()
     {
-        //Feriado.initFormValidation(); // Chama o método para inicializar a validação do formulário
+        //Tarefa.initFormValidation(); // Chama o método para inicializar a validação do formulário
     },
     novo: function ()
     {
@@ -33,7 +32,7 @@ const Feriado = {
         }
 
         // Usando template literals para interpolar as variáveis
-        location.href = `/Feriado/Cliente/${cliente.value}/Ano/${ano.value}/Mes/${mes.value}`;
+        location.href = `/Tarefa/Cliente/${cliente.value}/Ano/${ano.value}/Mes/${mes.value}`;
 
     }
 }

@@ -136,6 +136,11 @@ namespace French.Erp.Services
             return await notaFiscalRepository.ObterNumeroDaNota(tarefaId);
         }
 
+        public async Task<IEnumerable<ClienteDadosDto>> ObterTodosClientes()
+        {
+            return await repositoryTarefa.ObterTodosClientes();
+        }
+
 
     }
 }

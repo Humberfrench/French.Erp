@@ -14,5 +14,6 @@ namespace French.Erp.Application.Interfaces.Services
         Task<IEnumerable<TarefaDto>> ObterTodosDoCliente(int clienteId);
         Task<IEnumerable<TarefaDto>> ObterTodosDoCliente(int id, int ano, int mes = 0);
         Task<string> ObterNumeroDaNota(int tarefaId);
+        Task<IEnumerable<ClienteDadosDto>> ObterTodosClientes();
     }
 }

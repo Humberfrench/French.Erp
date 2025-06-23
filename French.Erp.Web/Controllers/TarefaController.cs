@@ -3,6 +3,7 @@ using French.Erp.Application.Interfaces.Services;
 using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -36,15 +37,20 @@ namespace French.Erp.Web.Controllers
             {
                 Lista = new List<TarefaDto>(),
                 Valor1 = 0,
+                Valor2 = 0,
+                Valor3 = 0,
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterClienteParaCombo(),
+                    Seletor1 = await ObterClienteTarefasParaCombo(),
                 },
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
                 Admin = Admin,
             };
 
+            ViewBag.Cliente = 0;
+            ViewBag.Mes = 0;
+            ViewBag.Ano = 0;
             return View(model);
         }
 
@@ -55,9 +61,11 @@ namespace French.Erp.Web.Controllers
             {
                 Lista = (await tarefaService.ObterTodosDoCliente(id, ano, mes)).ToList(),
                 Valor1 = id,
+                Valor2 = ano,
+                Valor3 = mes,
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterClienteParaCombo(),
+                    Seletor1 = await ObterClienteTarefasParaCombo(),
                 },
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
@@ -74,9 +82,11 @@ namespace French.Erp.Web.Controllers
             {
                 Lista = (await tarefaService.ObterTodosDoCliente(id)).ToList(),
                 Valor1 = id,
+                Valor2 = 0,
+                Valor3 = 0,
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterClienteParaCombo(),
+                    Seletor1 = await ObterClienteTarefasParaCombo(),
                 },
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
@@ -101,7 +111,7 @@ namespace French.Erp.Web.Controllers
                 Valor1 = "0",
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterClienteParaCombo(),
+                    Seletor1 = await ObterClienteTarefasParaCombo(),
                 },
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
@@ -126,7 +136,7 @@ namespace French.Erp.Web.Controllers
                     Valor1 = "0",
                     Seletores = new SeletoresBasic
                     {
-                        Seletor1 = await ObterClienteParaCombo(),
+                        Seletor1 = await ObterClienteTarefasParaCombo(),
                     },
                     Nome = Nome,
                     Role = Admin ? "Administrador" : "Usuário",
@@ -144,7 +154,7 @@ namespace French.Erp.Web.Controllers
                 Valor1 = await tarefaService.ObterNumeroDaNota(dadosModel.TarefaId),
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterClienteParaCombo(),
+                    Seletor1 = await ObterClienteTarefasParaCombo(),
                 },
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
@@ -166,7 +176,7 @@ namespace French.Erp.Web.Controllers
                 Lista = new List<TarefaItemDto>(), //futuramente itens de tarefa,
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterClienteParaCombo(),
+                    Seletor1 = await ObterClienteTarefasParaCombo(),
                 },
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
@@ -176,5 +186,12 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
+        public async Task<SelectList> ObterClienteTarefasParaCombo()
+        {
+            var dados = await tarefaService.ObterTodosClientes();
+            var dadosSelect = new SelectList(dados, "ClienteId", "NomeCompleto");
+
+            return dadosSelect;
+        }
     }
 }
