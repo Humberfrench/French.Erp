@@ -25,6 +25,7 @@ namespace French.Erp.Application.DataObject
         public decimal? Comissao { get; set; }
         public DateTime DataInicio { get; set; }
         public DateTime DataFim { get; set; }
+        public bool GerarItems{ get; set; }
 
         public virtual ClienteDto Cliente { get; set; }
         public virtual ICollection<ComposicaoNotaFiscalDto> ComposicaoNotaFiscal { get; set; }

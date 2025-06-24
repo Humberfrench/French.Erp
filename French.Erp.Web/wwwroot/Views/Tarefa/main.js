@@ -8,7 +8,16 @@ const Tarefa = {
     },
     novo: function ()
     {
-        location.href = `/Tarefa/New/`;
+        const cliente = document.getElementById("Cliente");
+        if (cliente.value === "" || cliente.value === "0")
+        {
+            location.href = `/Tarefa/New/`;
+            return;
+        }
+
+        location.href = `/Tarefa/New/` + cliente.value;
+
+
     },
     limpar: function ()
     {
@@ -24,7 +33,7 @@ const Tarefa = {
         const ano = document.getElementById("Ano");
 
         if (cliente.value === "" || cliente.value === "0" ) {
-            Mensagens.alerta("Preencha o campo de cliente.");
+            Mensagens.Erro("Preencha o campo de cliente.");
             return;
         }
 

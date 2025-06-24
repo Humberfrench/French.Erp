@@ -4,6 +4,7 @@ using French.Erp.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace French.Erp.Web.Controllers
     {
 
         private readonly ITarefaService tarefaService;
+        private DateTime dataInicio;
+        private DateTime dataFinal;
 
         public TarefaController(ITarefaService tarefaService,
                                 IGenericsService genericService,
@@ -28,6 +31,8 @@ namespace French.Erp.Web.Controllers
                                                                    context)
         {
             this.tarefaService = tarefaService;
+            dataInicio = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dataFinal = dataInicio.AddMonths(1).AddDays(-1);
         }
 
         [HttpGet("")]
@@ -99,13 +104,42 @@ namespace French.Erp.Web.Controllers
         [HttpGet("New")]
         public async Task<IActionResult> New()
         {
+            var model = new ModelBasic<TarefaDto, TarefaItemDto>
+            {
+                Erro = "",
+                ViewModel = new TarefaDto
+                {
+                    ClienteId = 0,
+                    DataInicio = dataInicio,
+                    DataFim = dataFinal,
+                },
+                Lista = new List<TarefaItemDto>(),
+                Valor1 = 0,
+                Seletores = new SeletoresBasic
+                {
+                    Seletor1 = await ObterClienteParaCombo(),
+                },
+                Nome = Nome,
+                Role = Admin ? "Administrador" : "Usuário",
+                Admin = Admin,
+            };
+
+            return View(model);
+        }
+        [HttpGet("New/{id}")]
+        public async Task<IActionResult> New(int id)
+        {
 
             var model = new ModelBasic<TarefaDto, TarefaItemDto>
             {
                 Erro = "",
-                ViewModel = new TarefaDto(),
+                ViewModel = new TarefaDto{
+                    ClienteId = id,
+                    DataInicio = dataInicio,
+                    DataFim = dataFinal,
+                },
                 Lista = new List<TarefaItemDto>(),
-                Valor1 = "0",
+                Valor1 = id,
                 Seletores = new SeletoresBasic
                 {
                     Seletor1 = await ObterClienteParaCombo(),
@@ -190,5 +224,6 @@ namespace French.Erp.Web.Controllers
 
             return dadosSelect;
         }
+
     }
 }
