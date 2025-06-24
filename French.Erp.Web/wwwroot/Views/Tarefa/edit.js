@@ -7,7 +7,7 @@ const Tarefa = {
     },
     changeCliente: function ()
     {
-        var id = $("#Cliente").val();
+        const id = $("#Cliente").val();
         $("#ClienteId").val(id);
     },
     voltar: function ()
@@ -31,9 +31,9 @@ const Tarefa = {
             Mensagens.Erro("Preencha os campos de valor orçado e quantidade de horas.");
             return;
         }
-        var valorHoraCalc = parseFloat($("#ValorHora").val().toString().replace(',', '.'));
-        var totalHorasCalc = parseFloat($("#TotalHoras").val().toString().replace(',', '.'));
-        var valorOrcadoCalc = valorHoraCalc * totalHorasCalc
+        const valorHoraCalc = parseFloat($("#ValorHora").val().toString().replace(',', '.'));
+        const totalHorasCalc = parseFloat($("#TotalHoras").val().toString().replace(',', '.'));
+        const valorOrcadoCalc = valorHoraCalc * totalHorasCalc
 
         valorOrcado.value = valorOrcadoCalc.toFixed(2).toString().replace('.', ',');
 
