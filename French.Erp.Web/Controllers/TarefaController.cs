@@ -96,22 +96,19 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpGet("New/{clienteId}")]
-        public async Task<IActionResult> New(int clienteId)
+        [HttpGet("New")]
+        public async Task<IActionResult> New()
         {
 
             var model = new ModelBasic<TarefaDto, TarefaItemDto>
             {
                 Erro = "",
-                ViewModel = new TarefaDto()
-                {
-                    ClienteId = clienteId
-                },
+                ViewModel = new TarefaDto(),
                 Lista = new List<TarefaItemDto>(),
                 Valor1 = "0",
                 Seletores = new SeletoresBasic
                 {
-                    Seletor1 = await ObterClienteTarefasParaCombo(),
+                    Seletor1 = await ObterClienteParaCombo(),
                 },
                 Nome = Nome,
                 Role = Admin ? "Administrador" : "Usuário",
@@ -136,7 +133,7 @@ namespace French.Erp.Web.Controllers
                     Valor1 = "0",
                     Seletores = new SeletoresBasic
                     {
-                        Seletor1 = await ObterClienteTarefasParaCombo(),
+                        Seletor1 = await ObterClienteParaCombo(),
                     },
                     Nome = Nome,
                     Role = Admin ? "Administrador" : "Usuário",

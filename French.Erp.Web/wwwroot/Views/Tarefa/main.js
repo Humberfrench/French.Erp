@@ -8,10 +8,7 @@ const Tarefa = {
     },
     novo: function ()
     {
-        const novo = document.getElementById("divNovo");
-        const botaoNovo = document.getElementById("botaoNovo");
-        botaoNovo.classList.add("d-none");
-        novo.classList.remove("d-none");
+        location.href = `/Tarefa/New/`;
     },
     limpar: function ()
     {

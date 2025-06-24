@@ -1,22 +1,19 @@
 ﻿const Util = {
-    OnlyNumbers: function (e)
+    onlyNumbers: function (e)
     {
         const intKey = e.keyCode || e.which;
         return (intKey >= 48 && intKey <= 57) || intKey === 8 || intKey === 0;
     },
-
-    ObterLista: function (value, text)
+    obterLista: function (value, text)
     {
         return `<option value="${value}">${text}</option>`;
     },
-
-    ValidaEmail: function (strEmail)
+    validaEmail: function (strEmail)
     {
         const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex melhorada
         return emailReg.test(strEmail);
     },
-
-    FormatarString: function ()
+    formatarString: function ()
     {
         let retornoString = arguments[0];
         for (let i = 1; i < arguments.length; i++)
@@ -26,16 +23,21 @@
         }
         return retornoString;
     },
-
-    SomenteCaracteres: function (e)
+    somenteCaracteres: function (e)
     {
         const char = String.fromCharCode(e.keyCode);
         return /^[a-zA-Z]$/.test(char);
     },
-
-    SomenteCaracteresENumeros: function (e)
+    somenteCaracteresENumeros: function (e)
     {
         const char = String.fromCharCode(e.keyCode);
         return /^[a-zA-Z0-9]$/.test(char);
+    },
+    onlyValues: function (e)
+    {
+        const intKey = e.keyCode || e.which;
+        const char = String.fromCharCode(intKey);
+        return (intKey >= 48 && intKey <= 57) || intKey === 8 || intKey === 0 || char === ',';
     }
+
 };

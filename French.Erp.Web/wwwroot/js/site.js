@@ -1,4 +1,5 @@
-﻿
+﻿/// <reference path="../lib/jquery/jquery.js" />
+
 if (typeof jQuery === 'undefined')
 {
     console.error('jQuery não está carregado!');
@@ -6,10 +7,10 @@ if (typeof jQuery === 'undefined')
 {
     console.log('jQuery está carregado!');
 }
+const $body = jQuery("body");
 
 $(function ()
 {
-    const $body = jQuery("body");
     $('[data-toggle="tooltip"]').tooltip();
 
     $("form").on('submit', function ()
