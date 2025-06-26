@@ -177,7 +177,7 @@ const Tarefa = {
             comissao.value = '0,00';
         }
 
-        const token = $('input[name="__RequestVerificationToken"]').val();
+        const token = '';// $('input[name="__RequestVerificationToken"]').val();
 
         const gerarItemsValue = gerarItems.checked ? true : false;
 
@@ -195,29 +195,31 @@ const Tarefa = {
         const valorCobrados = parseFloat(valorCobrado.value.toString().replace(',', '.'));
         const comissaos = parseFloat(comissao.value.toString().replace(',', '.'));
 
+        const dadoDeEnvio = {
+            TarefaId: tarefaId.value,
+            ClienteId: clienteIds,
+            NotaFiscalId: notaFiscalIds,
+            Nome: nome.value,
+            Observacao: observacao.value,
+            ValorOrcado: valorOrcados,
+            TotalHoras: totalHorass,
+            ValorDesconto: valorDescontos,
+            ValorBruto: valorBrutos,
+            ValorHora: valorHoras,
+            ValorCobrado: valorCobrados,
+            Comissao: comissaos,
+            DataInicio: dataInicio.value,
+            DataFim: dataFim.value,
+            GerarItems: gerarItemsValue
+        };
+
         const opcoes = {
             url: "/Tarefa/Gravar/",
             headers: {
                 "__RequestVerificationToken": token
             },
             type: "POST",
-            dadoEnvio: {
-                TarefaId: tarefaId.value, 
-                ClienteId: clienteIds,
-                NotaFiscalId: notaFiscalIds,
-                Nome: nome.value,
-                Observacao: observacao.value,
-                ValorOrcado: valorOrcados,
-                TotalHoras: totalHorass,
-                ValorDesconto: valorDescontos,
-                ValorBruto: valorBrutos,
-                ValorHora: valorHoras,
-                ValorCobrado: valorCobrados,
-                Comissao: comissaos,
-                DataInicio: dataInicio.value,
-                DataFim: dataFim.value,
-                GerarItems: gerarItemsValue
-            },
+            dadoEnvio: dadoDeEnvio,
             callBackSuccess: function (response)
             {
                 if (response.erro)
@@ -233,7 +235,8 @@ const Tarefa = {
             }
         };
 
-        Ajax.Execute(opcoes);
+        //Ajax.Execute(opcoes);
+        Ajax.Post(opcoes);
 
     }
 }

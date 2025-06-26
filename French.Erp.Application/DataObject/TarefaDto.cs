@@ -27,7 +27,7 @@ namespace French.Erp.Application.DataObject
 
         [JsonPropertyName("totalHoras")]
         [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-        public decimal? TotalHoras { get; set; }
+        public decimal TotalHoras { get; set; }
 
         [JsonPropertyName("valorDesconto")]
         [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
@@ -35,15 +35,15 @@ namespace French.Erp.Application.DataObject
 
         [JsonPropertyName("valorBruto")]
         [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-        public decimal? ValorBruto { get; set; }
+        public decimal ValorBruto { get; set; }
 
         [JsonPropertyName("valorHora")]
         [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-        public decimal? ValorHora { get; set; }
+        public decimal ValorHora { get; set; }
 
         [JsonPropertyName("valorCobrado")]
         [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
-        public decimal? ValorCobrado { get; set; }
+        public decimal ValorCobrado { get; set; }
 
         [JsonPropertyName("comissao")]
         [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]

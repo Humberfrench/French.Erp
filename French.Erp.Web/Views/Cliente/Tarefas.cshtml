@@ -30,7 +30,7 @@
                             {
                                 <tr>
                                     <th scope="col" style="width:45%">@item.Nome</th>
-                                    <th scope="col" style="width:15%">R$ @item.ValorCobrado.Value.ToString("N2")</th>
+                                    <th scope="col" style="width:15%">R$ @item.ValorCobrado.ToString("N2")</th>
                                     <th scope="col" style="width:40%">@item.DataInicio.ToDateFormated() - @item.DataFim.ToDateFormated()</th>
                                 </tr>
 
