@@ -126,6 +126,7 @@ namespace French.Erp.Web.Controllers
 
             return View(model);
         }
+
         [HttpGet("New/{id}")]
         public async Task<IActionResult> New(int id)
         {
@@ -193,6 +194,34 @@ namespace French.Erp.Web.Controllers
             };
 
             return View(model);
+        }
+
+        [HttpPost("Gravar")]
+        public async Task<IActionResult> Gravar(TarefaDto tarefa)
+        {
+            var okGravado = await tarefaService.Gravar(tarefa);
+
+            if (okGravado.Invalid)
+            {
+                var model = new ModelBasic<TarefaDto, TarefaItemDto>
+                {
+                    Erro = okGravado.Erros[0].Message,
+                    ViewModel = tarefa,
+                    Valor1 = await tarefaService.ObterNumeroDaNota(tarefa.TarefaId),
+                    Lista = new List<TarefaItemDto>(), //futuramente itens de tarefa,
+                    Seletores = new SeletoresBasic
+                    {
+                        Seletor1 = await ObterClienteTarefasParaCombo(),
+                    },
+                    Nome = Nome,
+                    Role = Admin ? "Administrador" : "Usuário",
+                    Admin = Admin,
+                };
+
+                return View("New", model);
+            }
+
+            return await Index();
         }
 
         [HttpPost("Edit")]

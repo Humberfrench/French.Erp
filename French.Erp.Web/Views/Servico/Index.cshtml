@@ -77,8 +77,8 @@
                         </div>
                     </td>
                     <td class="text-right">
-                        <button type="button" class="btn btn-success" onclick="Servico.Edit('@item.ServicoId', '@item.Descricao','@item.Nome')"><i class="fa fa-pencil"></i></button>
-                        <button type="button" class="btn btn-danger" onclick="Servico.Excluir('@item.ServicoId')"><i class="fa fa-trash-o"></i></button>
+                        <button type="button" class="btn btn-success" onclick="Servico.gravar(this)"><i class="fa fa-save"></i></button>
+                        <button type="button" class="btn btn-danger" onclick="Servico.excluir('@item.ServicoId')"><i class="fa fa-trash-o"></i></button>
                     </td>
                 </tr>
             }

@@ -31,7 +31,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        [HttpPost("Gravar")]
         public async Task<IActionResult> Gravar([FromBody] BancoDto banco)
         {
             var result = await bancoAppService.Gravar(banco);
@@ -54,7 +54,7 @@ namespace French.Erp.Web.Controllers
 
         }
 
-        [HttpPost]
+        [HttpPost("Alterar/Status")]
         public async Task<IActionResult> AlterarStatus(int banco, bool status)
         {
             var result = await bancoAppService.AlterarStatus(banco, status);

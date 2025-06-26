@@ -32,8 +32,8 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Gravar(TipoDeClienteDto tipoDeTarefa)
+        [HttpPost("Gravar")]
+        public async Task<IActionResult> Gravar([FromBody] TipoDeClienteDto tipoDeTarefa)
         {
             var result = await tipoDeClienteService.Gravar(tipoDeTarefa);
 

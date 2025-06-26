@@ -33,7 +33,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpPost("Excluir/{id}")]
+        [HttpPost("Gravar")]
         public async Task<IActionResult> Gravar(TributoDto tributo)
         {
             var result = await tributoService.Gravar(tributo);
@@ -56,7 +56,7 @@ namespace French.Erp.Web.Controllers
 
         }
 
-        [HttpPost("{id}")]
+        [HttpPost("Excluir/{id}")]
         public async Task<IActionResult> Excluir(int id)
         {
             var result = await tributoService.Excluir(id);

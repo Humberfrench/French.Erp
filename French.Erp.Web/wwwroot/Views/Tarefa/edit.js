@@ -16,9 +16,12 @@ const Tarefa = {
     },
     calcularValorOrcado: function ()
     {
-        const valorOrcado = document.getElementById("ValorOrcado");
         const valorHora = document.getElementById("ValorHora");
         const quantidade = document.getElementById("TotalHoras");
+
+        const valorOrcado = document.getElementById("ValorOrcado");
+        const valorBruto = document.getElementById("ValorBruto");
+        const valorCobrado = document.getElementById("ValorCobrado");
 
         valorHora.classList.remove('is-valid');
         quantidade.classList.remove('is-valid');
@@ -31,11 +34,13 @@ const Tarefa = {
             Mensagens.Erro("Preencha os campos de valor orçado e quantidade de horas.");
             return;
         }
-        const valorHoraCalc = parseFloat($("#ValorHora").val().toString().replace(',', '.'));
-        const totalHorasCalc = parseFloat($("#TotalHoras").val().toString().replace(',', '.'));
+        const valorHoraCalc = parseFloat(valorHora.value.toString().replace(',', '.'));
+        const totalHorasCalc = parseFloat(quantidade.value.toString().replace(',', '.'));
         const valorOrcadoCalc = valorHoraCalc * totalHorasCalc
 
         valorOrcado.value = valorOrcadoCalc.toFixed(2).toString().replace('.', ',');
+        valorBruto.value = valorOrcadoCalc.toFixed(2).toString().replace('.', ',');
+        valorCobrado.value = valorOrcadoCalc.toFixed(2).toString().replace('.', ',');
 
         return;
     },
@@ -44,24 +49,24 @@ const Tarefa = {
         var valid = true;
         var mensagem = "";
 
-        //clienteId.classList.remove('is-invalid');
-        //nome.classList.remove('is-invalid');
-        //valorOrcado.classList.remove('is-invalid');
-        //valorHora.classList.remove('is-invalid');
-        //totalHoras.classList.remove('is-invalid');
-        //valorBruto.classList.remove('is-invalid');
-        //valorCobrado.classList.remove('is-invalid');
-        //dataInicio.classList.remove('is-invalid');
-        //dataFim.classList.remove('is-invalid');
-
-        nome.classList.add('is-valid');
-        valorOrcado.classList.add('is-valid');
-        valorHora.classList.add('is-valid');
-        totalHoras.classList.add('is-valid');
-        valorBruto.classList.add('is-valid');
-        valorCobrado.classList.add('is-valid');
-        dataInicio.classList.add('is-valid');
-        dataFim.classList.add('is-valid');
+        clienteId.classList.remove('is-invalid');
+        nome.classList.remove('is-invalid');
+        valorOrcado.classList.remove('is-invalid');
+        valorHora.classList.remove('is-invalid');
+        totalHoras.classList.remove('is-invalid');
+        valorBruto.classList.remove('is-invalid');
+        valorCobrado.classList.remove('is-invalid');
+        dataInicio.classList.remove('is-invalid');
+        dataFim.classList.remove('is-invalid');
+        //clienteId.classList.remove('is-valid');
+        //nome.classList.remove('is-valid');
+        //valorOrcado.classList.remove('is-valid');
+        //valorHora.classList.remove('is-valid');
+        //totalHoras.classList.remove('is-valid');
+        //valorBruto.classList.remove('is-valid');
+        //valorCobrado.classList.remove('is-valid');
+        //dataInicio.classList.remove('is-valid');
+        //dataFim.classList.remove('is-valid');
 
         if (clienteId.value === '0')
         {
@@ -120,10 +125,15 @@ const Tarefa = {
         }
         if (valid)
         {
-            codigo.classList.add('is-valid');
+            clienteId.classList.add('is-invalid');
             nome.classList.add('is-valid');
-            apelido.classList.add('is-valid');
-            statusField.classList.add('is-valid');
+            valorOrcado.classList.add('is-valid');
+            valorHora.classList.add('is-valid');
+            totalHoras.classList.add('is-valid');
+            valorBruto.classList.add('is-valid');
+            valorCobrado.classList.add('is-valid');
+            dataInicio.classList.add('is-valid');
+            dataFim.classList.add('is-valid');
         }
         else
         {
@@ -157,22 +167,73 @@ const Tarefa = {
             return;
         }
 
-        const tarefa = {
-            tarefaId: tarefaId.value,
-            clienteId: clienteId.value,
-            notaFiscalId: notaFiscalId.value,
-            nome: nome.value,
-            observacao: observacao.value,
-            valorOrcado: valorOrcado.value,
-            totalHoras: totalHoras.value,
-            valorDesconto: valorDesconto.value,
-            valorBruto: valorBruto.value,
-            valorHora: valorHora.value,
-            valorCobrado: valorCobrado.value,
-            comissao: comissao.value,
-            dataInicio: dataInicio.value,
-            dataFim: dataFim.value,
-            gerarItems: gerarItems.value
+        if (valorDesconto.value === '')
+        {
+            valorDesconto.value = '0,00';
+        }
+
+        if (comissao.value === '')
+        {
+            comissao.value = '0,00';
+        }
+
+        const token = $('input[name="__RequestVerificationToken"]').val();
+
+        const gerarItemsValue = gerarItems.checked ? true : false;
+
+        const clienteIds = parseInt(clienteId.value.toString());
+        var notaFiscalIds = parseInt(notaFiscalId.value.toString());
+        if (notaFiscalId.value.toString() === '')
+        {
+            notaFiscalIds = 0;
+        }
+        const valorHoras = parseFloat(valorHora.value.toString().replace(',', '.'));
+        const valorOrcados = parseFloat(valorOrcado.value.toString().replace(',', '.'));
+        const totalHorass = parseFloat(totalHoras.value.toString().replace(',', '.'));
+        const valorDescontos = parseFloat(valorDesconto.value.toString().replace(',', '.'));
+        const valorBrutos = parseFloat(valorBruto.value.toString().replace(',', '.'));
+        const valorCobrados = parseFloat(valorCobrado.value.toString().replace(',', '.'));
+        const comissaos = parseFloat(comissao.value.toString().replace(',', '.'));
+
+        const opcoes = {
+            url: "/Tarefa/Gravar/",
+            headers: {
+                "__RequestVerificationToken": token
+            },
+            type: "POST",
+            dadoEnvio: {
+                TarefaId: tarefaId.value, 
+                ClienteId: clienteIds,
+                NotaFiscalId: notaFiscalIds,
+                Nome: nome.value,
+                Observacao: observacao.value,
+                ValorOrcado: valorOrcados,
+                TotalHoras: totalHorass,
+                ValorDesconto: valorDescontos,
+                ValorBruto: valorBrutos,
+                ValorHora: valorHoras,
+                ValorCobrado: valorCobrados,
+                Comissao: comissaos,
+                DataInicio: dataInicio.value,
+                DataFim: dataFim.value,
+                GerarItems: gerarItemsValue
+            },
+            callBackSuccess: function (response)
+            {
+                if (response.erro)
+                {
+                    Mensagens.Erro(response.mensagem, "Erro!");
+                    return;
+                }
+                Mensagens.Sucesso(response.mensagem, "Sucesso!");
+                setTimeout(() =>
+                {
+                    location.reload();
+                }, 1500);
+            }
         };
+
+        Ajax.Execute(opcoes);
+
     }
 }

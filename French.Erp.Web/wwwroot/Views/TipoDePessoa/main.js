@@ -61,10 +61,7 @@ const TipoDePessoa = {
             type: "POST",
             dadoEnvio: {
                 TipoDePessoaId: id,
-                Nome: nome,
-                Codigo: codigo,
-                Apelido: apelido,
-                Status: statusField === '1'
+                Descricao: descricao
             },
             callBackSuccess: function (response)
             {
@@ -85,11 +82,10 @@ const TipoDePessoa = {
     },
     novoGravar: function (element)
     {
-        const codigoCol = element.closest("div").querySelector("[data-parent='codigo']");
-        const descricaoCol = element.closest("div").querySelector("[data-parent='nome']");
+        const descricaoCol = element.closest("div").querySelector("[data-parent='descricao']");
 
-        const id = codigoCol.querySelector("#TipoDePessoaId");
-        const descricao = descricaoCol.querySelector("#Nome");
+        const id = idCol.querySelector("#TipoDePessoaId");
+        const descricao = descricaoCol.querySelector("#Descricao");
 
         if (!TipoDePessoa.validateInputs(id, descricao))
         {
@@ -101,10 +97,11 @@ const TipoDePessoa = {
     },
     gravar: function (element)
     {
-        const idCol = element.closest("tr").querySelector("[data-parent='descricao']");
+        const idCol = element.closest("tr").querySelector("[data-parent='id']");
+        const descricaoCol = element.closest("tr").querySelector("[data-parent='descricao']");
 
         const id = idCol.querySelector("#TipoDePessoaId");
-        const descricao = nomeCol.querySelector("#Descricao");
+        const descricao = descricaoCol.querySelector("#Descricao");
 
         if (!TipoDePessoa.validateInputs(id, descricao))
         {

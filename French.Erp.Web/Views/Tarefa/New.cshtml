@@ -22,13 +22,12 @@
         </div>
     </div>
 }
-<form asp-controller="Tarefa" asp-action="Edit" method="post" id="formTarefa">
     <h5 class="modal-title">Tarefa / Orçamento</h5>
     <div class="row mb-3">
         <div class="col-12 col-xxl-4">
             <div class="form-floating">
-                <input type="hidden" asp-for="ViewModel.TarefaId" />
-                <input type="hidden" asp-for="ViewModel.ClienteId" id="ClienteId" />
+                <input type="hidden" asp-for="ViewModel.TarefaId" name="TarefaId" id="TarefaId" />
+                <input type="hidden" asp-for="ViewModel.ClienteId" name="ClienteId" id="ClienteId" />
                 <select id="Cliente" name="Cliente" asp-items="cliente" asp-for="ViewModel.ClienteId" class="form-select form-select-lg" onchange="Tarefa.changeCliente()" data-width="100%" data-header="Escolha" data-done-button="true" data-live-search="true">
                     <option value="0">Selecione</option>
                 </select>
@@ -60,7 +59,7 @@
                 <span class="input-group-text"><i class="fa fa-qrcode"></i></span>
                 <div class="form-floating">
                     <input type="text" id="NumeroNota" name="NumeroNota" value="@numeroNota" class="form-control form-control-lg" disabled="disabled" placeholder=" " />
-                    <input type="hidden" asp-for="ViewModel.NotaFiscalId" />
+                    <input type="hidden" asp-for="ViewModel.NotaFiscalId" name="NotaFiscalId" id="NotaFiscalId" />
                     <label for="NumeroNota">N.F.</label>
                 </div>
             </div>
@@ -167,12 +166,9 @@
             <button type="button" class="btn btn-primary" onclick="Tarefa.gravar()">Gravar</button>
         </div>
     </div>
-</form>
 <br />
 
 @section scripts
 {
-    <script src="~/js/util.js" defer></script>
-    <script src="~/js/mensagens.js" defer></script>
     <script src="~/Views/Tarefa/edit.js" defer></script>
 }

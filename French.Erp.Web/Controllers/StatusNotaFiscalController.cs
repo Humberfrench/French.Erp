@@ -32,7 +32,7 @@ namespace French.Erp.Web.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        [HttpPost("Gravar")]
         public async Task<IActionResult> Gravar(StatusNotaFiscalDto statusNotaFiscal)
         {
             var result = await statusNotaFiscalService.Gravar(statusNotaFiscal);
