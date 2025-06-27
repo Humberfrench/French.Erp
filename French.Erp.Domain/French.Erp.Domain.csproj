@@ -6,13 +6,16 @@
 
   <ItemGroup>
     <Compile Remove="Interfaces\**" />
+    <Compile Remove="Specifications\**" />
     <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Specifications\**" />
     <None Remove="Interfaces\**" />
+    <None Remove="Specifications\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dietcode.Core.DomainValidator" Version="2.2.0" />
-    <PackageReference Include="Dietcode.Core.Lib" Version="2.5.0" />
+    <PackageReference Include="Dietcode.Core.DomainValidator" Version="2.3.0" />
+    <PackageReference Include="Dietcode.Core.Lib" Version="2.5.5" />
   </ItemGroup>
 
 </Project>
