@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class NotaFiscalRepository : BaseRepository<NotaFiscal>, INotaFiscalRepository, IBaseRepository<NotaFiscal>
+    public class NotaFiscalRepository : BaseRepository<NotaFiscal, int>, INotaFiscalRepository, IBaseRepository<NotaFiscal, int>
     {
         public NotaFiscalRepository(IMyContextManager<ThisDatabase<NotaFiscal>> contextManager) : base(contextManager)
         {

@@ -18,10 +18,10 @@ namespace French.Erp.Services
             this.statusNotaFiscalRepository = statusNotaFiscalRepository;
         }
 
-        public async Task<ValidationResult> Excluir(int id)
+        public async Task<ValidationResult> Excluir(byte id)
         {
             var validationResult = new ValidationResult();
-            var tipoDePessoa = await statusNotaFiscalRepository.ObterPorId(id);
+            var tipoDePessoa = await statusNotaFiscalRepository.ObterPorId( id);
             if (tipoDePessoa == null)
             {
                 validationResult.Add("Status da Nota Fiscal inexistente");
@@ -69,7 +69,7 @@ namespace French.Erp.Services
         }
 
 
-        public async Task<StatusNotaFiscalDto> ObterPorId(int id)
+        public async Task<StatusNotaFiscalDto> ObterPorId(byte id)
         {
             var statusNotaFiscal = await statusNotaFiscalRepository.ObterPorId(id);
 

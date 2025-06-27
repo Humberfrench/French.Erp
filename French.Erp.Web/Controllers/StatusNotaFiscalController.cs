@@ -56,7 +56,7 @@ namespace French.Erp.Web.Controllers
         }
 
         [HttpPost("Excluir/{id}")]
-        public async Task<IActionResult> Excluir(int id)
+        public async Task<IActionResult> Excluir(byte id)
         {
             var result = await statusNotaFiscalService.Excluir(id);
 

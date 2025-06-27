@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface ICidadeRepository : IBaseRepository<Cidade>
+    public interface ICidadeRepository : IBaseRepository<Cidade, int>
     {
         Task<IEnumerable<Cidade>> ObterCidades(int uf);
     }

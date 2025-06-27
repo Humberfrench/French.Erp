@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class UsuarioRepository : BaseRepository<Usuario>, IUsuarioRepository, IBaseRepository<Usuario>
+    public class UsuarioRepository : BaseRepository<Usuario, int>, IUsuarioRepository, IBaseRepository<Usuario, int>
     {
         public UsuarioRepository(IMyContextManager<ThisDatabase<Usuario>> contextManager) : base(contextManager)
         {

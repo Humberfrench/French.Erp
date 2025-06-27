@@ -51,13 +51,8 @@ const TipoDePessoa = {
     },
     saveAll: function (id, descricao)
     {
-        const token = $('input[name="__RequestVerificationToken"]').val();
-
         const opcoes = {
             url: "/TipoDePessoa/Gravar/",
-            headers: {
-                "__RequestVerificationToken": token
-            },
             type: "POST",
             dadoEnvio: {
                 TipoDePessoaId: id,

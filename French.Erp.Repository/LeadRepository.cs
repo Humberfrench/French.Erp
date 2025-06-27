@@ -6,7 +6,7 @@ using French.Erp.Domain.Entities;
 
 namespace French.Erp.Repository
 {
-    public class LeadRepository : BaseRepository<Lead>, ILeadRepository, IBaseRepository<Lead>
+    public class LeadRepository : BaseRepository<Lead, int>, ILeadRepository, IBaseRepository<Lead, int>
     {
         public LeadRepository(IMyContextManager<ThisDatabase<Lead>> contextManager) : base(contextManager)
         {

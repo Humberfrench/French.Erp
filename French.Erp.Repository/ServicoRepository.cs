@@ -6,7 +6,7 @@ using French.Erp.Domain.Entities;
 
 namespace French.Erp.Repository
 {
-    public class ServicoRepository : BaseRepository<Servico>, IServicoRepository, IBaseRepository<Servico>
+    public class ServicoRepository : BaseRepository<Servico, int>, IServicoRepository, IBaseRepository<Servico, int>
     {
         public ServicoRepository(IMyContextManager<ThisDatabase<Servico>> contextManager) : base(contextManager)
         {

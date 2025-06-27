@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface ITarefaRepository : IBaseRepository<Tarefa>
+    public interface ITarefaRepository : IBaseRepository<Tarefa, int>
     {
         new Task<IEnumerable<Tarefa>> ObterTodos();
         Task<IEnumerable<ClienteDadosDto>> ObterTodosClientes();

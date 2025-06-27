@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class ClienteRepository : BaseRepository<Cliente>, IClienteRepository, IBaseRepository<Cliente>
+    public class ClienteRepository : BaseRepository<Cliente, int>, IClienteRepository, IBaseRepository<Cliente, int>
     {
         public ClienteRepository(IMyContextManager<ThisDatabase<Cliente>> context) : base(context)
         {

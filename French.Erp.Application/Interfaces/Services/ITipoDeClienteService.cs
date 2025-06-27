@@ -8,7 +8,7 @@ namespace French.Erp.Application.Interfaces.Services
     public interface ITipoDeClienteService
     {
         Task<ValidationResult> Gravar(TipoDeClienteDto tipoDeCliente);
-        Task<ValidationResult> Excluir(int id);
+        Task<ValidationResult> Excluir(byte id);
         Task<IEnumerable<TipoDeClienteDto>> ObterTodos();
 
     }

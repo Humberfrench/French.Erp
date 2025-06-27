@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using Dietcode.Core.DomainValidator;
+﻿using Dietcode.Core.DomainValidator;
 using French.Erp.Domain.Validations;
 
 namespace French.Erp.Domain.Entities

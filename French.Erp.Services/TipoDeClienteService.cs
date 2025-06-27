@@ -20,7 +20,7 @@ namespace French.Erp.Services
             validationResult = new ValidationResult();
         }
 
-        public async Task<ValidationResult> Excluir(int id)
+        public async Task<ValidationResult> Excluir(byte id)
         {
             var tipoDeCliente = await tipoDeClienteRepository.ObterPorId(id);
             if (tipoDeCliente == null)
@@ -75,24 +75,10 @@ namespace French.Erp.Services
         {
             var tipoDeClientes = await tipoDeClienteRepository.ObterTodos();
 
-            //return tipoDeClientes.ConvertObjects<List<TipoDeClienteDto>>();
-            return ConverterObjects<List<TipoDeClienteDto>>(tipoDeClientes);
+            return tipoDeClientes.ConvertObjects<List<TipoDeClienteDto>>();
+            //return ConverterObjects<List<TipoDeClienteDto>>(tipoDeClientes);
         }
 
-        Destiny ConverterObjects<Destiny>(object data) where Destiny : new()
-        {
-            string value = SerializeObject(data);
-            Destiny result = new Destiny();
-            try
-            {
-                result = DeserializeObject<Destiny>(value);
-                return result;
-            }
-            catch
-            {
-                return result;
-            }
-        }
 
     }
 }

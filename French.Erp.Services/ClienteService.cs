@@ -101,24 +101,9 @@ namespace French.Erp.Services
         {
             var clientes = await clienteRepository.ObterTodos();
 
-            var clientesDto = clientes.ConvertObjects<List<ClienteDto>>(10);
+            var clientesDto = clientes.ConvertObjects<List<ClienteDto>>();
             //var clientesDto = ConverterObjects<List<ClienteDto>>(clientes);
             return clientesDto;
-        }
-
-        Destiny ConverterObjects<Destiny>(object data) where Destiny : new()
-        {
-            string value = SerializeObject(data);
-            Destiny result = new Destiny();
-            try
-            {
-                result = DeserializeObject<Destiny>(value);
-                return result;
-            }
-            catch (Exception)
-            {
-                return result;
-            }
         }
 
         public async Task<ClienteDto> ObterPorId(int id)

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class FeriadoRepository : BaseRepository<Feriado>, IFeriadoRepository, IBaseRepository<Feriado>
+    public class FeriadoRepository : BaseRepository<Feriado, int>, IFeriadoRepository, IBaseRepository<Feriado, int>
     {
         public FeriadoRepository(IMyContextManager<ThisDatabase<Feriado>> contextManager) : base(contextManager)
         {

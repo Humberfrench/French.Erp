@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface IFeriadoRepository : IBaseRepository<Feriado>
+    public interface IFeriadoRepository : IBaseRepository<Feriado, int>
     {
         Task<List<Feriado>> ObterFeriadosMes(int mes);
     }

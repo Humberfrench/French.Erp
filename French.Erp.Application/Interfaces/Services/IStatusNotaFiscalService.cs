@@ -8,9 +8,9 @@ namespace French.Erp.Application.Interfaces.Services
     public interface IStatusNotaFiscalService
     {
         Task<ValidationResult> Gravar(StatusNotaFiscalDto tipoDeCliente);
-        Task<ValidationResult> Excluir(int id);
+        Task<ValidationResult> Excluir(byte id);
 
-        Task<StatusNotaFiscalDto> ObterPorId(int id);
+        Task<StatusNotaFiscalDto> ObterPorId(byte id);
         Task<List<StatusNotaFiscalDto>> ObterTodos();
     }
 }

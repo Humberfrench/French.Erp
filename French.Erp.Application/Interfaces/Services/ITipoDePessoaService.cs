@@ -8,8 +8,8 @@ namespace French.Erp.Application.Interfaces.Services
     public interface ITipoDePessoaService
     {
         Task<ValidationResult> Gravar(TipoDePessoaDto tipoDePessoa);
-        Task<ValidationResult> Excluir(int id);
+        Task<ValidationResult> Excluir(byte id);
         Task<IEnumerable<TipoDePessoaDto>> ObterTodos();
-        Task<TipoDePessoaDto> ObterPorId(int id);
+        Task<TipoDePessoaDto> ObterPorId(byte id);
     }
 }

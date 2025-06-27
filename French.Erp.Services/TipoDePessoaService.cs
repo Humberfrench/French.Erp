@@ -18,7 +18,7 @@ namespace French.Erp.Services
             this.tipoDePessoaRepository = tipoDePessoaRepository;
         }
 
-        public async Task<ValidationResult> Excluir(int id)
+        public async Task<ValidationResult> Excluir(byte id)
         {
             var validationResult = new ValidationResult();
             var tipoDePessoa = await tipoDePessoaRepository.ObterPorId(id);
@@ -75,7 +75,7 @@ namespace French.Erp.Services
 
             return tipoDeClientes.ConvertObjects<List<TipoDePessoaDto>>();
         }
-        public async Task<TipoDePessoaDto> ObterPorId(int id)
+        public async Task<TipoDePessoaDto> ObterPorId(byte id)
         {
             var tipoDeClientes = await tipoDePessoaRepository.ObterPorId(id);
 

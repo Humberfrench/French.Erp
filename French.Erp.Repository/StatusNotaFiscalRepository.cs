@@ -6,7 +6,7 @@ using French.Erp.Domain.Entities;
 
 namespace French.Erp.Repository
 {
-    public class StatusNotaFiscalRepository : BaseRepository<StatusNotaFiscal>, IStatusNotaFiscalRepository, IBaseRepository<StatusNotaFiscal>
+    public class StatusNotaFiscalRepository : BaseRepository<StatusNotaFiscal, byte>, IStatusNotaFiscalRepository, IBaseRepository<StatusNotaFiscal, byte>
     {
         public StatusNotaFiscalRepository(IMyContextManager<ThisDatabase<StatusNotaFiscal>> contextManager) : base(contextManager)
         {

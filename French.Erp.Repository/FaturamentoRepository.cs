@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Repository
 {
-    public class FaturamentoRepository : BaseRepository<Faturamento>, IFaturamentoRepository, IBaseRepository<Faturamento>
+    public class FaturamentoRepository : BaseRepository<Faturamento, int>, IFaturamentoRepository, IBaseRepository<Faturamento, int>
     {
         public FaturamentoRepository(IMyContextManager<ThisDatabase<Faturamento>> contextManager) : base(contextManager)
         {

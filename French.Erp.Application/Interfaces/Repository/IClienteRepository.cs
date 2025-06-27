@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface IClienteRepository : IBaseRepository<Cliente>
+    public interface IClienteRepository : IBaseRepository<Cliente, int>
     {
         new Task<IEnumerable<Cliente>> ObterTodos();
         new Task<Cliente> ObterPorId(int id);

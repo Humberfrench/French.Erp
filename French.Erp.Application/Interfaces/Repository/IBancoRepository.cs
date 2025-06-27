@@ -3,7 +3,7 @@ using French.Erp.Domain.Entities;
 
 namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface IBancoRepository : IBaseRepository<Banco>
+    public interface IBancoRepository : IBaseRepository<Banco, int>
     {
     }
 }

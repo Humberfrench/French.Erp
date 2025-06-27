@@ -51,20 +51,13 @@ const TipoDeCliente = {
     },
     saveAll: function (id, descricao)
     {
-        const token = $('input[name="__RequestVerificationToken"]').val();
 
         const opcoes = {
             url: "/TipoDeCliente/Gravar/",
-            headers: {
-                "__RequestVerificationToken": token
-            },
             type: "POST",
             dadoEnvio: {
                 TipoDeClienteId: id,
-                Nome: nome,
-                Codigo: codigo,
-                Apelido: apelido,
-                Status: statusField === '1'
+                Descricao: descricao
             },
             callBackSuccess: function (response)
             {
@@ -85,11 +78,10 @@ const TipoDeCliente = {
     },
     novoGravar: function (element)
     {
-        const codigoCol = element.closest("div").querySelector("[data-parent='codigo']");
-        const descricaoCol = element.closest("div").querySelector("[data-parent='nome']");
+        const descricaoCol = element.closest("div").querySelector("[data-parent='descricao']");
 
-        const id = codigoCol.querySelector("#TipoDeClienteId");
-        const descricao = descricaoCol.querySelector("#Nome");
+        const id = idCol.querySelector("#TipoDeClienteId");
+        const descricao = descricaoCol.querySelector("#Descricao");
 
         if (!TipoDeCliente.validateInputs(id, descricao))
         {
@@ -101,10 +93,11 @@ const TipoDeCliente = {
     },
     gravar: function (element)
     {
-        const idCol = element.closest("tr").querySelector("[data-parent='descricao']");
+        const idCol = element.closest("tr").querySelector("[data-parent='id']");
+        const descricaoCol = element.closest("tr").querySelector("[data-parent='descricao']");
 
         const id = idCol.querySelector("#TipoDeClienteId");
-        const descricao = nomeCol.querySelector("#Descricao");
+        const descricao = descricaoCol.querySelector("#Descricao");
 
         if (!TipoDeCliente.validateInputs(id, descricao))
         {

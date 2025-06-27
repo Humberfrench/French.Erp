@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace French.Erp.Application.Interfaces.Repository
 {
-    public interface ITarefaItemRepository : IBaseRepository<TarefaItem>
+    public interface ITarefaItemRepository : IBaseRepository<TarefaItem, int>
     {
         new Task<IEnumerable<TarefaItem>> ObterTodos();
         new Task<TarefaItem> ObterPorId(int id);
